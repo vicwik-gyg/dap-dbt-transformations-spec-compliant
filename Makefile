@@ -1,4 +1,4 @@
-.PHONY: deps parse compile run test seed clean-testing all token
+.PHONY: deps parse compile run test seed clean-testing all token spec-check compliance-report clean
 
 # ─── Configuration ──────────────────────────────────────────
 DBT_TARGET ?= dev
@@ -57,6 +57,14 @@ clean-testing:
 	@echo "  databricks sql-cli -e \"DROP SCHEMA IF EXISTS testing.spec_compliant_marts CASCADE;\""
 	@echo "  databricks sql-cli -e \"DROP SCHEMA IF EXISTS testing.spec_compliant_semantic CASCADE;\""
 	@echo "  databricks sql-cli -e \"DROP SCHEMA IF EXISTS testing.spec_compliant_seeds CASCADE;\""
+
+# ─── Spec Check ─────────────────────────────────────────────
+spec-check: parse
+	python -m scripts.spec_check.cli all
+
+compliance-report: parse
+	python -m scripts.spec_check.cli all --format markdown > docs/COMPLIANCE-AUTO.md
+	@echo "docs/COMPLIANCE-AUTO.md regenerated."
 
 clean:
 	uv run dbt clean
