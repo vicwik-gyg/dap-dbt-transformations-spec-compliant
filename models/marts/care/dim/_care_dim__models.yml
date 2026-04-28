@@ -1,0 +1,36 @@
+version: 2
+models:
+  - name: dim_care_tickets
+    description: Conformed dimension of care tickets with response time metrics.
+    config:
+      group: boi
+    meta:
+      owner: boi
+      synonyms: [support_ticket, care_case]
+    columns:
+      - name: ticket_id
+        description: Unique ticket identifier.
+        tests: [unique, not_null]
+      - name: booking_id
+        description: Associated booking.
+      - name: customer_id
+        description: Customer who filed the ticket.
+        tests: [not_null]
+      - name: ticket_category
+        description: Category of the ticket.
+      - name: ticket_priority
+        description: Priority level.
+      - name: ticket_status
+        description: Current status.
+      - name: created_at
+        description: Creation timestamp (UTC).
+      - name: first_response_at
+        description: First response timestamp (UTC).
+      - name: resolved_at
+        description: Resolution timestamp (UTC).
+      - name: first_response_seconds
+        description: Seconds to first response.
+      - name: resolution_seconds
+        description: Seconds to resolution.
+      - name: is_resolved
+        description: Whether resolved.

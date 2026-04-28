@@ -1,0 +1,70 @@
+version: 2
+
+models:
+  - name: int_tours_with_supplier_context
+    description: >
+      Enriches tour catalog with supplier and destination attributes. Provides
+      a denormalized view of tours for downstream mart consumption.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: tour_id
+        description: Unique identifier for the tour.
+        data_type: bigint
+        tests:
+          - unique
+          - not_null
+      - name: tour_name
+        description: Display name of the tour.
+        data_type: string
+      - name: supplier_id
+        description: Foreign key to the supplier.
+        data_type: bigint
+      - name: destination_id
+        description: Foreign key to the destination.
+        data_type: bigint
+      - name: tour_category
+        description: Category of the tour.
+        data_type: string
+      - name: price_in_cents
+        description: Listed price per person in cents.
+        data_type: bigint
+      - name: currency_code
+        description: ISO 4217 currency code for the price.
+        data_type: string
+      - name: duration_minutes
+        description: Tour duration in minutes.
+        data_type: int
+      - name: is_tour_active
+        description: Whether the tour is currently bookable.
+        data_type: boolean
+      - name: tour_created_at
+        description: When the tour was first listed (UTC).
+        data_type: timestamp
+      - name: tour_updated_at
+        description: When the tour was last updated (UTC).
+        data_type: timestamp
+      - name: supplier_name
+        description: Business name of the supplier.
+        data_type: string
+      - name: is_supplier_verified
+        description: Whether the supplier is verified.
+        data_type: boolean
+      - name: is_supplier_active
+        description: Whether the supplier account is active.
+        data_type: boolean
+      - name: destination_name
+        description: Name of the destination.
+        data_type: string
+      - name: destination_country
+        description: Country of the destination.
+        data_type: string
+      - name: destination_continent
+        description: Continent of the destination.
+        data_type: string
+      - name: is_destination_active
+        description: Whether the destination is active on the platform.
+        data_type: boolean

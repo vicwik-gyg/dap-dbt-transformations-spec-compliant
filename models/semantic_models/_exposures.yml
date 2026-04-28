@@ -1,0 +1,20 @@
+version: 2
+
+exposures:
+  - name: looker_booking_performance_dashboard
+    label: Booking Performance Dashboard
+    description: >
+      Looker dashboard showing daily and monthly booking performance, including
+      gross/net bookings, cancellation rates, and geographic breakdowns.
+    type: dashboard
+    maturity: high
+    url: https://looker.getyourguide.com/dashboards/booking_performance
+    depends_on:
+      - ref('fct_bookings')
+      - ref('agg_bookings_checkout_daily')
+      - ref('agg_bookings_destination_daily')
+      - ref('dim_destinations')
+      - ref('dim_tours')
+    owner:
+      name: Business Operations & Intelligence
+      email: boi@getyourguide.com

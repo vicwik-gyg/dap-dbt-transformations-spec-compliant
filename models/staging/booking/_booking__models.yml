@@ -1,0 +1,99 @@
+version: 2
+
+models:
+  - name: stg_seed_data__bookings
+    description: >
+      Staged booking transaction records from the seed_data source. Applies type
+      casting and derives the is_cancelled boolean flag. No joins — pure 1:1 mirror
+      of the source with clean types.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: booking_id
+        description: Unique identifier for each booking transaction.
+        data_type: bigint
+        tests:
+          - unique
+          - not_null
+      - name: tour_id
+        description: Foreign key to the tour this booking is for.
+        data_type: bigint
+        tests:
+          - not_null
+      - name: customer_id
+        description: Foreign key to the customer who made the booking.
+        data_type: bigint
+        tests:
+          - not_null
+      - name: supplier_id
+        description: Foreign key to the supplier providing the tour.
+        data_type: bigint
+      - name: destination_id
+        description: Foreign key to the destination where the tour takes place.
+        data_type: bigint
+      - name: booking_status
+        description: Current status of the booking — one of 'pending', 'confirmed', 'cancelled'.
+        data_type: string
+        tests:
+          - accepted_values:
+              values: ['pending', 'confirmed', 'cancelled']
+      - name: number_of_participants
+        description: Number of guests on this booking.
+        data_type: int
+      - name: total_price_in_cents
+        description: Total price charged for this booking in minor currency units (cents).
+        data_type: bigint
+      - name: currency_code
+        description: ISO 4217 currency code for this booking's price.
+        data_type: string
+      - name: commission_rate
+        description: GYG's commission rate on this booking as a decimal (e.g. 0.25 = 25%).
+        data_type: decimal(5,4)
+      - name: checkout_at
+        description: Timestamp when the customer completed checkout (UTC).
+        data_type: timestamp
+      - name: travel_at
+        description: Scheduled travel date and time for this booking (UTC).
+        data_type: timestamp
+      - name: created_at
+        description: Timestamp when the booking record was created in the source system (UTC).
+        data_type: timestamp
+      - name: cancelled_at
+        description: Timestamp when the booking was cancelled, null if not cancelled (UTC).
+        data_type: timestamp
+      - name: is_cancelled
+        description: Boolean flag indicating whether this booking has been cancelled.
+        data_type: boolean
+
+  - name: stg_seed_data__booking_status_changes
+    description: >
+      Staged booking status change events from the seed_data source. Each row
+      represents a single status transition in the booking lifecycle. Used to build
+      the accumulating snapshot of booking milestones.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: booking_id
+        description: Identifier of the booking this status change belongs to.
+        data_type: bigint
+        tests:
+          - not_null
+      - name: booking_status
+        description: The status the booking transitioned to at this event.
+        data_type: string
+        tests:
+          - not_null
+      - name: changed_at
+        description: Timestamp when this status transition occurred (UTC).
+        data_type: timestamp
+        tests:
+          - not_null
+      - name: changed_by
+        description: Actor that triggered the change — 'system', 'customer', or 'supplier'.
+        data_type: string

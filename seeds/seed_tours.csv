@@ -1,0 +1,13 @@
+tour_id,tour_name,supplier_id,destination_id,tour_category,price_in_cents,currency_code,duration_minutes,is_active,created_at,updated_at
+1001,Berlin Wall Walking Tour,101,1,walking_tour,2500,EUR,180,true,2020-03-01 00:00:00,2024-06-15 10:00:00
+1002,Reichstag & Government District,101,1,walking_tour,3000,EUR,150,true,2020-04-01 00:00:00,2024-07-01 09:00:00
+1003,Eiffel Tower Skip-the-Line,102,2,landmark,5500,EUR,120,true,2020-03-15 00:00:00,2024-07-20 14:00:00
+1004,Louvre Museum Guided Tour,102,2,museum,4500,EUR,180,true,2020-05-01 00:00:00,2024-08-01 11:00:00
+1005,Sagrada Familia Fast Track,103,3,landmark,4000,EUR,90,true,2020-02-01 00:00:00,2024-05-15 16:00:00
+1006,Barcelona Gothic Quarter Bike,103,3,bike_tour,3500,EUR,150,true,2020-06-01 00:00:00,2024-06-01 08:00:00
+1007,Colosseum Underground Tour,104,4,landmark,6000,EUR,180,true,2020-04-15 00:00:00,2024-08-10 12:00:00
+1008,Vatican Museums & Sistine Chapel,104,4,museum,5000,EUR,240,true,2020-07-01 00:00:00,2024-09-01 10:00:00
+1009,Tower of London Tour,105,5,landmark,4500,GBP,120,true,2020-03-01 00:00:00,2024-04-25 16:30:00
+1010,NYC Central Park Food Walk,106,6,food_tour,7500,USD,180,true,2020-05-15 00:00:00,2024-09-10 08:00:00
+1011,Tokyo Tsukiji Market Tour,107,7,food_tour,8000,JPY,150,true,2020-08-01 00:00:00,2024-03-20 12:00:00
+1012,Amsterdam Canal Cruise,108,8,boat_tour,2000,EUR,75,true,2020-02-01 00:00:00,2024-06-15 10:30:00

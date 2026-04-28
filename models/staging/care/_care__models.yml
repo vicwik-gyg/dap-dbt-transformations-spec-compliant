@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: stg_seed_data__care_tickets
+    description: >
+      Staged customer care ticket records from the seed_data source. Each row
+      represents a support ticket filed by a customer, often linked to a booking.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: ticket_id
+        description: Unique identifier for each care ticket.
+        data_type: bigint
+        tests:
+          - unique
+          - not_null
+      - name: booking_id
+        description: Foreign key to the booking this ticket relates to, if any.
+        data_type: bigint
+      - name: customer_id
+        description: Foreign key to the customer who filed the ticket.
+        data_type: bigint
+        tests:
+          - not_null
+      - name: ticket_category
+        description: >
+          Category of the ticket — 'cancellation', 'general_inquiry',
+          'date_change', 'complaint'.
+        data_type: string
+      - name: ticket_priority
+        description: Priority level — 'low', 'medium', 'high'.
+        data_type: string
+      - name: ticket_status
+        description: Current status — 'open' or 'resolved'.
+        data_type: string
+      - name: created_at
+        description: Timestamp when the ticket was created (UTC).
+        data_type: timestamp
+      - name: first_response_at
+        description: Timestamp of the first agent response (UTC).
+        data_type: timestamp
+      - name: resolved_at
+        description: Timestamp when the ticket was resolved, null if still open (UTC).
+        data_type: timestamp

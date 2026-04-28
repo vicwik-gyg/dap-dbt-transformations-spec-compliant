@@ -1,0 +1,146 @@
+version: 2
+
+semantic_models:
+  - name: sem_bookings
+    description: >
+      Semantic model on fct_bookings for MetricFlow queries.
+    defaults:
+      agg_time_dimension: checkout_at
+    model: ref('fct_bookings')
+    entities:
+      - name: booking
+        type: primary
+        expr: booking_id
+      - name: tour
+        type: foreign
+        expr: tour_id
+      - name: supplier
+        type: foreign
+        expr: supplier_id
+      - name: destination
+        type: foreign
+        expr: destination_id
+    dimensions:
+      - name: checkout_at
+        type: time
+        type_params:
+          time_granularity: day
+      - name: travel_at
+        type: time
+        type_params:
+          time_granularity: day
+      - name: booking_status
+        type: categorical
+      - name: is_cancelled
+        type: categorical
+      - name: tour_category
+        type: categorical
+      - name: destination_name
+        type: categorical
+      - name: destination_country
+        type: categorical
+      - name: destination_continent
+        type: categorical
+      - name: currency_code
+        type: categorical
+    measures:
+      - name: bookings_count
+        description: Count of all bookings.
+        agg: count
+        expr: booking_id
+      - name: confirmed_bookings_count
+        description: Count of non-cancelled bookings.
+        agg: count
+        expr: "case when is_cancelled = false then booking_id end"
+      - name: cancelled_bookings_count
+        description: Count of cancelled bookings.
+        agg: count
+        expr: "case when is_cancelled = true then booking_id end"
+      - name: gross_bookings_in_cents
+        description: Total revenue in cents (all statuses).
+        agg: sum
+        expr: total_price_in_cents
+      - name: net_bookings_in_cents
+        description: Revenue from confirmed bookings in cents.
+        agg: sum
+        expr: "case when is_cancelled = false then total_price_in_cents else 0 end"
+      - name: total_commission_in_cents
+        description: Sum of GYG commission in cents.
+        agg: sum
+        expr: commission_in_cents
+      - name: total_participants
+        description: Sum of booking participants.
+        agg: sum
+        expr: number_of_participants
+
+  - name: sem_bookings_daily
+    description: >
+      Pre-aggregated semantic model on agg_bookings_checkout_daily.
+    defaults:
+      agg_time_dimension: checkout_date
+    model: ref('agg_bookings_checkout_daily')
+    entities:
+      - name: daily_booking
+        type: primary
+        expr: checkout_date
+    dimensions:
+      - name: checkout_date
+        type: time
+        type_params:
+          time_granularity: day
+    measures:
+      - name: daily_total_bookings
+        description: Sum of daily booking counts.
+        agg: sum
+        expr: total_bookings
+      - name: daily_confirmed_bookings
+        description: Sum of daily confirmed bookings.
+        agg: sum
+        expr: confirmed_bookings
+      - name: daily_gross_in_cents
+        description: Sum of daily gross revenue in cents.
+        agg: sum
+        expr: gross_bookings_in_cents
+      - name: daily_net_in_cents
+        description: Sum of daily net revenue in cents.
+        agg: sum
+        expr: net_bookings_in_cents
+
+metrics:
+  - name: gross_bookings
+    label: Gross Bookings
+    description: Total revenue from all bookings in cents, including cancelled.
+    type: simple
+    type_params:
+      measure: gross_bookings_in_cents
+
+  - name: net_bookings
+    label: Net Bookings
+    description: Revenue from confirmed bookings only, in cents.
+    type: simple
+    type_params:
+      measure: net_bookings_in_cents
+
+  - name: booking_count
+    label: Booking Count
+    description: Total number of bookings across all statuses.
+    type: simple
+    type_params:
+      measure: bookings_count
+
+  - name: cancelled_bookings_metric
+    label: Cancelled Bookings
+    description: Count of cancelled bookings.
+    type: simple
+    type_params:
+      measure: cancelled_bookings_count
+
+  - name: cancellation_rate
+    label: Cancellation Rate
+    description: Fraction of bookings cancelled (0.0 to 1.0).
+    type: derived
+    type_params:
+      expr: "cast(cancelled_bookings_metric as double) / nullif(booking_count, 0)"
+      metrics:
+        - name: cancelled_bookings_metric
+        - name: booking_count

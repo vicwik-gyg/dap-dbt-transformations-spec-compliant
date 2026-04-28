@@ -1,0 +1,73 @@
+version: 2
+
+sources:
+  - name: seed_data
+    description: >
+      Seed data representing a representative slice of the GYG data platform.
+      These seeds simulate source tables from Kafka, Debezium mirrors, and
+      application databases. In the real repo these would be Databricks sources.
+    schema: "spec_compliant_seeds"
+    tables:
+      - name: seed_destinations
+        description: Reference data for travel destinations (simulates db_mirror_dbz.catalog__location).
+        columns:
+          - name: destination_id
+            description: Unique identifier for each destination.
+          - name: destination_name
+            description: Human-readable name of the destination.
+
+      - name: seed_suppliers
+        description: Supplier account data (simulates db_mirror_dbz.gyg__supplier).
+        columns:
+          - name: supplier_id
+            description: Unique identifier for each supplier.
+          - name: supplier_name
+            description: Business name of the supplier.
+
+      - name: seed_tours
+        description: Tour/activity catalog (simulates db_mirror_dbz.gyg__tour).
+        columns:
+          - name: tour_id
+            description: Unique identifier for each tour.
+          - name: tour_name
+            description: Display name of the tour.
+
+      - name: seed_bookings
+        description: Transaction records (simulates db_mirror_dbz.gyg__booking).
+        columns:
+          - name: booking_id
+            description: Unique identifier for each booking.
+          - name: booking_status
+            description: Current status of the booking (confirmed, cancelled, pending).
+
+      - name: seed_supplier_history
+        description: >
+          SCD2 history of supplier attribute changes (simulates db_mirror_dbz.gyg__supplier_history).
+          Each row represents a version with valid_from/valid_to window.
+        columns:
+          - name: supplier_id
+            description: Supplier identifier — not unique, repeats across versions.
+          - name: valid_from
+            description: Start of this version's validity window.
+          - name: valid_to
+            description: End of this version's validity window. '9999-12-31' means current.
+
+      - name: seed_booking_status_history
+        description: >
+          Event log of booking status transitions (simulates a Kafka topic).
+          Used to build the accumulating snapshot.
+        columns:
+          - name: booking_id
+            description: Booking this status change belongs to.
+          - name: booking_status
+            description: The status the booking transitioned to.
+          - name: changed_at
+            description: Timestamp of the status change.
+
+      - name: seed_care_tickets
+        description: Customer care ticket records (simulates the care system database).
+        columns:
+          - name: ticket_id
+            description: Unique identifier for each care ticket.
+          - name: booking_id
+            description: Associated booking, if any.

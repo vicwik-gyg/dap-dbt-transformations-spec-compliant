@@ -1,0 +1,22 @@
+booking_id,booking_status,changed_at,changed_by
+5001,pending,2024-06-01 10:25:00,system
+5001,confirmed,2024-06-01 10:30:00,system
+5002,pending,2024-06-02 13:55:00,system
+5002,confirmed,2024-06-02 14:00:00,system
+5003,pending,2024-06-03 08:55:00,system
+5003,confirmed,2024-06-03 09:00:00,system
+5003,cancellation_requested,2024-06-10 15:30:00,customer
+5003,cancelled,2024-06-10 16:00:00,system
+5004,pending,2024-06-04 15:55:00,system
+5004,confirmed,2024-06-04 16:00:00,system
+5007,pending,2024-06-07 09:55:00,system
+5007,confirmed,2024-06-07 10:00:00,system
+5007,cancellation_requested,2024-06-12 13:30:00,customer
+5007,cancelled,2024-06-12 14:00:00,system
+5012,pending,2024-07-02 13:55:00,system
+5012,confirmed,2024-07-02 14:00:00,system
+5012,cancelled,2024-07-05 09:00:00,supplier
+5020,pending,2024-07-10 07:55:00,system
+5020,confirmed,2024-07-10 08:00:00,system
+5020,cancellation_requested,2024-07-15 09:30:00,customer
+5020,cancelled,2024-07-15 10:00:00,system

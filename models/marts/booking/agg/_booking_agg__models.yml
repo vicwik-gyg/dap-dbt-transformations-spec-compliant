@@ -1,0 +1,101 @@
+version: 2
+models:
+  - name: agg_bookings_checkout_daily
+    description: Daily aggregate of bookings by checkout date.
+    config:
+      group: boi
+    meta:
+      owner: boi
+      synonyms: [daily_bookings]
+    columns:
+      - name: checkout_date
+        description: Date of customer checkout.
+        tests: [unique, not_null]
+      - name: total_bookings
+        description: Total bookings.
+      - name: confirmed_bookings
+        description: Confirmed bookings.
+      - name: cancelled_bookings
+        description: Cancelled bookings.
+      - name: total_participants
+        description: Total participants.
+      - name: gross_bookings_in_cents
+        description: Gross revenue in cents.
+      - name: net_bookings_in_cents
+        description: Net revenue in cents.
+      - name: total_commission_in_cents
+        description: Commission in cents.
+      - name: cancellation_rate
+        description: Cancellation rate (0.0 to 1.0).
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 1
+
+  - name: agg_bookings_destination_daily
+    description: Daily aggregate by destination and checkout date.
+    config:
+      group: boi
+    meta:
+      owner: boi
+      synonyms: [destination_daily]
+    columns:
+      - name: checkout_date
+        description: Checkout date.
+        tests: [not_null]
+      - name: destination_id
+        description: Destination ID.
+        tests: [not_null]
+      - name: destination_name
+        description: Destination name.
+      - name: destination_country
+        description: Destination country.
+      - name: destination_continent
+        description: Destination continent.
+      - name: total_bookings
+        description: Total bookings.
+      - name: confirmed_bookings
+        description: Confirmed bookings.
+      - name: cancelled_bookings
+        description: Cancelled bookings.
+      - name: total_participants
+        description: Total participants.
+      - name: gross_bookings_in_cents
+        description: Gross revenue in cents.
+      - name: net_bookings_in_cents
+        description: Net revenue in cents.
+      - name: total_commission_in_cents
+        description: Commission in cents.
+
+  - name: agg_bookings_tour_category_monthly
+    description: Monthly aggregate by tour category.
+    config:
+      group: boi
+    meta:
+      owner: boi
+      synonyms: [category_monthly]
+    columns:
+      - name: checkout_month
+        description: First day of checkout month.
+        tests: [not_null]
+      - name: tour_category
+        description: Tour category.
+        tests: [not_null]
+      - name: total_bookings
+        description: Total bookings.
+      - name: confirmed_bookings
+        description: Confirmed bookings.
+      - name: cancelled_bookings
+        description: Cancelled bookings.
+      - name: total_participants
+        description: Total participants.
+      - name: gross_bookings_in_cents
+        description: Gross revenue in cents.
+      - name: net_bookings_in_cents
+        description: Net revenue in cents.
+      - name: total_commission_in_cents
+        description: Commission in cents.
+      - name: avg_booking_value_in_cents
+        description: Average booking value in cents.
+      - name: cancellation_rate
+        description: Cancellation rate.

@@ -1,0 +1,138 @@
+version: 2
+
+models:
+  - name: int_bookings_enriched
+    description: >
+      Enriches raw booking records with tour metadata (name, category, price,
+      duration) and destination context (city, country, continent). Also derives
+      commission and supplier payout amounts. This is the primary intermediate
+      model feeding fact and aggregate marts.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: booking_id
+        description: Unique identifier for the booking.
+        data_type: bigint
+        tests:
+          - unique
+          - not_null
+      - name: tour_id
+        description: Foreign key to the tour.
+        data_type: bigint
+      - name: customer_id
+        description: Foreign key to the customer.
+        data_type: bigint
+      - name: supplier_id
+        description: Foreign key to the supplier.
+        data_type: bigint
+      - name: destination_id
+        description: Foreign key to the destination.
+        data_type: bigint
+      - name: booking_status
+        description: Current booking status.
+        data_type: string
+      - name: is_cancelled
+        description: Whether this booking was cancelled.
+        data_type: boolean
+      - name: number_of_participants
+        description: Number of guests on the booking.
+        data_type: int
+      - name: total_price_in_cents
+        description: Total booking price in minor currency units.
+        data_type: bigint
+      - name: currency_code
+        description: ISO 4217 currency code.
+        data_type: string
+      - name: commission_rate
+        description: GYG commission rate as a decimal.
+        data_type: decimal(5,4)
+      - name: checkout_at
+        description: Timestamp of customer checkout (UTC).
+        data_type: timestamp
+      - name: travel_at
+        description: Scheduled travel timestamp (UTC).
+        data_type: timestamp
+      - name: created_at
+        description: Record creation timestamp (UTC).
+        data_type: timestamp
+      - name: cancelled_at
+        description: Cancellation timestamp if cancelled, else null (UTC).
+        data_type: timestamp
+      - name: tour_name
+        description: Display name of the booked tour.
+        data_type: string
+      - name: tour_category
+        description: Category of the booked tour.
+        data_type: string
+      - name: tour_list_price_in_cents
+        description: Listed per-person price of the tour in cents.
+        data_type: bigint
+      - name: tour_duration_minutes
+        description: Duration of the tour in minutes.
+        data_type: int
+      - name: destination_name
+        description: Name of the destination.
+        data_type: string
+      - name: destination_city
+        description: City of the destination.
+        data_type: string
+      - name: destination_country
+        description: Country of the destination.
+        data_type: string
+      - name: destination_continent
+        description: Continent of the destination.
+        data_type: string
+      - name: commission_in_cents
+        description: GYG commission amount for this booking in cents.
+        data_type: bigint
+      - name: supplier_payout_in_cents
+        description: Amount payable to the supplier for this booking in cents.
+        data_type: bigint
+
+  - name: int_bookings_with_milestones
+    description: >
+      Pivots booking status change events into one row per booking with milestone
+      timestamps (pending, confirmed, cancellation_requested, cancelled). Derives
+      milestone flags and time-between-milestones for the accumulating snapshot.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: booking_id
+        description: Unique booking identifier.
+        data_type: bigint
+        tests:
+          - unique
+          - not_null
+      - name: pending_at
+        description: Timestamp when the booking entered pending status (UTC).
+        data_type: timestamp
+      - name: confirmed_at
+        description: Timestamp when the booking was confirmed (UTC).
+        data_type: timestamp
+      - name: cancellation_requested_at
+        description: Timestamp when a cancellation was requested, null if none (UTC).
+        data_type: timestamp
+      - name: cancelled_at
+        description: Timestamp when the booking was fully cancelled, null if not (UTC).
+        data_type: timestamp
+      - name: cancelled_by
+        description: Actor that cancelled — 'customer', 'supplier', or 'system'.
+        data_type: string
+      - name: is_confirmed
+        description: Whether this booking reached the confirmed milestone.
+        data_type: boolean
+      - name: is_cancelled
+        description: Whether this booking was cancelled.
+        data_type: boolean
+      - name: seconds_pending_to_confirmed
+        description: Elapsed seconds between pending and confirmed milestones.
+        data_type: bigint
+      - name: seconds_request_to_cancellation
+        description: Elapsed seconds between cancellation request and final cancellation.
+        data_type: bigint

@@ -1,0 +1,11 @@
+destination_id,destination_name,destination_city,destination_country,destination_continent,is_active,created_at,updated_at
+1,Berlin,Berlin,Germany,Europe,true,2020-01-01 00:00:00,2024-06-15 10:30:00
+2,Paris,Paris,France,Europe,true,2020-01-01 00:00:00,2024-07-01 09:00:00
+3,Barcelona,Barcelona,Spain,Europe,true,2020-01-01 00:00:00,2024-05-20 14:00:00
+4,Rome,Rome,Italy,Europe,true,2020-01-01 00:00:00,2024-08-10 11:00:00
+5,London,London,United Kingdom,Europe,true,2020-01-01 00:00:00,2024-04-15 16:30:00
+6,New York,New York,United States,North America,true,2020-01-15 00:00:00,2024-09-01 08:00:00
+7,Tokyo,Tokyo,Japan,Asia,true,2020-02-01 00:00:00,2024-03-20 12:00:00
+8,Amsterdam,Amsterdam,Netherlands,Europe,true,2020-01-01 00:00:00,2024-06-01 10:00:00
+9,Lisbon,Lisbon,Portugal,Europe,true,2020-03-01 00:00:00,2024-07-15 09:30:00
+10,Prague,Prague,Czech Republic,Europe,false,2020-01-01 00:00:00,2024-02-28 17:00:00

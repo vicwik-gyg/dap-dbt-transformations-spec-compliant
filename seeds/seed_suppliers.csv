@@ -1,0 +1,11 @@
+supplier_id,supplier_name,supplier_email,destination_id,is_verified,is_active,created_at,updated_at
+101,Berlin Walking Tours,info@berlinwalks.de,1,true,true,2020-02-01 00:00:00,2024-06-01 10:00:00
+102,Paris Adventures,contact@parisadv.fr,2,true,true,2020-03-01 00:00:00,2024-07-15 09:00:00
+103,Barcelona Bikes,hola@bcnbikes.es,3,true,true,2020-01-15 00:00:00,2024-05-10 14:00:00
+104,Roman History Tours,ciao@romantours.it,4,true,true,2020-04-01 00:00:00,2024-08-01 11:00:00
+105,London Eye Experiences,hello@londoneye.uk,5,true,true,2020-02-15 00:00:00,2024-04-20 16:00:00
+106,NYC Food Tours,eat@nycfood.com,6,true,true,2020-05-01 00:00:00,2024-09-05 08:00:00
+107,Tokyo Cultural Tours,info@tokyoculture.jp,7,true,true,2020-06-01 00:00:00,2024-03-15 12:00:00
+108,Amsterdam Canal Cruises,ahoy@canals.nl,8,true,true,2020-01-20 00:00:00,2024-06-10 10:30:00
+109,Lisbon Tram Tours,ola@lisbontram.pt,9,true,true,2020-07-01 00:00:00,2024-07-20 09:00:00
+110,Prague Castle Tours,info@praguecastle.cz,10,false,false,2020-03-15 00:00:00,2024-02-25 17:00:00

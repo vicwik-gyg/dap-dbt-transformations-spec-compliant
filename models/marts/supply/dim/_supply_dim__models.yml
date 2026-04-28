@@ -1,0 +1,110 @@
+version: 2
+models:
+  - name: dim_destinations
+    description: Conformed dimension of travel destinations. One row per destination.
+    config:
+      group: boi
+    meta:
+      owner: boi
+      synonyms: [location, city, market]
+    columns:
+      - name: destination_id
+        description: Unique identifier for each destination.
+        tests: [unique, not_null]
+      - name: destination_name
+        description: Display name of the destination.
+        tests: [not_null]
+      - name: destination_city
+        description: City of the destination.
+      - name: destination_country
+        description: Country of the destination.
+      - name: destination_continent
+        description: Continent of the destination.
+      - name: is_active
+        description: Whether this destination is active.
+      - name: created_at
+        description: When destination was first added (UTC).
+      - name: updated_at
+        description: Most recent update (UTC).
+
+  - name: dim_tours
+    description: Conformed dimension of bookable tours with supplier context.
+    config:
+      group: boi
+    meta:
+      owner: boi
+      synonyms: [activity, experience, product]
+    columns:
+      - name: tour_id
+        description: Unique tour identifier.
+        tests: [unique, not_null]
+      - name: tour_name
+        description: Display name of the tour.
+        tests: [not_null]
+      - name: supplier_id
+        description: Supplier offering this tour.
+      - name: destination_id
+        description: Destination where the tour operates.
+      - name: tour_category
+        description: Tour category.
+      - name: price_in_cents
+        description: Price per person in cents.
+      - name: currency_code
+        description: ISO 4217 currency code.
+      - name: duration_minutes
+        description: Tour duration in minutes.
+      - name: is_tour_active
+        description: Whether the tour is bookable.
+      - name: tour_created_at
+        description: When tour was listed (UTC).
+      - name: tour_updated_at
+        description: When tour was updated (UTC).
+      - name: supplier_name
+        description: Supplier name.
+      - name: is_supplier_verified
+        description: Supplier verification status.
+      - name: is_supplier_active
+        description: Supplier active status.
+      - name: destination_name
+        description: Destination name.
+      - name: destination_country
+        description: Destination country.
+      - name: destination_continent
+        description: Destination continent.
+
+  - name: dim_suppliers_history
+    description: SCD Type 2 supplier dimension with valid_from/valid_to window.
+    config:
+      group: boi
+    meta:
+      owner: boi
+      synonyms: [supplier, partner, vendor]
+    columns:
+      - name: supplier_version_id
+        description: Surrogate key for this supplier version.
+        tests: [unique, not_null]
+      - name: supplier_id
+        description: Business key (repeats across versions).
+        tests: [not_null]
+      - name: supplier_name
+        description: Supplier name at this version.
+      - name: supplier_email
+        description: Contact email at this version.
+      - name: destination_id
+        description: Primary destination at this version.
+      - name: is_verified
+        description: Verification status at this version.
+      - name: is_active
+        description: Active status at this version.
+      - name: valid_from
+        description: Start of version validity (UTC).
+        tests: [not_null]
+      - name: valid_to
+        description: End of version validity (UTC). 9999-12-31 = current.
+        tests: [not_null]
+      - name: operation
+        description: insert or update.
+      - name: is_current_version
+        description: Whether this is the active version.
+      - name: version_number
+        description: Sequential version number.

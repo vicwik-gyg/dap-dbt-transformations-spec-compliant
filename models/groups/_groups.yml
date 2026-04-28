@@ -1,0 +1,12 @@
+version: 2
+
+groups:
+  - name: boi
+    owner:
+      name: boi
+      description: Business Operations & Intelligence team — owns core booking, supply, and care models.
+
+  - name: dap
+    owner:
+      name: dap
+      description: Data Analytics Platform team — owns platform infrastructure and semantic layer.

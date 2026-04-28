@@ -1,0 +1,12 @@
+target/
+dbt_packages/
+logs/
+.vscode/
+.idea/
+profiles.yml
+.env
+.DS_Store
+.databricks
+.user.yml
+*.pyc
+__pycache__/

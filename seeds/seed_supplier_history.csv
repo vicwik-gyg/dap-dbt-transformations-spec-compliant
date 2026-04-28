@@ -1,0 +1,11 @@
+supplier_id,supplier_name,supplier_email,destination_id,is_verified,is_active,valid_from,valid_to,operation
+101,Berlin Walking Tours,info@berlinwalks.de,1,false,true,2020-02-01 00:00:00,2021-06-01 00:00:00,insert
+101,Berlin Walking Tours,info@berlinwalks.de,1,true,true,2021-06-01 00:00:00,9999-12-31 23:59:59,update
+102,Paris Adventures,contact@parisadv.fr,2,false,true,2020-03-01 00:00:00,2022-01-15 00:00:00,insert
+102,Paris Adventures,contact@parisadv.fr,2,true,true,2022-01-15 00:00:00,9999-12-31 23:59:59,update
+103,Barcelona Bikes,hola@bcnbikes.es,3,true,true,2020-01-15 00:00:00,9999-12-31 23:59:59,insert
+104,Roman History Tours,ciao@romantours.it,4,false,true,2020-04-01 00:00:00,2021-09-01 00:00:00,insert
+104,Roman History Tours,ciao@romantours.it,4,true,true,2021-09-01 00:00:00,9999-12-31 23:59:59,update
+105,London Eye Experiences,hello@londoneye.uk,5,true,true,2020-02-15 00:00:00,9999-12-31 23:59:59,insert
+106,NYC Food Tours,eat@nycfood.com,6,true,true,2020-05-01 00:00:00,2023-06-01 00:00:00,insert
+106,NYC Food Walks,eat@nycfoodwalks.com,6,true,true,2023-06-01 00:00:00,9999-12-31 23:59:59,update

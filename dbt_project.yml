@@ -1,0 +1,53 @@
+name: dap_dbt_transformations_spec_compliant
+version: '1.0.0'
+profile: dap_dbt_transformations
+config-version: 2
+
+model-paths: [models]
+seed-paths: [seeds]
+test-paths: [tests]
+macro-paths: [macros]
+target-path: target
+clean-targets: [target, dbt_modules, logs, dbt_packages]
+require-dbt-version: ['>=1.7.0']
+
+# ──────────────────────────────────────────────
+# SAFETY: this project targets testing catalog ONLY.
+# If you see "production" anywhere in config, STOP and open a P0 task.
+# The profile in ~/.dbt/profiles.yml MUST point to catalog: testing.
+# ──────────────────────────────────────────────
+
+models:
+  dap_dbt_transformations_spec_compliant:
+    +persist_docs:
+      relation: true
+      columns: true
+    +file_format: delta
+
+    # ── Staging: views or ephemeral, no joins ──
+    staging:
+      +materialized: view
+      +schema: "spec_compliant_staging"
+      +tags: [layer:staging]
+
+    # ── Intermediate: views or ephemeral ──
+    intermediate:
+      +materialized: view
+      +schema: "spec_compliant_intermediate"
+      +tags: [layer:intermediate]
+
+    # ── Marts: tables (incremental for large models) ──
+    marts:
+      +materialized: table
+      +schema: "spec_compliant_marts"
+      +tags: [layer:marts]
+
+
+seeds:
+  dap_dbt_transformations_spec_compliant:
+    +file_format: delta
+    +schema: "spec_compliant_seeds"
+
+vars:
+  # Schema prefix for testing catalog isolation
+  spec_compliant_schema_prefix: "spec_compliant_"

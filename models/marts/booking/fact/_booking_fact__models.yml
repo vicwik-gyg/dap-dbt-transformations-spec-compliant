@@ -1,0 +1,165 @@
+version: 2
+models:
+  - name: fct_bookings
+    description: Core transaction fact table. One row per booking.
+    config:
+      group: boi
+    meta:
+      owner: boi
+      synonyms: [booking, order, transaction]
+    columns:
+      - name: booking_id
+        description: Unique booking identifier.
+        tests: [unique, not_null]
+      - name: tour_id
+        description: Tour FK.
+      - name: customer_id
+        description: Customer FK.
+      - name: supplier_id
+        description: Supplier FK.
+      - name: destination_id
+        description: Destination FK.
+      - name: booking_status
+        description: pending, confirmed, or cancelled.
+      - name: is_cancelled
+        description: Whether cancelled.
+      - name: number_of_participants
+        description: Guest count.
+      - name: total_price_in_cents
+        description: Total price in cents.
+      - name: currency_code
+        description: ISO 4217 code.
+      - name: commission_rate
+        description: GYG commission rate.
+      - name: commission_in_cents
+        description: Commission in cents.
+      - name: supplier_payout_in_cents
+        description: Supplier payout in cents.
+      - name: checkout_at
+        description: Checkout timestamp (UTC).
+      - name: travel_at
+        description: Travel timestamp (UTC).
+      - name: created_at
+        description: Creation timestamp (UTC).
+      - name: cancelled_at
+        description: Cancellation timestamp (UTC).
+      - name: tour_name
+        description: Tour name.
+      - name: tour_category
+        description: Tour category.
+      - name: tour_list_price_in_cents
+        description: Tour list price in cents.
+      - name: tour_duration_minutes
+        description: Tour duration.
+      - name: destination_name
+        description: Destination name.
+      - name: destination_city
+        description: Destination city.
+      - name: destination_country
+        description: Destination country.
+      - name: destination_continent
+        description: Destination continent.
+      - name: checkout_date
+        description: Checkout date.
+        tests: [not_null]
+      - name: travel_date
+        description: Travel date.
+
+  - name: fct_bookings_snapshot
+    description: Periodic snapshot of confirmed bookings.
+    config:
+      group: boi
+    meta:
+      owner: boi
+      synonyms: [booking_snapshot]
+    columns:
+      - name: snapshot_at
+        description: Snapshot timestamp (UTC).
+        tests: [not_null]
+      - name: snapshot_date
+        description: Snapshot date.
+        tests: [not_null]
+      - name: booking_id
+        description: Booking ID.
+        tests: [not_null]
+      - name: tour_id
+        description: Tour ID.
+      - name: customer_id
+        description: Customer ID.
+      - name: supplier_id
+        description: Supplier ID.
+      - name: destination_id
+        description: Destination ID.
+      - name: booking_status
+        description: Always confirmed in this model.
+      - name: number_of_participants
+        description: Participant count.
+      - name: total_price_in_cents
+        description: Price in cents.
+      - name: currency_code
+        description: ISO 4217 code.
+      - name: commission_rate
+        description: Commission rate.
+      - name: commission_in_cents
+        description: Commission in cents.
+      - name: supplier_payout_in_cents
+        description: Supplier payout.
+      - name: checkout_at
+        description: Checkout timestamp.
+      - name: travel_at
+        description: Travel timestamp.
+      - name: created_at
+        description: Creation timestamp.
+      - name: destination_name
+        description: Destination name.
+      - name: destination_country
+        description: Destination country.
+
+  - name: fct_bookings_accumulating_snapshot
+    description: Booking lifecycle milestones accumulating snapshot.
+    config:
+      group: boi
+    meta:
+      owner: boi
+      synonyms: [booking_lifecycle]
+    columns:
+      - name: booking_id
+        description: Unique booking ID.
+        tests: [unique, not_null]
+      - name: tour_id
+        description: Tour ID.
+      - name: customer_id
+        description: Customer ID.
+      - name: supplier_id
+        description: Supplier ID.
+      - name: destination_id
+        description: Destination ID.
+      - name: number_of_participants
+        description: Participant count.
+      - name: total_price_in_cents
+        description: Price in cents.
+      - name: currency_code
+        description: ISO 4217 code.
+      - name: pending_at
+        description: When booking entered pending (UTC).
+      - name: confirmed_at
+        description: When confirmed (UTC).
+      - name: cancellation_requested_at
+        description: When cancellation requested (UTC).
+      - name: cancelled_at
+        description: When cancelled (UTC).
+      - name: cancelled_by
+        description: Who cancelled.
+      - name: is_confirmed
+        description: Confirmed milestone reached.
+      - name: is_cancelled
+        description: Cancelled milestone reached.
+      - name: seconds_pending_to_confirmed
+        description: Seconds pending to confirmed.
+      - name: seconds_request_to_cancellation
+        description: Seconds request to cancellation.
+      - name: current_lifecycle_stage
+        description: Current lifecycle stage.
+        tests:
+          - accepted_values:
+              values: ['pending', 'confirmed', 'cancellation_requested', 'cancelled', 'unknown']

@@ -1,0 +1,9 @@
+ticket_id,booking_id,customer_id,ticket_category,ticket_priority,ticket_status,created_at,first_response_at,resolved_at
+7001,5003,9003,cancellation,high,resolved,2024-06-10 15:00:00,2024-06-10 15:15:00,2024-06-10 16:00:00
+7002,5007,9007,cancellation,medium,resolved,2024-06-12 13:00:00,2024-06-12 13:20:00,2024-06-12 14:00:00
+7003,5004,9004,general_inquiry,low,resolved,2024-06-05 10:00:00,2024-06-05 10:30:00,2024-06-05 11:00:00
+7004,5012,9012,cancellation,high,resolved,2024-07-04 08:00:00,2024-07-04 08:10:00,2024-07-05 09:00:00
+7005,5020,9020,cancellation,medium,resolved,2024-07-15 09:00:00,2024-07-15 09:15:00,2024-07-15 10:00:00
+7006,5009,9009,date_change,medium,resolved,2024-06-20 14:00:00,2024-06-20 14:30:00,2024-06-20 15:00:00
+7007,5002,9002,general_inquiry,low,open,2024-06-18 11:00:00,2024-06-18 11:45:00,
+7008,5015,9015,complaint,high,resolved,2024-07-10 16:00:00,2024-07-10 16:05:00,2024-07-10 17:30:00
