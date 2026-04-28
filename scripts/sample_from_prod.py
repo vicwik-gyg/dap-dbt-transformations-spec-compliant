@@ -2,8 +2,9 @@
 Deterministic production seed sampler for the shadow repo.
 
 Connects to Databricks via OAuth (databricks auth token --profile bridge),
-executes sampling queries defined in sampling-config.yaml, applies PII
-scrubbing, and writes reproducible CSVs to seeds/.
+executes sampling queries defined in sampling-config.yaml using the Statement
+Execution API (reliable, with timeouts and polling), applies PII scrubbing,
+and writes reproducible CSVs to seeds/.
 
 Usage:
     uv run python scripts/sample_from_prod.py [--dry-run] [--seed NAME]
@@ -11,24 +12,25 @@ Usage:
 
 import argparse
 import csv
-import hashlib
+import json
 import subprocess
 import sys
+import time
+from itertools import groupby
 from pathlib import Path
 
+import requests
 import yaml
-
-try:
-    from databricks import sql as dbsql
-except ImportError:
-    dbsql = None
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = REPO_ROOT / "scripts" / "sampling-config.yaml"
 SALT_PATH = REPO_ROOT / "scripts" / ".sampling-salt"
 
-# Default salt if none exists (first run creates one)
 DEFAULT_SALT = "shadow-repo-seed-salt-2026"
+
+# Databricks config — read from env or maestro .env
+MAESTRO_ROOT = Path.home() / "git" / "maestro"
+ENV_PATH = MAESTRO_ROOT / ".env"
 
 
 def get_salt() -> str:
@@ -40,27 +42,160 @@ def get_salt() -> str:
     return DEFAULT_SALT
 
 
+def load_dotenv() -> dict:
+    """Load .env file from maestro root."""
+    env = {}
+    if ENV_PATH.exists():
+        for line in ENV_PATH.read_text().splitlines():
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            if "=" in line:
+                key, _, val = line.partition("=")
+                env[key.strip()] = val.strip().strip('"').strip("'")
+    return env
+
+
 def get_oauth_token(profile: str) -> str:
     """Get OAuth token via databricks CLI."""
     result = subprocess.run(
         ["databricks", "auth", "token", "--profile", profile],
         capture_output=True,
         text=True,
+        timeout=10,
     )
     if result.returncode != 0:
         print(f"ERROR: Failed to get token for profile '{profile}':")
         print(f"  {result.stderr.strip()}")
         sys.exit(1)
 
-    # Parse the JSON output for access_token
-    import json
-
     try:
         data = json.loads(result.stdout)
         return data["access_token"]
     except (json.JSONDecodeError, KeyError):
-        # Fallback: token might be raw text
         return result.stdout.strip()
+
+
+def get_databricks_config(profile: str) -> tuple[str, str, str]:
+    """Get host, warehouse_id, and token."""
+    import os
+
+    env = load_dotenv()
+
+    host = os.environ.get("DATABRICKS_HOST") or env.get(
+        "DATABRICKS_HOST_BRIDGE_WORKSPACE"
+    )
+    warehouse_id = os.environ.get("DATABRICKS_WAREHOUSE_ID") or env.get(
+        "DATABRICKS_WAREHOUSE_ID", ""
+    )
+
+    if not host:
+        # Fallback: read from databricks CLI
+        result = subprocess.run(
+            ["databricks", "auth", "env", "--profile", profile],
+            capture_output=True,
+            text=True,
+        )
+        if result.returncode == 0:
+            try:
+                data = json.loads(result.stdout)
+                env_data = data.get("env", data)
+                host = env_data.get("DATABRICKS_HOST", "")
+            except json.JSONDecodeError:
+                pass
+
+    if not host:
+        print("ERROR: Cannot determine Databricks host.")
+        print("  Set DATABRICKS_HOST_BRIDGE_WORKSPACE in maestro .env")
+        sys.exit(1)
+
+    host = host.rstrip("/")
+    if not host.startswith("http"):
+        host = f"https://{host}"
+
+    token = get_oauth_token(profile)
+    return host, warehouse_id, token
+
+
+def submit_query(host: str, token: str, warehouse_id: str, sql: str) -> dict:
+    """Submit query via Statement Execution API."""
+    url = f"{host}/api/2.0/sql/statements"
+    headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
+    payload = {
+        "statement": sql,
+        "warehouse_id": warehouse_id,
+        "wait_timeout": "0s",
+        "disposition": "INLINE",
+        "catalog": "production",
+    }
+
+    resp = requests.post(url, headers=headers, json=payload, timeout=30)
+    resp.raise_for_status()
+    return resp.json()
+
+
+def poll_result(host: str, token: str, statement_id: str, timeout: int = 300) -> dict:
+    """Poll for query completion."""
+    url = f"{host}/api/2.0/sql/statements/{statement_id}"
+    headers = {"Authorization": f"Bearer {token}"}
+
+    start = time.monotonic()
+    poll_interval = 1.0
+
+    while True:
+        elapsed = time.monotonic() - start
+        if elapsed > timeout:
+            print(f"  ERROR: Query timed out after {timeout}s")
+            try:
+                requests.post(f"{url}/cancel", headers=headers, timeout=5)
+            except Exception:
+                pass
+            sys.exit(1)
+
+        resp = requests.get(url, headers=headers, timeout=30)
+        resp.raise_for_status()
+        data = resp.json()
+
+        state = data.get("status", {}).get("state", "UNKNOWN")
+
+        if state == "SUCCEEDED":
+            return data
+        elif state in ("FAILED", "CANCELED", "CLOSED"):
+            error = data.get("status", {}).get("error", {})
+            msg = error.get("message", state)
+            print(f"  ERROR: Query {state}: {msg}")
+            return None
+
+        time.sleep(min(poll_interval, 3.0))
+        poll_interval *= 1.5
+
+
+def execute_query(host: str, token: str, warehouse_id: str, sql: str) -> list[dict] | None:
+    """Execute SQL and return list of dicts."""
+    result = submit_query(host, token, warehouse_id, sql)
+    state = result.get("status", {}).get("state", "UNKNOWN")
+    statement_id = result.get("statement_id", "")
+
+    if state in ("PENDING", "RUNNING"):
+        print(f"    Statement {statement_id} polling...")
+        result = poll_result(host, token, statement_id)
+        if result is None:
+            return None
+    elif state == "SUCCEEDED":
+        pass
+    else:
+        error = result.get("status", {}).get("error", {})
+        msg = error.get("message", state)
+        print(f"  ERROR: Query {state}: {msg}")
+        return None
+
+    # Parse result
+    manifest = result.get("manifest", {})
+    columns = manifest.get("schema", {}).get("columns", [])
+    col_names = [c["name"] for c in columns]
+    data_array = result.get("result", {}).get("data_array", [])
+
+    return [dict(zip(col_names, row)) for row in data_array]
 
 
 def load_config() -> dict:
@@ -69,65 +204,12 @@ def load_config() -> dict:
         return yaml.safe_load(f)
 
 
-def get_databricks_config(profile: str) -> tuple[str, str]:
-    """Get host and http_path from databricks CLI profile or env vars."""
-    import os
-
-    host = os.environ.get("DATABRICKS_HOST")
-    http_path = os.environ.get("DATABRICKS_HTTP_PATH")
-
-    if host and http_path:
-        return host, http_path
-
-    # Read from databricks CLI config
-    result = subprocess.run(
-        ["databricks", "auth", "env", "--profile", profile],
-        capture_output=True,
-        text=True,
-    )
-    if result.returncode == 0:
-        import json
-
-        try:
-            env_data = json.loads(result.stdout)
-            host = host or env_data.get("DATABRICKS_HOST", "")
-            # http_path not in auth env — use default serverless
-            http_path = http_path or "/sql/1.0/warehouses/auto"
-        except json.JSONDecodeError:
-            pass
-
-    if not host:
-        print("ERROR: Cannot determine Databricks host.")
-        print("  Set DATABRICKS_HOST env var or configure databricks CLI profile.")
-        sys.exit(1)
-
-    return host, http_path or "/sql/1.0/warehouses/auto"
-
-
-def connect(config: dict, token: str):
-    """Create Databricks SQL connection."""
-    if dbsql is None:
-        print("ERROR: databricks-sql-connector not installed.")
-        print("  Run: uv add databricks-sql-connector")
-        sys.exit(1)
-
-    profile = config["connection"]["auth_profile"]
-    host, http_path = get_databricks_config(profile)
-
-    return dbsql.connect(
-        server_hostname=host,
-        http_path=http_path,
-        access_token=token,
-    )
-
-
 def resolve_query(query_template: str, collected_ids: dict) -> str:
     """Replace {{placeholder}} tokens with collected FK values."""
     for key, values in collected_ids.items():
         placeholder = "{{" + key + "}}"
         if placeholder in query_template:
             if not values:
-                # No matching IDs — return query that yields 0 rows
                 query_template = query_template.replace(
                     placeholder, "SELECT NULL WHERE 1=0"
                 )
@@ -142,10 +224,7 @@ def compute_valid_to(rows: list[dict]) -> list[dict]:
     if not rows:
         return rows
 
-    # Group by supplier_id
-    from itertools import groupby
-
-    rows_sorted = sorted(rows, key=lambda r: (r["supplier_id"], r["valid_from"] or ""))
+    rows_sorted = sorted(rows, key=lambda r: (r["supplier_id"] or "", r["valid_from"] or ""))
     result = []
 
     for _supplier_id, group in groupby(rows_sorted, key=lambda r: r["supplier_id"]):
@@ -173,7 +252,6 @@ def write_csv(rows: list[dict], target_path: Path) -> int:
         writer = csv.DictWriter(f, fieldnames=fieldnames, quoting=csv.QUOTE_MINIMAL)
         writer.writeheader()
         for row in rows:
-            # Normalize None → empty string for CSV
             writer.writerow({k: ("" if v is None else v) for k, v in row.items()})
 
     return len(rows)
@@ -186,7 +264,9 @@ def extract_pk_values(rows: list[dict], pk_column: str) -> list:
 
 def run_sampling(
     config: dict,
-    connection,
+    host: str,
+    token: str,
+    warehouse_id: str,
     dry_run: bool = False,
     only_seed: str | None = None,
 ):
@@ -195,7 +275,6 @@ def run_sampling(
     seeds = config["seeds"]
 
     if only_seed:
-        # Find the seed and all its dependencies
         seed_names = {s["name"] for s in seeds}
         if only_seed not in seed_names:
             print(f"ERROR: Seed '{only_seed}' not found in config.")
@@ -205,7 +284,6 @@ def run_sampling(
     for seed_cfg in seeds:
         name = seed_cfg["name"]
         if only_seed and name != only_seed:
-            # Still run dependencies
             deps = seed_cfg.get("depends_on", [])
             if only_seed not in _get_all_dependents(seeds, name):
                 continue
@@ -225,14 +303,11 @@ def run_sampling(
 
         # Execute query
         print(f"  Executing query...")
-        cursor = connection.cursor()
-        try:
-            cursor.execute(query)
-            columns = [desc[0] for desc in cursor.description]
-            raw_rows = cursor.fetchall()
-            rows = [dict(zip(columns, row)) for row in raw_rows]
-        finally:
-            cursor.close()
+        rows = execute_query(host, token, warehouse_id, query)
+
+        if rows is None:
+            print(f"  FAILED — skipping {name}")
+            continue
 
         print(f"  Fetched {len(rows)} rows")
 
@@ -283,23 +358,17 @@ def main():
 
     if args.dry_run:
         print("  Mode:   DRY RUN (no queries executed)")
-        run_sampling(config, connection=None, dry_run=True, only_seed=args.seed)
+        run_sampling(config, "", "", "", dry_run=True, only_seed=args.seed)
         return
 
-    # Get OAuth token
+    # Get Databricks config
     profile = config["connection"]["auth_profile"]
     print(f"  Auth:   OAuth via profile '{profile}'")
-    token = get_oauth_token(profile)
-    print(f"  Token:  {'[obtained]'}")
+    host, warehouse_id, token = get_databricks_config(profile)
+    print(f"  Host:   {host}")
+    print(f"  Warehouse: {warehouse_id or '[auto/serverless]'}")
 
-    # Connect
-    connection = connect(config, token)
-    print(f"  Connected to Databricks")
-
-    try:
-        run_sampling(config, connection, dry_run=False, only_seed=args.seed)
-    finally:
-        connection.close()
+    run_sampling(config, host, token, warehouse_id, dry_run=False, only_seed=args.seed)
 
 
 if __name__ == "__main__":
