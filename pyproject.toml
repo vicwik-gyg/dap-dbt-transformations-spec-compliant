@@ -1,0 +1,8 @@
+[project]
+name = "dap-dbt-transformations-spec-compliant"
+version = "1.0.0"
+requires-python = ">= 3.12"
+dependencies = [
+    "dbt-core==1.10.20",
+    "dbt-databricks==1.10.9",
+]

@@ -27,27 +27,19 @@ models:
     # ── Staging: views or ephemeral, no joins ──
     staging:
       +materialized: view
-      +schema: "spec_compliant_staging"
       +tags: [layer:staging]
 
     # ── Intermediate: views or ephemeral ──
     intermediate:
       +materialized: view
-      +schema: "spec_compliant_intermediate"
       +tags: [layer:intermediate]
 
     # ── Marts: tables (incremental for large models) ──
     marts:
       +materialized: table
-      +schema: "spec_compliant_marts"
       +tags: [layer:marts]
 
 
 seeds:
   dap_dbt_transformations_spec_compliant:
     +file_format: delta
-    +schema: "spec_compliant_seeds"
-
-vars:
-  # Schema prefix for testing catalog isolation
-  spec_compliant_schema_prefix: "spec_compliant_"

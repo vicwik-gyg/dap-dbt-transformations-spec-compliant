@@ -6,7 +6,7 @@ sources:
       Seed data representing a representative slice of the GYG data platform.
       These seeds simulate source tables from Kafka, Debezium mirrors, and
       application databases. In the real repo these would be Databricks sources.
-    schema: "spec_compliant_seeds"
+    schema: "dbt_default"
     tables:
       - name: seed_destinations
         description: Reference data for travel destinations (simulates db_mirror_dbz.catalog__location).

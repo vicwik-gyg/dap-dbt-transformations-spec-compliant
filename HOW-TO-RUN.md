@@ -2,14 +2,51 @@
 
 ## Prerequisites
 
-- **dbt-core** >= 1.7.0
-- **dbt-databricks** adapter
-- **Databricks testing-catalog token** — stored as `DATABRICKS_TOKEN` env var
-- **~/.dbt/profiles.yml** with the `dap_dbt_transformations` profile pointing to testing catalog
+- **Python** >= 3.12
+- **uv** — Python package manager ([install](https://docs.astral.sh/uv/getting-started/installation/))
+- **Databricks CLI** with OAuth login configured (see below)
+- **~/.dbt/profiles.yml** with the `dap_dbt_transformations` profile (see below)
 
-## Profile setup
+## One-time setup
 
-Your `~/.dbt/profiles.yml` should have an entry like:
+### 1. Databricks OAuth (replaces PATs)
+
+PATs are deprecated. Use OAuth U2M (user-to-machine) via the Databricks CLI:
+
+```bash
+databricks auth login \
+  --host https://dbc-d10db17d-b6c4.cloud.databricks.com/ \
+  --profile bridge
+```
+
+This opens a browser for OAuth consent. After login, verify:
+
+```bash
+databricks auth token --profile bridge
+# Should print a JSON object with access_token
+```
+
+### 2. SSL certificate bundle
+
+GYG's network proxy (Zscaler) intercepts TLS with a corporate CA. Python's bundled
+certifi doesn't trust it. Export system certs once:
+
+```bash
+security find-certificate -a -p /Library/Keychains/System.keychain > .ca-bundle.pem
+security find-certificate -a -p /System/Library/Keychains/SystemRootCertificates.keychain >> .ca-bundle.pem
+```
+
+The Makefile sets `SSL_CERT_FILE` and `REQUESTS_CA_BUNDLE` automatically.
+
+### 3. Python environment
+
+```bash
+uv sync
+```
+
+### 4. dbt profile
+
+Your `~/.dbt/profiles.yml` should have:
 
 ```yaml
 dap_dbt_transformations:
@@ -25,83 +62,60 @@ dap_dbt_transformations:
       token: "{{ env_var('DATABRICKS_TOKEN') }}"
 ```
 
-**Never set `catalog: production` in this project's context.** The schemas are
-prefixed with `spec_compliant_` to isolate from other dev work.
+The `DATABRICKS_TOKEN` env var is set automatically by the Makefile using the
+OAuth bridge profile. You do NOT need to export it manually.
+
+**Never set `catalog: production` in this project's context.**
 
 ## Commands
 
+The Makefile handles OAuth token generation and SSL configuration. Use `make`:
+
 ### Install dependencies
 ```bash
-dbt deps
-# or
 make deps
 ```
 
-### Parse (validate project structure)
-```bash
-dbt parse
-# or
-make parse
-```
-Expected: exit code 0, no errors.
-
-### Compile (generate SQL without executing)
-```bash
-dbt compile --target dev
-# or
-make compile
-```
-Expected: exit code 0, compiled SQL in `target/compiled/`.
-
 ### Seed sample data
 ```bash
-dbt seed --target dev
-# or
 make seed
 ```
-Expected: 7 seed tables created in `testing.spec_compliant_seeds`.
+Expected: 7 seed tables created in `testing.dbt_default`.
 
 ### Run models
 ```bash
-dbt run --target dev
-# or
 make run  # (runs seed first automatically)
 ```
-Expected: all ~25 models created across `spec_compliant_*` schemas.
+Expected: 21 models (11 tables, 10 views) created in `testing.dbt_default`.
 
 ### Run tests
 ```bash
-dbt test --target dev
-# or
 make test
 ```
-Expected: all tests pass (unique, not_null, accepted_values, business logic).
+Expected: 59 tests pass (unique, not_null, accepted_values, business logic).
 
 ### Full pipeline
 ```bash
 make all  # deps + seed + run + test
 ```
 
-### Semantic layer queries (requires MetricFlow)
+### Parse / Compile (no Databricks connection needed)
 ```bash
-# List available metrics
-dbt sl list metrics
-
-# Query a metric
-dbt sl query --metrics gross_bookings --group-by metric_time__day
-dbt sl query --metrics cancellation_rate --group-by destination_name
+make parse
+make compile
 ```
 
 ## Teardown
 
-To clean up testing-catalog schemas created by this project:
+All objects land in `testing.dbt_default` schema. To clean up:
 
-```bash
-make clean-testing
+```sql
+-- In Databricks SQL editor, drop tables/views prefixed with seed_, stg_, int_, dim_, fct_, agg_, metricflow_
+-- Example:
+DROP TABLE IF EXISTS testing.dbt_default.seed_bookings;
+DROP VIEW IF EXISTS testing.dbt_default.stg_seed_data__bookings;
+-- etc.
 ```
-
-This prints the SQL statements to run in the Databricks SQL editor. The schemas
-all match `spec_compliant_*`, so there's no risk of affecting other dev work.
 
 To clean local build artifacts:
 ```bash
@@ -110,25 +124,33 @@ make clean
 
 ## Troubleshooting
 
-### "Permission denied" on Databricks
-Ensure your `DATABRICKS_TOKEN` is valid and has access to the `testing` catalog.
-Check with:
+### "Invalid access token" / 403
+Your OAuth token expired (1-hour lifetime). The Makefile refreshes it on every
+invocation, but if running dbt directly you need:
+
 ```bash
-databricks sql-cli -e "SELECT current_catalog()"
+export DATABRICKS_TOKEN=$(databricks auth token --profile bridge | python3 -c "import sys,json; print(json.load(sys.stdin)['access_token'])")
 ```
 
-### "Schema not found"
-dbt creates schemas automatically on first run. If you see this on `dbt test`
-before `dbt run`, run `make run` first.
+If the bridge profile itself is expired, re-login:
+```bash
+databricks auth login --host https://dbc-d10db17d-b6c4.cloud.databricks.com/ --profile bridge
+```
 
-### "Seed file too large"
-All seeds are <100 rows by design. If you're hitting limits, ensure you're not
-accidentally pointing at a different seed directory.
+### SSL "self-signed certificate in certificate chain"
+Regenerate the CA bundle:
+```bash
+security find-certificate -a -p /Library/Keychains/System.keychain > .ca-bundle.pem
+security find-certificate -a -p /System/Library/Keychains/SystemRootCertificates.keychain >> .ca-bundle.pem
+```
 
-### "PII guard" errors
-This project contains no PII — all seed data is synthetic. If you see PII-related
-errors, check that your Databricks workspace doesn't have overly strict governance
-policies on the testing catalog.
+### "PERMISSION_DENIED: User does not have CREATE SCHEMA"
+This is expected — the project routes all objects to `dbt_default` schema.
+If you see this error, the `generate_schema_name` macro may have been reverted.
+
+### "Schema not found" / TABLE_OR_VIEW_NOT_FOUND
+Run `make seed` before `make run`. Seeds create the base tables that staging
+models reference via `source()`.
 
 ### stale compiled SQL
 ```bash
