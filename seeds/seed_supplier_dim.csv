@@ -1,0 +1,6 @@
+user_id,user_type,company_name,date_of_registration,gyg_status
+501,supplier,Barcelona Walking Tours,2023-10-01T10:00:00.000+02:00,active
+502,supplier,Rome Adventure Co,2023-09-15T10:00:00.000+02:00,active
+503,supplier,Paris Sightseeing Ltd,2024-01-01T10:00:00.000+01:00,active
+504,supplier,London Heritage Tours,2023-07-01T10:00:00.000+02:00,deactivated
+505,supplier,Vienna Music Walks,2023-05-01T10:00:00.000+02:00,active

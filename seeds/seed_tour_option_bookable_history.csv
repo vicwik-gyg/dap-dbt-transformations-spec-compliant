@@ -1,0 +1,16 @@
+tour_id,tour_option_id,binlog_timestamp,bookable_status,supplier_status,tour_status,tour_option_status
+1001,10011,2024-01-05T08:00:00.000Z,true,active,active,active
+1001,10011,2024-06-15T12:00:00.000Z,false,active,active,active
+1001,10012,2024-01-06T09:00:00.000Z,true,active,active,active
+1001,10012,2024-06-10T10:00:00.000Z,false,active,active,inactive
+1002,10021,2024-01-10T10:00:00.000Z,true,active,active,active
+1002,10021,2024-12-31T23:59:59.000Z,true,active,active,active
+1003,10031,2024-02-01T09:00:00.000Z,true,active,active,active
+1003,10031,2024-04-01T08:00:00.000Z,false,active,active,active
+1003,10031,2024-07-01T07:00:00.000Z,true,active,active,active
+1004,10041,2024-03-01T09:00:00.000Z,true,active,active,active
+1004,10041,2024-12-31T23:59:59.000Z,true,active,active,active
+1006,10061,2023-09-01T08:00:00.000Z,true,active,active,active
+1006,10061,2024-01-15T09:00:00.000Z,false,active,active,active
+1007,10071,2023-07-01T08:00:00.000Z,true,active,active,active
+1007,10071,2023-08-01T08:00:00.000Z,false,active,active,active

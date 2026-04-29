@@ -1,0 +1,167 @@
+version: 2
+
+models:
+  - name: stg_seed_data__dim_date
+    description: >
+      Staging of date spine reference data. One row per calendar date.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: date_id
+        description: Calendar date.
+        data_type: date
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_seed_data__tour_history
+    description: >
+      Staging of tour SCD2 state changes. Each row captures a point-in-time
+      change to a tour's is_online flag.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: tour_id
+        description: Tour identifier.
+        data_type: bigint
+        tests: [not_null]
+      - name: user_id
+        description: Supplier (user) who owns this tour.
+        data_type: bigint
+        tests: [not_null]
+      - name: is_online
+        description: Whether the tour was online at this point.
+        data_type: boolean
+      - name: update_timestamp_org
+        description: When the state change occurred.
+        data_type: timestamp
+        tests: [not_null]
+
+  - name: stg_seed_data__tour_option_bookable_history
+    description: >
+      Staging of tour option bookable status CDC events. Each row is a
+      binlog event indicating whether a tour option became bookable or not.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: tour_id
+        description: Parent tour identifier.
+        data_type: bigint
+        tests: [not_null]
+      - name: tour_option_id
+        description: Tour option identifier.
+        data_type: bigint
+        tests: [not_null]
+      - name: binlog_timestamp
+        description: Timestamp of the CDC event.
+        data_type: timestamp
+        tests: [not_null]
+      - name: bookable_status
+        description: Whether the option became bookable.
+        data_type: boolean
+      - name: supplier_status
+        description: Status of the supplier at this point.
+        data_type: string
+      - name: tour_status
+        description: Status of the tour at this point.
+        data_type: string
+      - name: tour_option_status
+        description: Status of the tour option at this point.
+        data_type: string
+
+  - name: stg_seed_data__reviews
+    description: >
+      Staging of tour review records. Used to determine the activation
+      threshold (3rd active review).
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: review_id
+        description: Unique review identifier.
+        data_type: bigint
+        tests:
+          - unique
+          - not_null
+      - name: activity_id
+        description: Tour (activity) this review belongs to.
+        data_type: bigint
+        tests: [not_null]
+      - name: status
+        description: Review status (active, inactive).
+        data_type: string
+        tests:
+          - accepted_values:
+              values: ['active', 'inactive']
+      - name: created_at
+        description: When the review was created.
+        data_type: timestamp
+      - name: date
+        description: Date of the review.
+        data_type: date
+
+  - name: stg_seed_data__supplier_dim
+    description: >
+      Staging of supplier dimension (latest state). Contains registration
+      metadata used for lifecycle stage universe filtering.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: user_id
+        description: Supplier user identifier.
+        data_type: bigint
+        tests:
+          - unique
+          - not_null
+      - name: user_type
+        description: Account type (supplier, internal, etc).
+        data_type: string
+      - name: company_name
+        description: Supplier company name.
+        data_type: string
+      - name: date_of_registration
+        description: When the supplier registered.
+        data_type: timestamp
+      - name: gyg_status
+        description: Current GYG platform status.
+        data_type: string
+
+  - name: stg_seed_data__supplier_status_history
+    description: >
+      Staging of supplier gyg_status transitions. Used to detect
+      self-requested deactivation windows that override lifecycle stage.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: user_id
+        description: Supplier user identifier.
+        data_type: bigint
+        tests: [not_null]
+      - name: gyg_status
+        description: Status value (active, deactivated).
+        data_type: string
+        tests: [not_null]
+      - name: deactivation_reason_id
+        description: Reason code for deactivation (null if activation).
+        data_type: int
+      - name: update_timestamp
+        description: When the status change occurred.
+        data_type: timestamp
+        tests: [not_null]

@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: int_tour_online_daily
+    description: >
+      Daily online status per tour, combining bookable history (option-level)
+      and tour history (tour-level SCD) sources. A tour is considered online
+      on a given day if either source indicates it was active at any point.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: date
+        description: Calendar date.
+        data_type: date
+        tests: [not_null]
+      - name: tour_id
+        description: Tour identifier.
+        data_type: bigint
+        tests: [not_null]
+      - name: supplier_id
+        description: Supplier who owns this tour.
+        data_type: bigint
+        tests: [not_null]
+      - name: is_online
+        description: Whether the tour was online on this date (from either source).
+        data_type: boolean

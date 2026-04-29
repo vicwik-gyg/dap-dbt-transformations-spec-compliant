@@ -71,3 +71,77 @@ sources:
             description: Unique identifier for each care ticket.
           - name: booking_id
             description: Associated booking, if any.
+
+      - name: seed_dim_date
+        description: Date spine reference table (simulates dwh.dim_date_v3).
+        columns:
+          - name: date_id
+            description: Calendar date.
+
+      - name: seed_tour_history
+        description: >
+          SCD2 history of tour attribute changes (simulates db_mirror_dbz.gyg__tour_history).
+          Each row is a state change with is_online flag.
+        columns:
+          - name: tour_id
+            description: Tour identifier.
+          - name: user_id
+            description: Supplier (user) who owns this tour.
+          - name: is_online
+            description: Whether the tour was online at this point.
+          - name: update_timestamp_org
+            description: When the state change occurred.
+
+      - name: seed_tour_option_bookable_history
+        description: >
+          CDC log of tour option bookable status changes
+          (simulates db_mirror_dbz.inventory__tour_option_bookable_history).
+        columns:
+          - name: tour_id
+            description: Parent tour identifier.
+          - name: tour_option_id
+            description: Tour option identifier.
+          - name: binlog_timestamp
+            description: Timestamp of the CDC event.
+          - name: bookable_status
+            description: Whether the option became bookable (true) or not (false).
+
+      - name: seed_reviews
+        description: Tour review records (simulates production.core.fact_review).
+        columns:
+          - name: review_id
+            description: Unique review identifier.
+          - name: activity_id
+            description: Tour (activity) this review belongs to.
+          - name: status
+            description: Review status (active, inactive).
+          - name: created_at
+            description: When the review was created.
+
+      - name: seed_supplier_dim
+        description: >
+          Supplier dimension latest state (simulates production.core.dim_supplier).
+          Contains registration and type metadata for lifecycle filtering.
+        columns:
+          - name: user_id
+            description: Supplier user identifier.
+          - name: user_type
+            description: Account type (supplier, internal, etc).
+          - name: company_name
+            description: Supplier company name.
+          - name: date_of_registration
+            description: When the supplier registered.
+
+      - name: seed_supplier_status_history
+        description: >
+          Supplier gyg_status change history (simulates db_mirror_dbz.gyg__supplier_history).
+          Used to detect self-requested deactivation windows.
+        columns:
+          - name: user_id
+            description: Supplier user identifier.
+          - name: gyg_status
+            description: Status value (active, deactivated).
+          - name: deactivation_reason_id
+            description: Reason code for deactivation (null if activation).
+          - name: update_timestamp
+            description: When the status change occurred.
