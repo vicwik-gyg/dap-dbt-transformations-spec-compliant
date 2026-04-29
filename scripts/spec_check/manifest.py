@@ -83,3 +83,83 @@ def get_model_prefix(node: dict[str, Any]) -> str:
         if name.startswith(prefix):
             return prefix
     return ""
+
+
+def is_rule_suppressed(node: dict[str, Any], rule_name: str) -> tuple[bool, str | None]:
+    """Check if a rule is suppressed for a node via meta pragma.
+
+    Looks for spec_check_suppress in model-level or column-level meta:
+        meta:
+          spec_check_suppress:
+            - rule: "tests.accepted_values_on_enums"
+              justification: "Open-domain column with unbounded values"
+
+    Or the shorthand list form:
+        meta:
+          spec_check_suppress: ["tests.accepted_values_on_enums"]
+
+    Returns (suppressed, justification) tuple.
+    """
+    meta = node.get("config", {}).get("meta", {})
+    if not meta:
+        meta = node.get("meta", {})
+
+    suppressions = meta.get("spec_check_suppress", [])
+    if not suppressions:
+        return False, None
+
+    for entry in suppressions:
+        if isinstance(entry, str):
+            if entry == rule_name:
+                return True, None
+        elif isinstance(entry, dict):
+            if entry.get("rule") == rule_name:
+                return True, entry.get("justification")
+
+    return False, None
+
+
+def is_column_rule_suppressed(
+    node: dict[str, Any], column_name: str, rule_name: str
+) -> tuple[bool, str | None]:
+    """Check if a rule is suppressed for a specific column via column-level meta.
+
+    Looks in the column's meta for spec_check_suppress pragma.
+    """
+    columns = node.get("columns", {})
+    col_info = columns.get(column_name, {})
+    meta = col_info.get("meta", {})
+
+    suppressions = meta.get("spec_check_suppress", [])
+    if not suppressions:
+        return False, None
+
+    for entry in suppressions:
+        if isinstance(entry, str):
+            if entry == rule_name:
+                return True, None
+        elif isinstance(entry, dict):
+            if entry.get("rule") == rule_name:
+                return True, entry.get("justification")
+
+    return False, None
+
+
+def model_exists_in_manifest(model_name: str, manifest: dict[str, Any]) -> bool:
+    """Check if a model (by name) exists in the manifest."""
+    nodes = manifest.get("nodes", {})
+    for node in nodes.values():
+        if node.get("resource_type") == "model" and node.get("name") == model_name:
+            return True
+    return False
+
+
+# Models that are dbt-framework-required utilities, not user-authored content.
+_FRAMEWORK_MODELS = frozenset({"metricflow_time_spine"})
+
+
+def is_framework_model(node: dict[str, Any]) -> bool:
+    """Check if a node is a dbt-framework utility model (not user content)."""
+    return node.get("name", "") in _FRAMEWORK_MODELS
+
+

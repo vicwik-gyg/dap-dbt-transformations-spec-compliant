@@ -7,7 +7,7 @@ import sys
 from pathlib import Path
 
 from .formatters import format_human, format_json, format_markdown, format_matrix
-from .manifest import get_layer, get_model_nodes, load_manifest
+from .manifest import get_layer, get_model_nodes, is_rule_suppressed, load_manifest
 from .models import Result, RuleResult
 from .registry import get_all_rules, get_rule_info
 
@@ -59,6 +59,20 @@ def run_checks(
                         )
                     )
                     continue
+
+            # Check model-level suppression
+            suppressed, justification = is_rule_suppressed(node, rule_name)
+            if suppressed:
+                reason = justification or "no justification provided"
+                results.append(
+                    RuleResult(
+                        model=node["name"],
+                        rule=rule_name,
+                        result=Result.SUPPRESSED,
+                        finding=f"Suppressed: {reason}",
+                    )
+                )
+                continue
 
             fn = all_rules[rule_name]
             try:

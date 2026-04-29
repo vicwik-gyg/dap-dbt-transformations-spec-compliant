@@ -21,6 +21,7 @@ def format_markdown(results: list[RuleResult]) -> str:
     pass_count = sum(1 for r in results if r.result == Result.PASS)
     dev_count = sum(1 for r in results if r.result == Result.DEVIATES)
     na_count = sum(1 for r in results if r.result == Result.NA)
+    sup_count = sum(1 for r in results if r.result == Result.SUPPRESSED)
     total = pass_count + dev_count
 
     if total > 0:
@@ -36,6 +37,7 @@ def format_markdown(results: list[RuleResult]) -> str:
     lines.append(f"| PASS | {pass_count} |")
     lines.append(f"| DEVIATES | {dev_count} |")
     lines.append(f"| N/A | {na_count} |")
+    lines.append(f"| SUPPRESSED | {sup_count} |")
     lines.append(f"| Compliance rate | {pct:.1f}% |")
     lines.append("")
 
@@ -65,6 +67,8 @@ def format_markdown(results: list[RuleResult]) -> str:
                 cells.append("-")
             elif r.result == Result.PASS:
                 cells.append("PASS")
+            elif r.result == Result.SUPPRESSED:
+                cells.append("~SUP~")
             else:
                 cells.append("**DEV**")
         lines.append(f"| {model} | {' | '.join(cells)} |")
@@ -84,6 +88,17 @@ def format_markdown(results: list[RuleResult]) -> str:
         lines.append("## Findings")
         lines.append("")
         lines.append("No deviations found. All models are spec-compliant.")
+        lines.append("")
+
+    # Suppressions section
+    suppressions = [r for r in results if r.result == Result.SUPPRESSED]
+    if suppressions:
+        lines.append("## Suppressions")
+        lines.append("")
+        lines.append("Rules suppressed via `spec_check_suppress` meta pragma:")
+        lines.append("")
+        for r in sorted(suppressions, key=lambda x: (x.model, x.rule)):
+            lines.append(f"- **{r.model}** / `{r.rule}`: {r.finding}")
         lines.append("")
 
     return "\n".join(lines)

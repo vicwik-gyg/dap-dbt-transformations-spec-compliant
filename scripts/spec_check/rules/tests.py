@@ -4,7 +4,13 @@ from __future__ import annotations
 
 from typing import Any
 
-from ..manifest import get_layer, get_model_prefix, get_tests_for_model
+from ..manifest import (
+    get_layer,
+    get_model_prefix,
+    get_tests_for_model,
+    is_column_rule_suppressed,
+    model_exists_in_manifest,
+)
 from ..models import Result, RuleResult
 from ..registry import rule
 
@@ -178,8 +184,18 @@ def check_accepted_values_on_enums(
 
     all_tests = get_tests_for_model(model_uid, manifest)
     findings = []
+    suppressed = []
 
     for col in enum_cols:
+        # Check column-level suppression
+        is_suppressed, justification = is_column_rule_suppressed(
+            node, col, "tests.accepted_values_on_enums"
+        )
+        if is_suppressed:
+            reason = justification or "no justification provided"
+            suppressed.append(f"{col} (suppressed: {reason})")
+            continue
+
         has_accepted = any(
             t.get("column_name") == col
             and t.get("test_metadata", {}).get("name") == "accepted_values"
@@ -187,6 +203,15 @@ def check_accepted_values_on_enums(
         )
         if not has_accepted:
             findings.append(f"Enum column '{col}' missing accepted_values test")
+
+    # If all enum columns are suppressed, return SUPPRESSED
+    if not findings and suppressed:
+        return RuleResult(
+            model=model_name,
+            rule="tests.accepted_values_on_enums",
+            result=Result.SUPPRESSED,
+            finding=f"Suppressed: {'; '.join(suppressed)}",
+        )
 
     if findings:
         return RuleResult(
@@ -203,6 +228,36 @@ def check_accepted_values_on_enums(
         result=Result.PASS,
         spec_ref=SPEC_REF_TESTING,
     )
+
+
+def _fk_target_exists(column_name: str, source_node: dict[str, Any], manifest: dict[str, Any]) -> tuple[bool, str | None]:
+    """Check if any conventional FK target model exists in the manifest.
+
+    Checks (in order): dim_<entity>s, dim_<entity>, stg_<source>__<entity>s.
+    Returns (exists, checked_target_name) where checked_target_name is the
+    primary candidate that was looked up.
+    """
+    if not column_name.endswith("_id"):
+        return True, None
+    entity = column_name[:-3]  # strip _id
+
+    # Check dim variants
+    candidates = [f"dim_{entity}s", f"dim_{entity}"]
+
+    # For staging models, also check sibling staging model
+    layer = get_layer(source_node)
+    if layer == "staging":
+        source_name = source_node.get("name", "")
+        if "__" in source_name:
+            source_prefix = source_name.split("__")[0]
+            candidates.append(f"{source_prefix}__{entity}s")
+            candidates.append(f"{source_prefix}__{entity}")
+
+    for candidate in candidates:
+        if model_exists_in_manifest(candidate, manifest):
+            return True, candidate
+
+    return False, candidates[0]
 
 
 @rule(
@@ -231,6 +286,7 @@ def check_relationships_on_fks(
 
     all_tests = get_tests_for_model(model_uid, manifest)
     findings = []
+    unverifiable = []
 
     for col in fk_cols:
         has_relationship = any(
@@ -238,8 +294,26 @@ def check_relationships_on_fks(
             and t.get("test_metadata", {}).get("name") == "relationships"
             for t in all_tests
         )
-        if not has_relationship:
+        if has_relationship:
+            continue
+
+        # Check if any conventional target model exists in the manifest
+        target_exists, target_name = _fk_target_exists(col, node, manifest)
+        if not target_exists:
+            unverifiable.append(
+                f"FK column '{col}' — target {target_name} not in project"
+            )
+        else:
             findings.append(f"FK column '{col}' missing relationships test")
+
+    # If all FK columns are unverifiable (target not in manifest), return NA
+    if not findings and unverifiable:
+        return RuleResult(
+            model=model_name,
+            rule="tests.relationships_on_fks",
+            result=Result.NA,
+            finding="; ".join(unverifiable),
+        )
 
     if findings:
         return RuleResult(
