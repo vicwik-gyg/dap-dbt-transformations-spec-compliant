@@ -47,6 +47,10 @@ models:
         description: Destination where the tour operates.
       - name: tour_category
         description: Tour category.
+        meta:
+          spec_check_suppress:
+            - rule: "tests.accepted_values_on_enums"
+              justification: "Open-domain classification from source — unbounded set of values"
       - name: price_in_cents
         description: Price per person in cents.
       - name: currency_code

@@ -81,6 +81,10 @@ models:
       - name: tour_category
         description: Tour category.
         tests: [not_null]
+        meta:
+          spec_check_suppress:
+            - rule: "tests.accepted_values_on_enums"
+              justification: "Open-domain classification from source — unbounded set of values"
       - name: total_bookings
         description: Total bookings.
       - name: confirmed_bookings

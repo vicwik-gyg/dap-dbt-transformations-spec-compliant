@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
+from ..manifest import is_framework_model
 from ..models import Result, RuleResult
 from ..registry import rule
 
@@ -20,6 +21,26 @@ def check_model_description(
     node: dict[str, Any], manifest: dict[str, Any]
 ) -> RuleResult:
     model_name = node["name"]
+
+    # Exclude external/package-generated models (not ours to document)
+    project_name = manifest.get("metadata", {}).get("project_name", "")
+    if node.get("package_name") and node["package_name"] != project_name:
+        return RuleResult(
+            model=model_name,
+            rule="docs.model_description",
+            result=Result.NA,
+            finding="External package model — not ours to document",
+        )
+
+    # Exclude dbt-framework utility models (e.g. metricflow_time_spine)
+    if is_framework_model(node):
+        return RuleResult(
+            model=model_name,
+            rule="docs.model_description",
+            result=Result.NA,
+            finding="Framework utility model — not user content",
+        )
+
     description = node.get("description", "").strip()
 
     if not description:
@@ -49,6 +70,14 @@ def check_column_description(
     node: dict[str, Any], manifest: dict[str, Any]
 ) -> RuleResult:
     model_name = node["name"]
+
+    # Exclude framework models
+    if is_framework_model(node):
+        return RuleResult(
+            model=model_name, rule="docs.column_description", result=Result.NA,
+            finding="Framework utility model — not user content",
+        )
+
     columns = node.get("columns", {})
 
     if not columns:
