@@ -1,0 +1,202 @@
+# Sampling configuration for deterministic production seed generation.
+# Each entry maps a seed file to its production source.
+# Queries verified against actual production schemas (2026-04-28).
+
+connection:
+  # Host and warehouse read from maestro .env (DATABRICKS_HOST_BRIDGE_WORKSPACE, DATABRICKS_WAREHOUSE_ID)
+  auth_profile: bridge  # uses `databricks auth token --profile bridge`
+
+seeds:
+  - name: seed_destinations
+    source_query: |
+      SELECT
+        id as destination_id,
+        name as destination_name,
+        CASE
+          WHEN instr(name, ', ') > 0 THEN substring(name, 1, instr(name, ', ') - 1)
+          ELSE name
+        END as destination_city,
+        CASE
+          WHEN instr(name, ', ') > 0 THEN substring(name, instr(name, ', ') + 2)
+          ELSE 'Unknown'
+        END as destination_country,
+        CASE
+          WHEN name LIKE '%, Germany' OR name LIKE '%, France' OR name LIKE '%, Spain'
+               OR name LIKE '%, Italy' OR name LIKE '%, Netherlands' OR name LIKE '%, Poland'
+               OR name LIKE '%, Portugal' OR name LIKE '%, Austria' OR name LIKE '%, Belgium'
+               OR name LIKE '%, Ireland' OR name LIKE '%, United Kingdom' OR name LIKE '%, Greece'
+               OR name LIKE '%, Czech Republic' OR name LIKE '%, Sweden' OR name LIKE '%, Norway'
+               OR name LIKE '%, Denmark' OR name LIKE '%, Finland' OR name LIKE '%, Switzerland'
+               OR name LIKE '%, Croatia' OR name LIKE '%, Hungary' OR name LIKE '%, Romania'
+               OR name LIKE '%, Iceland' OR name LIKE '%, Turkey' THEN 'Europe'
+          WHEN name LIKE '%, United States' OR name LIKE '%, Canada' OR name LIKE '%, Mexico'
+               THEN 'North America'
+          WHEN name LIKE '%, Brazil' OR name LIKE '%, Argentina' OR name LIKE '%, Colombia'
+               OR name LIKE '%, Chile' OR name LIKE '%, Peru' THEN 'South America'
+          WHEN name LIKE '%, Japan' OR name LIKE '%, Thailand' OR name LIKE '%, Indonesia'
+               OR name LIKE '%, Vietnam' OR name LIKE '%, India' OR name LIKE '%, China'
+               OR name LIKE '%, South Korea' OR name LIKE '%, Singapore' OR name LIKE '%, Malaysia'
+               OR name LIKE '%, Philippines' OR name LIKE '%, Taiwan' THEN 'Asia'
+          WHEN name LIKE '%, Australia' OR name LIKE '%, New Zealand' THEN 'Oceania'
+          WHEN name LIKE '%, Egypt' OR name LIKE '%, South Africa' OR name LIKE '%, Morocco'
+               OR name LIKE '%, Kenya' OR name LIKE '%, Ethiopia' OR name LIKE '%, Tanzania'
+               THEN 'Africa'
+          WHEN name LIKE '%, UAE' OR name LIKE '%, Israel' OR name LIKE '%, Jordan'
+               OR name LIKE '%, Saudi Arabia' OR name LIKE '%, Qatar' THEN 'Middle East'
+          ELSE 'Other'
+        END as destination_continent,
+        CASE WHEN status = 'active' THEN true ELSE false END as is_active,
+        update_timestamp as created_at,
+        update_timestamp as updated_at
+      FROM production.db_mirror_dbz.`catalog__location`
+      WHERE type = 'city'
+        AND abs(hash(cast(id as string))) % 30 < 1
+      ORDER BY id
+    pk_column: destination_id
+    target_file: seeds/seed_destinations.csv
+    fk_filter: destination_ids
+    sample_note: "~1K from ~30K city-type locations"
+
+  - name: seed_suppliers
+    source_query: |
+      SELECT DISTINCT
+        s.id as supplier_id,
+        s.name as supplier_name,
+        concat('supplier_', cast(s.id as string), '@redacted.example') as supplier_email,
+        t.primary_location_id as destination_id,
+        CASE WHEN s.verification_status = 'verified' THEN true ELSE false END as is_verified,
+        CASE WHEN s.gyg_status = 'active' THEN true ELSE false END as is_active,
+        s.update_timestamp as created_at,
+        s.update_timestamp as updated_at
+      FROM production.db_mirror_dbz.`catalog__supplier` s
+      JOIN production.db_mirror_dbz.`catalog__tour` t
+        ON t.supplier_id = s.id
+      WHERE t.primary_location_id IN ({{destination_ids}})
+        AND abs(hash(cast(s.id as string))) % 7 < 1
+      ORDER BY supplier_id
+    pk_column: supplier_id
+    target_file: seeds/seed_suppliers.csv
+    depends_on: [seed_destinations]
+    fk_filter: supplier_ids
+    sample_note: "~1K suppliers with tours in sampled destinations (7433 base / 7)"
+
+  - name: seed_supplier_history
+    source_query: |
+      SELECT
+        id as supplier_id,
+        name as supplier_name,
+        concat('supplier_', cast(id as string), '@redacted.example') as supplier_email,
+        NULL as destination_id,
+        CASE WHEN verification_status = 'verified' THEN true ELSE false END as is_verified,
+        CASE WHEN gyg_status = 'active' THEN true ELSE false END as is_active,
+        binlog_timestamp as valid_from,
+        operation
+      FROM production.db_mirror_dbz.`catalog__supplier_history`
+      WHERE id IN ({{supplier_ids}})
+      ORDER BY id, binlog_timestamp
+    pk_column: supplier_id
+    target_file: seeds/seed_supplier_history.csv
+    depends_on: [seed_suppliers]
+    fk_filter: supplier_ids
+    sample_note: "All history rows for sampled suppliers"
+    post_process: compute_valid_to
+
+  - name: seed_tours
+    source_query: |
+      SELECT
+        t.id as tour_id,
+        COALESCE(tt.title, 'Untitled') as tour_name,
+        t.supplier_id,
+        t.primary_location_id as destination_id,
+        COALESCE(t.category, 'unknown') as tour_category,
+        COALESCE(CAST(t.commission_rate * 100 AS BIGINT), 0) as price_in_cents,
+        'EUR' as currency_code,
+        COALESCE(topt.duration, 0) as duration_minutes,
+        CASE WHEN t.gyg_status = 'active' AND t.online = true THEN true ELSE false END as is_active,
+        t.creation_timestamp as created_at,
+        t.update_timestamp as updated_at
+      FROM production.db_mirror_dbz.`catalog__tour` t
+      LEFT JOIN production.db_mirror_dbz.`catalog__tour_text` tt
+        ON t.id = tt.tour_id AND tt.language_id = 29
+      LEFT JOIN (
+        SELECT tour_id, MIN(duration) as duration
+        FROM production.db_mirror_dbz.`catalog__tour_option`
+        GROUP BY tour_id
+      ) topt ON t.id = topt.tour_id
+      WHERE t.supplier_id IN ({{supplier_ids}})
+        AND abs(hash(cast(t.id as string))) % 27 < 1
+      ORDER BY t.id
+    pk_column: tour_id
+    target_file: seeds/seed_tours.csv
+    depends_on: [seed_suppliers]
+    fk_filter: tour_ids
+    sample_note: "~1K tours from sampled suppliers (~27K base / 27)"
+
+  - name: seed_bookings
+    source_query: |
+      SELECT
+        b.booking_id,
+        topt.tour_id as tour_id,
+        abs(hash(cast(b.customer_id_anon as string))) % 2147483647 as customer_id,
+        b.supplier_id,
+        t.primary_location_id as destination_id,
+        b.status as booking_status,
+        b.total_number_of_participants as number_of_participants,
+        CAST(b.customer_total_price * 100 AS BIGINT) as total_price_in_cents,
+        'EUR' as currency_code,
+        b.commission_rate,
+        b.creation_timestamp as checkout_at,
+        b.tour_start_datetime as travel_at,
+        b.creation_timestamp as created_at,
+        b.date_of_cancelation as cancelled_at
+      FROM production.db_mirror_dbz.`gyg__booking` b
+      JOIN production.db_mirror_dbz.`catalog__tour_option` topt
+        ON b.tour_option_id = topt.id
+      LEFT JOIN production.db_mirror_dbz.`catalog__tour` t
+        ON topt.tour_id = t.id
+      WHERE topt.tour_id IN ({{tour_ids}})
+        AND abs(hash(cast(b.booking_id as string))) % 100 < 1
+      ORDER BY b.booking_id
+    pk_column: booking_id
+    target_file: seeds/seed_bookings.csv
+    depends_on: [seed_tours]
+    fk_filter: booking_ids
+    sample_note: "~1K bookings for sampled tours (via tour_option FK)"
+
+  - name: seed_booking_status_history
+    source_query: |
+      SELECT
+        booking_id,
+        status as booking_status,
+        update_timestamp as changed_at,
+        update_user_type as changed_by
+      FROM production.db_mirror_dbz.`gyg__booking_history`
+      WHERE booking_id IN ({{booking_ids}})
+      ORDER BY booking_id, update_timestamp
+    pk_column: booking_id
+    target_file: seeds/seed_booking_status_history.csv
+    depends_on: [seed_bookings]
+    fk_filter: booking_ids
+    sample_note: "All status history for sampled bookings"
+
+  - name: seed_care_tickets
+    source_query: |
+      SELECT
+        ticket_id,
+        booking_id,
+        abs(hash(cast(coalesce(cast(booking_id as string), '') as string))) % 2147483647 as customer_id,
+        COALESCE(contact_reason_id, 'general_inquiry') as ticket_category,
+        COALESCE(ticket_priority, 'medium') as ticket_priority,
+        status as ticket_status,
+        date_of_creation as created_at,
+        NULL as first_response_at,
+        CASE WHEN status IN ('solved', 'closed') THEN date_of_update ELSE NULL END as resolved_at
+      FROM production.care.fact_care_ticket
+      WHERE booking_id IN ({{booking_ids}})
+        AND is_ignore_ticket = false
+      ORDER BY ticket_id
+    pk_column: ticket_id
+    target_file: seeds/seed_care_tickets.csv
+    depends_on: [seed_bookings]
+    fk_filter: booking_ids
+    sample_note: "Care tickets for sampled bookings"

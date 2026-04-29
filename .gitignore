@@ -13,3 +13,4 @@ __pycache__/
 .venv/
 uv.lock
 .ca-bundle.pem
+scripts/.sampling-salt

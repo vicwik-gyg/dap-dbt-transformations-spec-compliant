@@ -1,11 +1,1145 @@
 destination_id,destination_name,destination_city,destination_country,destination_continent,is_active,created_at,updated_at
-1,Berlin,Berlin,Germany,Europe,true,2020-01-01 00:00:00,2024-06-15 10:30:00
-2,Paris,Paris,France,Europe,true,2020-01-01 00:00:00,2024-07-01 09:00:00
-3,Barcelona,Barcelona,Spain,Europe,true,2020-01-01 00:00:00,2024-05-20 14:00:00
-4,Rome,Rome,Italy,Europe,true,2020-01-01 00:00:00,2024-08-10 11:00:00
-5,London,London,United Kingdom,Europe,true,2020-01-01 00:00:00,2024-04-15 16:30:00
-6,New York,New York,United States,North America,true,2020-01-15 00:00:00,2024-09-01 08:00:00
-7,Tokyo,Tokyo,Japan,Asia,true,2020-02-01 00:00:00,2024-03-20 12:00:00
-8,Amsterdam,Amsterdam,Netherlands,Europe,true,2020-01-01 00:00:00,2024-06-01 10:00:00
-9,Lisbon,Lisbon,Portugal,Europe,true,2020-03-01 00:00:00,2024-07-15 09:30:00
-10,Prague,Prague,Czech Republic,Europe,false,2020-01-01 00:00:00,2024-02-28 17:00:00
+164,"Innsbruck, Austria",Innsbruck,Austria,Europe,true,2024-07-18T15:44:42.149+02:00,2024-07-18T15:44:42.149+02:00
+201,"Mumbai, India",Mumbai,India,Asia,true,2024-09-03T13:19:24.115+02:00,2024-09-03T13:19:24.115+02:00
+343,"Arico, Spain",Arico,Spain,Europe,true,2020-02-18T13:55:26.929+01:00,2020-02-18T13:55:26.929+01:00
+381,"Liberia, Costa Rica",Liberia,Costa Rica,Other,true,2026-04-02T06:31:55.792+02:00,2026-04-02T06:31:55.792+02:00
+423,"Las Palmas, Spain",Las Palmas,Spain,Europe,true,2024-02-23T11:59:11.679+01:00,2024-02-23T11:59:11.679+01:00
+467,"Potsdam, Germany",Potsdam,Germany,Europe,true,2024-08-27T14:13:53.938+02:00,2024-08-27T14:13:53.938+02:00
+469,"Weimar, Germany",Weimar,Germany,Europe,true,2018-06-06T11:53:02.788+02:00,2018-06-06T11:53:02.788+02:00
+474,"Timmendorfer Strand, Germany",Timmendorfer Strand,Germany,Europe,true,2024-06-03T10:11:10.582+02:00,2024-06-03T10:11:10.582+02:00
+495,"Sharjah, United Arab Emirates",Sharjah,United Arab Emirates,Other,true,2026-04-27T10:31:22.931+02:00,2026-04-27T10:31:22.931+02:00
+511,"Franklin, North Carolina, United States",Franklin,"North Carolina, United States",North America,true,2023-11-20T09:31:29.372+01:00,2023-11-20T09:31:29.372+01:00
+675,"Obidos, Portugal",Obidos,Portugal,Europe,true,2025-06-25T16:32:41.695+02:00,2025-06-25T16:32:41.695+02:00
+691,"Les Baux-de-Provence, France",Les Baux-de-Provence,France,Europe,true,2025-03-10T09:14:01.122+01:00,2025-03-10T09:14:01.122+01:00
+829,"Fes, Morocco",Fes,Morocco,Africa,true,2018-06-06T12:19:56.490+02:00,2018-06-06T12:19:56.490+02:00
+852,"Windhoek, Namibia",Windhoek,Namibia,Other,true,2025-06-25T16:33:14.536+02:00,2025-06-25T16:33:14.536+02:00
+913,"Chiang Rai, Thailand",Chiang Rai,Thailand,Asia,true,2024-09-23T15:17:06.818+02:00,2024-09-23T15:17:06.818+02:00
+967,"San Jose del Cabo, Mexico",San Jose del Cabo,Mexico,North America,true,2024-02-19T15:56:27.964+01:00,2024-02-19T15:56:27.964+01:00
+1062,"Meiringen, Switzerland",Meiringen,Switzerland,Europe,true,2024-06-28T10:45:45.267+02:00,2024-06-28T10:45:45.267+02:00
+1095,"Lalibela, Ethiopia",Lalibela,Ethiopia,Africa,true,2025-09-29T17:16:05.500+02:00,2025-09-29T17:16:05.500+02:00
+1175,"Vasto, Italy",Vasto,Italy,Europe,true,2018-06-06T12:53:17.886+02:00,2018-06-06T12:53:17.886+02:00
+1229,"An Minh Bac, Vietnam",An Minh Bac,Vietnam,Asia,true,2024-02-18T15:24:40.336+01:00,2024-02-18T15:24:40.336+01:00
+1243,"Huangshan, China",Huangshan,China,Asia,true,2023-11-23T16:18:15.030+01:00,2023-11-23T16:18:15.030+01:00
+1279,"Nashville, United States",Nashville,United States,North America,true,2025-06-25T16:33:12.563+02:00,2025-06-25T16:33:12.563+02:00
+1290,"Delft, Netherlands",Delft,Netherlands,Europe,true,2024-01-20T12:44:08.374+01:00,2024-01-20T12:44:08.374+01:00
+1379,"Tbilisi, Georgia",Tbilisi,Georgia,Other,true,2025-08-13T18:50:22.410+02:00,2025-08-13T18:50:22.410+02:00
+1495,"San Salvador, El Salvador",San Salvador,El Salvador,Other,true,2023-11-06T14:40:59.341+01:00,2023-11-06T14:40:59.341+01:00
+1550,"Odessa, Ukraine",Odessa,Ukraine,Other,true,2024-02-18T22:19:11.802+01:00,2024-02-18T22:19:11.802+01:00
+1562,"Seward, United States",Seward,United States,North America,true,2025-11-14T13:51:24.490+01:00,2025-11-14T13:51:24.490+01:00
+1581,"Burano, Italy",Burano,Italy,Europe,true,2025-06-10T17:12:38.838+02:00,2025-06-10T17:12:38.838+02:00
+1601,"Wexford, Ireland",Wexford,Ireland,Europe,true,2024-04-16T09:39:19.113+02:00,2024-04-16T09:39:19.113+02:00
+1617,"Jorhat, India",Jorhat,India,Asia,true,2018-06-06T13:35:32.388+02:00,2018-06-06T13:35:32.388+02:00
+1654,"Guatemala City, Guatemala",Guatemala City,Guatemala,Other,true,2025-06-26T15:11:50.191+02:00,2025-06-26T15:11:50.191+02:00
+1667,"Redding, United States",Redding,United States,North America,true,2026-04-02T06:31:59.439+02:00,2026-04-02T06:31:59.439+02:00
+1718,"Divisadero, Mexico",Divisadero,Mexico,North America,true,2024-02-08T19:09:11.808+01:00,2024-02-08T19:09:11.808+01:00
+1768,"Anjuna, India",Anjuna,India,Asia,true,2024-09-09T10:29:41.435+02:00,2024-09-09T10:29:41.435+02:00
+1801,"Tyre, South Governorate",Tyre,South Governorate,Other,true,2025-09-29T17:15:44.150+02:00,2025-09-29T17:15:44.150+02:00
+1831,"Petrópolis, Brazil",Petrópolis,Brazil,South America,true,2023-10-03T13:45:55.372+02:00,2023-10-03T13:45:55.372+02:00
+1980,"Irgalem, Ethiopia",Irgalem,Ethiopia,Africa,true,2025-11-17T09:17:46.099+01:00,2025-11-17T09:17:46.099+01:00
+1991,"Bahir Dar, Ethiopia",Bahir Dar,Ethiopia,Africa,true,2020-02-09T13:56:06.380+01:00,2020-02-09T13:56:06.380+01:00
+2003,"Brasov, Romania",Brasov,Romania,Europe,true,2026-04-02T06:32:03.287+02:00,2026-04-02T06:32:03.287+02:00
+2012,"Sighișoara, Romania",Sighișoara,Romania,Europe,true,2023-10-03T13:50:28.835+02:00,2023-10-03T13:50:28.835+02:00
+2020,"Wondo Genet, Ethiopia",Wondo Genet,Ethiopia,Africa,true,2025-11-17T09:17:46.132+01:00,2025-11-17T09:17:46.132+01:00
+2061,"Panauti, Nepal",Panauti,Nepal,Other,true,2024-04-01T10:21:43.803+02:00,2024-04-01T10:21:43.803+02:00
+2068,"Trani, Italy",Trani,Italy,Europe,true,2018-06-06T14:19:45.387+02:00,2018-06-06T14:19:45.387+02:00
+2085,"Ericeira, Portugal",Ericeira,Portugal,Europe,true,2026-01-12T15:08:41.222+01:00,2026-01-12T15:08:41.222+01:00
+2163,"Kalavasos, Cyprus",Kalavasos,Cyprus,Other,true,2023-08-18T16:05:22.422+02:00,2023-08-18T16:05:22.422+02:00
+2171,"Martinborough, New Zealand",Martinborough,New Zealand,Oceania,true,2023-11-20T09:35:10.050+01:00,2023-11-20T09:35:10.050+01:00
+2174,"Krabi, Thailand",Krabi,Thailand,Asia,true,2026-04-02T06:32:03.467+02:00,2026-04-02T06:32:03.467+02:00
+2183,"Remagen, Germany",Remagen,Germany,Europe,true,2024-07-01T10:12:35.989+02:00,2024-07-01T10:12:35.989+02:00
+2190,"Kaub, Germany",Kaub,Germany,Europe,true,2024-07-08T10:27:39.438+02:00,2024-07-08T10:27:39.438+02:00
+2198,"Cape Canaveral, United States",Cape Canaveral,United States,North America,true,2025-06-25T16:32:41.264+02:00,2025-06-25T16:32:41.264+02:00
+2262,"Baños de Agua Santa, Ecuador",Baños de Agua Santa,Ecuador,Other,true,2024-02-18T23:45:33.187+01:00,2024-02-18T23:45:33.187+01:00
+2388,"Bad Voslau, Austria",Bad Voslau,Austria,Europe,true,2018-06-06T14:50:07.989+02:00,2018-06-06T14:50:07.989+02:00
+2411,"Vung Tau, Vietnam",Vung Tau,Vietnam,Asia,true,2024-02-14T12:18:39.782+01:00,2024-02-14T12:18:39.782+01:00
+2420,"Zirl, Austria",Zirl,Austria,Europe,true,2024-09-02T10:32:39.292+02:00,2024-09-02T10:32:39.292+02:00
+2570,"Sitka, United States",Sitka,United States,North America,true,2025-11-14T13:51:27.072+01:00,2025-11-14T13:51:27.072+01:00
+2584,"Santa Pau, Spain",Santa Pau,Spain,Europe,true,2018-06-06T15:08:46.287+02:00,2018-06-06T15:08:46.287+02:00
+2731,"Gorlitz, Germany",Gorlitz,Germany,Europe,true,2024-09-11T16:45:26.658+02:00,2024-09-11T16:45:26.658+02:00
+2788,"Exmouth, Australia",Exmouth,Australia,Oceania,true,2026-04-02T06:32:11.639+02:00,2026-04-02T06:32:11.639+02:00
+2874,"Baeza, Spain",Baeza,Spain,Europe,true,2018-06-06T16:14:21.791+02:00,2018-06-06T16:14:21.791+02:00
+2927,"Sucre, Bolivia",Sucre,Bolivia,Other,true,2025-11-14T13:51:27.850+01:00,2025-11-14T13:51:27.850+01:00
+2951,"Villa de Leyva, Colombia",Villa de Leyva,Colombia,South America,true,2025-07-25T12:34:56.260+02:00,2025-07-25T12:34:56.260+02:00
+2965,"Acqualagna, Italy",Acqualagna,Italy,Europe,true,2023-10-03T13:50:30.913+02:00,2023-10-03T13:50:30.913+02:00
+7936,"Gernika, Spain",Gernika,Spain,Europe,true,2024-02-21T15:14:43.329+01:00,2024-02-21T15:14:43.329+01:00
+32249,"Mardin, Turkey",Mardin,Turkey,Europe,true,2024-01-16T16:58:14.889+01:00,2024-01-16T16:58:14.889+01:00
+32275,"Imphal, India",Imphal,India,Asia,true,2026-04-02T06:32:10.484+02:00,2026-04-02T06:32:10.484+02:00
+32344,"Dali, China",Dali,China,Asia,true,2026-04-02T06:32:10.543+02:00,2026-04-02T06:32:10.543+02:00
+32350,"Puerto Varas, Chile",Puerto Varas,Chile,South America,true,2025-11-14T13:50:46.790+01:00,2025-11-14T13:50:46.790+01:00
+32394,"Bluefields, Nicaragua",Bluefields,Nicaragua,Other,true,2025-11-14T13:50:47.216+01:00,2025-11-14T13:50:47.216+01:00
+32402,"Lomé, Togo",Lomé,Togo,Other,true,2025-11-14T13:51:29.392+01:00,2025-11-14T13:51:29.392+01:00
+32570,"Gettysburg, United States",Gettysburg,United States,North America,true,2023-11-20T09:37:37.775+01:00,2023-11-20T09:37:37.775+01:00
+32578,"Kuwait City, Kuwait",Kuwait City,Kuwait,Other,true,2025-11-14T13:50:47.391+01:00,2025-11-14T13:50:47.391+01:00
+32612,"Porto de Galinhas, Brazil",Porto de Galinhas,Brazil,South America,true,2019-12-16T09:50:27.976+01:00,2019-12-16T09:50:27.976+01:00
+32644,"Sapporo, Japan",Sapporo,Japan,Asia,true,2019-01-10T08:54:48.547+01:00,2019-01-10T08:54:48.547+01:00
+32686,"Port Angeles, United States",Port Angeles,United States,North America,true,2025-11-14T13:51:30.998+01:00,2025-11-14T13:51:30.998+01:00
+34238,"Concord, Massachusetts, United States",Concord,"Massachusetts, United States",North America,true,2023-11-20T09:16:33.179+01:00,2023-11-20T09:16:33.179+01:00
+35088,"St Catharines, Canada",St Catharines,Canada,North America,true,2019-04-18T14:27:46.508+02:00,2019-04-18T14:27:46.508+02:00
+35279,"Saint-Malo, France",Saint-Malo,France,Europe,true,2024-09-14T20:15:13.148+02:00,2024-09-14T20:15:13.148+02:00
+36446,"Glencoe, United Kingdom",Glencoe,United Kingdom,Europe,true,2025-06-25T16:32:36.058+02:00,2025-06-25T16:32:36.058+02:00
+38653,"Cape Kidnappers, New Zealand",Cape Kidnappers,New Zealand,Oceania,true,2026-04-24T10:57:42.402+02:00,2026-04-24T10:57:42.402+02:00
+39574,"Mandurah, Australia",Mandurah,Australia,Oceania,true,2025-11-14T13:51:31.466+01:00,2025-11-14T13:51:31.466+01:00
+87891,"Niagara Falls, Ontario, Canada",Niagara Falls,"Ontario, Canada",North America,true,2024-09-04T09:52:05.396+02:00,2024-09-04T09:52:05.396+02:00
+89540,"Abisko, Sweden",Abisko,Sweden,Europe,true,2025-06-25T16:32:51.286+02:00,2025-06-25T16:32:51.286+02:00
+89685,"Coral Bay, Western Australia",Coral Bay,Western Australia,Other,true,2025-12-07T11:36:11.667+01:00,2025-12-07T11:36:11.667+01:00
+89864,"Doolin, Ireland",Doolin,Ireland,Europe,true,2025-06-25T16:32:52.735+02:00,2025-06-25T16:32:52.735+02:00
+90231,"Tenganan, Indonesia",Tenganan,Indonesia,Asia,true,2025-11-07T16:36:38.180+01:00,2025-11-07T16:36:38.180+01:00
+90750,"Armação de Pêra, Portugal",Armação de Pêra,Portugal,Europe,true,2018-06-07T11:59:47.575+02:00,2018-06-07T11:59:47.575+02:00
+91281,"Arthur's Pass Village, New Zealand",Arthur's Pass Village,New Zealand,Oceania,true,2024-11-29T09:48:39.491+01:00,2024-11-29T09:48:39.491+01:00
+92756,"North Pole, Alaska, United States",North Pole,"Alaska, United States",North America,true,2023-10-19T09:25:53.342+02:00,2023-10-19T09:25:53.342+02:00
+93071,"Vermillion, South Dakota, United States",Vermillion,"South Dakota, United States",North America,true,2023-11-20T09:39:31.648+01:00,2023-11-20T09:39:31.648+01:00
+93194,"Ashland, Nebraska, United States",Ashland,"Nebraska, United States",North America,true,2023-11-20T09:17:43.415+01:00,2023-11-20T09:17:43.415+01:00
+93344,"Bismarck, North Dakota, United States",Bismarck,"North Dakota, United States",North America,true,2024-07-25T16:58:35.233+02:00,2024-07-25T16:58:35.233+02:00
+93978,"Hutchinson, Kansas, United States",Hutchinson,"Kansas, United States",North America,true,2025-11-14T13:51:32.810+01:00,2025-11-14T13:51:32.810+01:00
+94383,"Kaluga, Russia",Kaluga,Russia,Other,true,2018-10-24T11:52:51.803+02:00,2018-10-24T11:52:51.803+02:00
+94392,"Ryazan, Russia",Ryazan,Russia,Other,true,2018-10-24T16:57:17.779+02:00,2018-10-24T16:57:17.779+02:00
+94553,"Castle Rock, Washington, United States",Castle Rock,"Washington, United States",North America,true,2023-11-20T09:39:35.938+01:00,2023-11-20T09:39:35.938+01:00
+95612,"Pistoia, Italy",Pistoia,Italy,Europe,true,2025-07-01T11:43:21.024+02:00,2025-07-01T11:43:21.024+02:00
+95867,"Sendai, Japan",Sendai,Japan,Asia,true,2018-11-27T23:05:58.570+01:00,2018-11-27T23:05:58.570+01:00
+96826,"Kyoto, Japan",Kyoto,Japan,Asia,true,2024-10-18T14:28:18.466+02:00,2024-10-18T14:28:18.466+02:00
+97692,"L'Isle-sur-la-Sorgue, France",L'Isle-sur-la-Sorgue,France,Europe,true,2024-08-22T11:19:28.834+02:00,2024-08-22T11:19:28.834+02:00
+98010,"Bochnia, Poland",Bochnia,Poland,Europe,true,2024-09-30T10:14:32.788+02:00,2024-09-30T10:14:32.788+02:00
+98277,"Bacharach, Germany",Bacharach,Germany,Europe,true,2025-11-14T13:50:48.807+01:00,2025-11-14T13:50:48.807+01:00
+98472,"Bagnolet, France",Bagnolet,France,Europe,true,2023-10-03T13:50:36.624+02:00,2023-10-03T13:50:36.624+02:00
+98637,"Saltillo, Mexico",Saltillo,Mexico,North America,true,2025-09-04T16:40:32.997+02:00,2025-09-04T16:40:32.997+02:00
+98685,"Lindau, Germany",Lindau,Germany,Europe,true,2020-07-17T08:50:31.775+02:00,2020-07-17T08:50:31.775+02:00
+98730,"Apucarana, Brazil",Apucarana,Brazil,South America,true,2022-08-26T14:34:32.227+02:00,2022-08-26T14:34:32.227+02:00
+98739,"Salon-de-Provence, France",Salon-de-Provence,France,Europe,true,2025-03-10T09:13:13.376+01:00,2025-03-10T09:13:13.376+01:00
+98754,"Steffisburg, Switzerland",Steffisburg,Switzerland,Europe,true,2021-02-18T12:11:18.577+01:00,2021-02-18T12:11:18.577+01:00
+98829,"Naval, Spain",Naval,Spain,Europe,true,2020-01-08T16:51:14.055+01:00,2020-01-08T16:51:14.055+01:00
+98865,"Duluth, Georgia, United States",Duluth,"Georgia, United States",North America,true,2023-10-19T09:21:50.504+02:00,2023-10-19T09:21:50.504+02:00
+99081,"Martinsburg, United States",Martinsburg,United States,North America,true,2023-11-20T09:41:53.023+01:00,2023-11-20T09:41:53.023+01:00
+99162,"Baar, Switzerland",Baar,Switzerland,Europe,true,2023-11-27T09:09:24.153+01:00,2023-11-27T09:09:24.153+01:00
+99180,"Varazze, Italy",Varazze,Italy,Europe,true,2021-02-18T12:11:10.755+01:00,2021-02-18T12:11:10.755+01:00
+99198,"Heppenheim, Germany",Heppenheim,Germany,Europe,true,2023-11-09T10:45:59.061+01:00,2023-11-09T10:45:59.061+01:00
+99225,"Iowa City, United States",Iowa City,United States,North America,true,2025-11-14T13:51:34.629+01:00,2025-11-14T13:51:34.629+01:00
+99234,"Ismaning, Germany",Ismaning,Germany,Europe,true,2021-03-01T11:09:53.474+01:00,2021-03-01T11:09:53.474+01:00
+99288,"Radolfzell, Germany",Radolfzell,Germany,Europe,true,2024-10-16T19:19:23.444+02:00,2024-10-16T19:19:23.444+02:00
+99363,"Fouesnant, France",Fouesnant,France,Europe,true,2019-10-21T09:33:41.694+02:00,2019-10-21T09:33:41.694+02:00
+99375,"Le Pradet, France",Le Pradet,France,Europe,true,2023-12-25T09:20:15.504+01:00,2023-12-25T09:20:15.504+01:00
+99426,"West University Place, United States",West University Place,United States,North America,true,2024-07-19T11:35:30.358+02:00,2024-07-19T11:35:30.358+02:00
+99468,"Gummersbach, Germany",Gummersbach,Germany,Europe,true,2024-06-24T10:24:08.485+02:00,2024-06-24T10:24:08.485+02:00
+99558,"Heilbad Heiligenstadt, Germany",Heilbad Heiligenstadt,Germany,Europe,true,2024-09-09T10:25:05.619+02:00,2024-09-09T10:25:05.619+02:00
+99615,"Bad Sassendorf, Germany",Bad Sassendorf,Germany,Europe,true,2021-03-01T10:31:13.287+01:00,2021-03-01T10:31:13.287+01:00
+99726,"Feuchtwangen, Germany",Feuchtwangen,Germany,Europe,true,2025-11-14T13:50:51.452+01:00,2025-11-14T13:50:51.452+01:00
+99798,"San Antonio de Areco, Argentina",San Antonio de Areco,Argentina,South America,true,2021-03-01T11:12:10.259+01:00,2021-03-01T11:12:10.259+01:00
+99870,"Luckenwalde, Germany",Luckenwalde,Germany,Europe,true,2025-11-14T13:50:51.774+01:00,2025-11-14T13:50:51.774+01:00
+99882,"Gonzales, United States",Gonzales,United States,North America,true,2023-10-19T09:22:12.319+02:00,2023-10-19T09:22:12.319+02:00
+99888,"Goslar, Germany",Goslar,Germany,Europe,true,2024-08-30T16:51:52.060+02:00,2024-08-30T16:51:52.060+02:00
+100227,"Montargis, France",Montargis,France,Europe,true,2021-03-01T11:10:56.915+01:00,2021-03-01T11:10:56.915+01:00
+100260,"Villeneuve-sur-Lot, France",Villeneuve-sur-Lot,France,Europe,true,2021-03-01T11:13:05.371+01:00,2021-03-01T11:13:05.371+01:00
+100263,"Villeparisis, France",Villeparisis,France,Europe,true,2023-10-19T09:16:03.571+02:00,2023-10-19T09:16:03.571+02:00
+100548,"Greven, Germany",Greven,Germany,Europe,true,2025-11-14T13:50:52.624+01:00,2025-11-14T13:50:52.624+01:00
+100656,"Puteaux, France",Puteaux,France,Europe,true,2023-10-03T13:35:54.999+02:00,2023-10-03T13:35:54.999+02:00
+100704,"Albert, France",Albert,France,Europe,true,2024-08-22T10:11:04.229+02:00,2024-08-22T10:11:04.229+02:00
+100752,"Hoofddorp, Netherlands",Hoofddorp,Netherlands,Europe,true,2021-03-01T11:09:45.182+01:00,2021-03-01T11:09:45.182+01:00
+100872,"Digoin, France",Digoin,France,Europe,true,2023-10-03T14:02:56.883+02:00,2023-10-03T14:02:56.883+02:00
+100893,"Le Cannet, France",Le Cannet,France,Europe,true,2023-10-19T09:19:52.757+02:00,2023-10-19T09:19:52.757+02:00
+101388,"Hoppegarten, Germany",Hoppegarten,Germany,Europe,true,2024-09-23T10:24:21.822+02:00,2024-09-23T10:24:21.822+02:00
+101529,"Las Grutas, Argentina",Las Grutas,Argentina,South America,true,2023-11-17T12:56:49.613+01:00,2023-11-17T12:56:49.613+01:00
+101556,"Valladolid, Mexico",Valladolid,Mexico,North America,true,2023-10-04T23:59:40.255+02:00,2023-10-04T23:59:40.255+02:00
+101775,"Les Ulis, France",Les Ulis,France,Europe,true,2023-10-03T13:59:52.334+02:00,2023-10-03T13:59:52.334+02:00
+101868,"Camaiore, Italy",Camaiore,Italy,Europe,true,2023-10-19T09:25:34.770+02:00,2023-10-19T09:25:34.770+02:00
+102684,"Lichfield, United Kingdom",Lichfield,United Kingdom,Europe,true,2024-01-15T09:21:40.137+01:00,2024-01-15T09:21:40.137+01:00
+102861,"Horsham, United Kingdom",Horsham,United Kingdom,Europe,true,2021-02-18T12:27:02.900+01:00,2021-02-18T12:27:02.900+01:00
+102903,"Winter Park, United States",Winter Park,United States,North America,true,2023-11-27T09:22:58.282+01:00,2023-11-27T09:22:58.282+01:00
+102909,"Cernobbio, Italy",Cernobbio,Italy,Europe,true,2024-10-28T09:23:17.232+01:00,2024-10-28T09:23:17.232+01:00
+103062,"Blagnac, France",Blagnac,France,Europe,true,2024-08-19T09:33:56.516+02:00,2024-08-19T09:33:56.516+02:00
+103068,"Santo Amaro, Brazil",Santo Amaro,Brazil,South America,true,2024-07-15T17:42:47.233+02:00,2024-07-15T17:42:47.233+02:00
+103149,"Reading, United Kingdom",Reading,United Kingdom,Europe,true,2023-12-22T11:37:01.605+01:00,2023-12-22T11:37:01.605+01:00
+103242,"Loivre, France",Loivre,France,Europe,true,2023-10-03T14:09:02.964+02:00,2023-10-03T14:09:02.964+02:00
+103245,"Manchester, New Hampshire, United States",Manchester,"New Hampshire, United States",North America,true,2023-11-20T09:44:17.371+01:00,2023-11-20T09:44:17.371+01:00
+103320,"Castle Combe, United Kingdom",Castle Combe,United Kingdom,Europe,true,2024-09-01T20:48:56.639+02:00,2024-09-01T20:48:56.639+02:00
+103362,"Taunton, United Kingdom",Taunton,United Kingdom,Europe,true,2021-03-01T11:12:43.166+01:00,2021-03-01T11:12:43.166+01:00
+103437,"Getafe, Spain",Getafe,Spain,Europe,true,2021-02-18T11:52:43.098+01:00,2021-02-18T11:52:43.098+01:00
+103470,"Voiron, France",Voiron,France,Europe,true,2025-09-08T10:31:47.050+02:00,2025-09-08T10:31:47.050+02:00
+103803,"Bryn Mawr, United States",Bryn Mawr,United States,North America,true,2023-11-20T09:44:24.838+01:00,2023-11-20T09:44:24.838+01:00
+103857,"Noisy-le-Grand, France",Noisy-le-Grand,France,Europe,true,2024-08-20T10:34:15.436+02:00,2024-08-20T10:34:15.436+02:00
+104265,"Chefchaouen, Morocco",Chefchaouen,Morocco,Africa,true,2024-09-10T17:47:09.222+02:00,2024-09-10T17:47:09.222+02:00
+104397,"Flørli, Norway",Flørli,Norway,Europe,true,2022-12-09T10:37:43.078+01:00,2022-12-09T10:37:43.078+01:00
+104532,"Kaniv, Ukraine",Kaniv,Ukraine,Other,true,2023-11-23T11:30:30.980+01:00,2023-11-23T11:30:30.980+01:00
+105747,"Balatonfüred, Hungary",Balatonfüred,Hungary,Europe,true,2024-10-28T09:18:38.227+01:00,2024-10-28T09:18:38.227+01:00
+109422,"Viñales, Cuba",Viñales,Cuba,Other,true,2023-10-03T13:59:45.748+02:00,2023-10-03T13:59:45.748+02:00
+109617,"Alvarado, Mexico",Alvarado,Mexico,North America,true,2021-03-01T10:30:05.595+01:00,2021-03-01T10:30:05.595+01:00
+109637,"Orizaba, Mexico",Orizaba,Mexico,North America,true,2021-03-01T11:11:24.175+01:00,2021-03-01T11:11:24.175+01:00
+110317,"Conwy, United Kingdom",Conwy,United Kingdom,Europe,true,2023-10-19T09:18:09.789+02:00,2023-10-19T09:18:09.789+02:00
+110532,"Flic en Flac, Mauritius",Flic en Flac,Mauritius,Other,true,2025-06-25T16:32:57.356+02:00,2025-06-25T16:32:57.356+02:00
+112487,"Armagh, United Kingdom",Armagh,United Kingdom,Europe,true,2025-11-07T16:36:38.813+01:00,2025-11-07T16:36:38.813+01:00
+112692,"Uji, Japan",Uji,Japan,Asia,true,2023-09-07T13:11:24.125+02:00,2023-09-07T13:11:24.125+02:00
+113547,"Bøstad, Norway",Bøstad,Norway,Europe,true,2025-11-07T16:36:45.278+01:00,2025-11-07T16:36:45.278+01:00
+114742,"Tabanan, Indonesia",Tabanan,Indonesia,Asia,true,2023-10-03T14:02:51.569+02:00,2023-10-03T14:02:51.569+02:00
+115472,"Geelong, Victoria",Geelong,Victoria,Other,true,2026-01-19T09:19:35.686+01:00,2026-01-19T09:19:35.686+01:00
+115617,"Qobustan, Qaradağku, Azerbaijan",Qobustan,"Qaradağku, Azerbaijan",Other,true,2025-11-07T16:35:24.260+01:00,2025-11-07T16:35:24.260+01:00
+117465,"Grand Canyon Village, United States",Grand Canyon Village,United States,North America,true,2025-11-14T13:51:39.356+01:00,2025-11-14T13:51:39.356+01:00
+118155,"Alcanada, Spain",Alcanada,Spain,Europe,true,2025-11-07T16:35:35.261+01:00,2025-11-07T16:35:35.261+01:00
+118640,"Warmun, Australia",Warmun,Australia,Oceania,true,2019-08-22T05:57:03.788+02:00,2019-08-22T05:57:03.788+02:00
+122175,"Archaia Nemea, Greece",Archaia Nemea,Greece,Europe,true,2019-09-02T15:29:51.488+02:00,2019-09-02T15:29:51.488+02:00
+122800,"Vaduz, Liechtenstein",Vaduz,Liechtenstein,Other,true,2024-09-10T17:46:47.576+02:00,2024-09-10T17:46:47.576+02:00
+123205,"Baie Sainte Anne, Seychelles",Baie Sainte Anne,Seychelles,Other,true,2025-07-25T12:35:05.715+02:00,2025-07-25T12:35:05.715+02:00
+123490,"Riquewihr, France",Riquewihr,France,Europe,true,2025-09-08T10:12:40.045+02:00,2025-09-08T10:12:40.045+02:00
+124653,"Arugam Bay, Sri Lanka",Arugam Bay,Sri Lanka,Other,true,2025-10-06T10:35:59.889+02:00,2025-10-06T10:35:59.889+02:00
+124848,"Grazalema, Spain",Grazalema,Spain,Europe,true,2024-02-16T18:38:42.851+01:00,2024-02-16T18:38:42.851+01:00
+126778,"Caravelas, Brazil",Caravelas,Brazil,South America,true,2019-09-19T11:24:24.976+02:00,2019-09-19T11:24:24.976+02:00
+127148,"Gomel, Belarus",Gomel,Belarus,Other,true,2023-11-21T12:53:22.785+01:00,2023-11-21T12:53:22.785+01:00
+129448,"Shipka, Bulgaria",Shipka,Bulgaria,Other,true,2023-12-07T18:22:31.209+01:00,2023-12-07T18:22:31.209+01:00
+129723,"Borovets, Bulgaria",Borovets,Bulgaria,Other,true,2025-11-07T16:35:10.400+01:00,2025-11-07T16:35:10.400+01:00
+131203,"Edgartown, United States",Edgartown,United States,North America,true,2019-10-09T11:48:50.376+02:00,2019-10-09T11:48:50.376+02:00
+131733,"San Sebastián del Oeste, Mexico",San Sebastián del Oeste,Mexico,North America,true,2025-09-04T16:39:12.822+02:00,2025-09-04T16:39:12.822+02:00
+131838,"Jardim da Serra, Portugal",Jardim da Serra,Portugal,Europe,true,2019-10-10T22:56:04.698+02:00,2019-10-10T22:56:04.698+02:00
+131993,"Petrohue, Chile",Petrohue,Chile,South America,true,2019-10-11T03:18:52.573+02:00,2019-10-11T03:18:52.573+02:00
+132818,"Corinth, Mississippi, United States",Corinth,"Mississippi, United States",North America,true,2025-11-14T13:51:40.565+01:00,2025-11-14T13:51:40.565+01:00
+135112,"Brunate, Italy",Brunate,Italy,Europe,true,2023-10-03T14:09:06.388+02:00,2023-10-03T14:09:06.388+02:00
+135497,"Moustiers-Sainte-Marie, France",Moustiers-Sainte-Marie,France,Europe,true,2025-09-08T10:14:00.742+02:00,2025-09-08T10:14:00.742+02:00
+137938,"Costa del Silencio, Spain",Costa del Silencio,Spain,Europe,true,2025-06-25T16:33:04.469+02:00,2025-06-25T16:33:04.469+02:00
+138068,"Arthurs Seat, Australia",Arthurs Seat,Australia,Oceania,true,2021-11-01T16:32:51.782+01:00,2021-11-01T16:32:51.782+01:00
+138118,"Culebra, Puerto Rico",Culebra,Puerto Rico,Other,true,2023-11-23T16:47:13.029+01:00,2023-11-23T16:47:13.029+01:00
+138283,"Ciudad Altamirano, Mexico",Ciudad Altamirano,Mexico,North America,true,2025-11-14T13:51:40.797+01:00,2025-11-14T13:51:40.797+01:00
+139006,"Mitrovica, Kosovo",Mitrovica,Kosovo,Other,true,2024-08-24T09:24:11.284+02:00,2024-08-24T09:24:11.284+02:00
+139971,"Villalba de la Sierra, Spain",Villalba de la Sierra,Spain,Europe,true,2019-11-24T23:46:14.715+01:00,2019-11-24T23:46:14.715+01:00
+140876,"Korthiou, Greece",Korthiou,Greece,Europe,true,2020-02-25T09:23:49.635+01:00,2020-02-25T09:23:49.635+01:00
+141141,"Saint-Pierre, Martinique, Martinique",Saint-Pierre,"Martinique, Martinique",Other,true,2023-11-23T16:05:53.617+01:00,2023-11-23T16:05:53.617+01:00
+141706,"Kechries, Greece",Kechries,Greece,Europe,true,2025-11-07T16:35:51.653+01:00,2025-11-07T16:35:51.653+01:00
+141881,"Mundaú, Brazil",Mundaú,Brazil,South America,true,2020-02-11T11:14:54.494+01:00,2020-02-11T11:14:54.494+01:00
+142071,"Traunkirchen, Austria",Traunkirchen,Austria,Europe,true,2025-11-14T13:51:41.073+01:00,2025-11-14T13:51:41.073+01:00
+142953,"Carbini, France",Carbini,France,Europe,true,2019-12-13T12:32:21.962+01:00,2019-12-13T12:32:21.962+01:00
+143075,"Berrima, Australia",Berrima,Australia,Oceania,true,2024-09-23T10:25:22.000+02:00,2024-09-23T10:25:22.000+02:00
+143244,"Akita, Japan",Akita,Japan,Asia,true,2023-09-22T16:53:02.439+02:00,2023-09-22T16:53:02.439+02:00
+143266,"Tafí del Valle, Argentina",Tafí del Valle,Argentina,South America,true,2025-11-14T13:51:41.663+01:00,2025-11-14T13:51:41.663+01:00
+143270,"Stykkishólmur, Iceland",Stykkishólmur,Iceland,Europe,true,2023-11-03T16:55:17.813+01:00,2023-11-03T16:55:17.813+01:00
+143718,"Glenbrook, Australia",Glenbrook,Australia,Oceania,true,2019-12-27T01:28:50.137+01:00,2019-12-27T01:28:50.137+01:00
+144069,"Es Capdellà, Spain",Es Capdellà,Spain,Europe,true,2023-11-06T14:36:04.066+01:00,2023-11-06T14:36:04.066+01:00
+144272,"Torla-Ordesa, Spain",Torla-Ordesa,Spain,Europe,true,2025-11-07T16:36:43.663+01:00,2025-11-07T16:36:43.663+01:00
+144346,"Teresina, Brazil",Teresina,Brazil,South America,true,2023-10-03T13:50:35.033+02:00,2023-10-03T13:50:35.033+02:00
+144432,"Den Oever, Netherlands",Den Oever,Netherlands,Europe,true,2020-01-12T22:55:17.730+01:00,2020-01-12T22:55:17.730+01:00
+144481,"Aguenouane, Morocco",Aguenouane,Morocco,Africa,true,2020-01-13T22:16:10.708+01:00,2020-01-13T22:16:10.708+01:00
+144485,"Principal, Cape Verde",Principal,Cape Verde,Other,true,2026-04-02T06:32:14.087+02:00,2026-04-02T06:32:14.087+02:00
+144847,"Charleston, New Zealand",Charleston,New Zealand,Oceania,true,2024-09-30T10:28:38.432+02:00,2024-09-30T10:28:38.432+02:00
+144913,"Torroella de Montgrí, Spain",Torroella de Montgrí,Spain,Europe,true,2023-11-17T13:06:10.172+01:00,2023-11-17T13:06:10.172+01:00
+144982,"Best, Netherlands",Best,Netherlands,Europe,true,2024-12-03T10:11:57.348+01:00,2024-12-03T10:11:57.348+01:00
+144986,"Nesbyen, Norway",Nesbyen,Norway,Europe,true,2025-09-04T16:21:24.076+02:00,2025-09-04T16:21:24.076+02:00
+145252,"Studland, United Kingdom",Studland,United Kingdom,Europe,true,2023-11-17T13:01:30.030+01:00,2023-11-17T13:01:30.030+01:00
+145511,"Masindi, Uganda",Masindi,Uganda,Other,true,2020-02-14T19:36:21.692+01:00,2020-02-14T19:36:21.692+01:00
+145988,"Bar, Montenegro, Montenegro",Bar,"Montenegro, Montenegro",Other,true,2024-03-15T12:05:12.348+01:00,2024-03-15T12:05:12.348+01:00
+146212,"Goygol, Azerbaijan",Goygol,Azerbaijan,Other,true,2026-04-02T06:32:25.757+02:00,2026-04-02T06:32:25.757+02:00
+146298,"Fundo de Figueiras, Cape Verde",Fundo de Figueiras,Cape Verde,Other,true,2020-03-23T09:07:41.534+01:00,2020-03-23T09:07:41.534+01:00
+146799,"Red Hill South, Australia",Red Hill South,Australia,Oceania,true,2020-03-30T08:47:15.263+02:00,2020-03-30T08:47:15.263+02:00
+146822,"Murnau am Staffelsee, Germany",Murnau am Staffelsee,Germany,Europe,true,2023-11-17T09:04:19.029+01:00,2023-11-17T09:04:19.029+01:00
+146880,"Brenton-on-Sea, South Africa",Brenton-on-Sea,South Africa,Africa,true,2023-11-09T16:14:26.858+01:00,2023-11-09T16:14:26.858+01:00
+146886,"Gibsons, British Columbia, Canada",Gibsons,"British Columbia, Canada",North America,true,2026-04-06T10:10:33.733+02:00,2026-04-06T10:10:33.733+02:00
+146890,"Nižbor, Czech Republic",Nižbor,Czech Republic,Europe,true,2020-03-30T14:12:01.849+02:00,2020-03-30T14:12:01.849+02:00
+147210,"Na Mèo, Vietnam",Na Mèo,Vietnam,Asia,true,2025-06-30T10:28:27.653+02:00,2025-06-30T10:28:27.653+02:00
+147258,"Koszalin, Poland",Koszalin,Poland,Europe,true,2023-11-17T13:53:02.707+01:00,2023-11-17T13:53:02.707+01:00
+147348,"Miyazaki, Japan",Miyazaki,Japan,Asia,true,2026-04-24T10:54:40.604+02:00,2026-04-24T10:54:40.604+02:00
+147945,"Vothonas, Greece",Vothonas,Greece,Europe,true,2023-09-20T11:40:42.919+02:00,2023-09-20T11:40:42.919+02:00
+147953,"Villa Traful, Argentina",Villa Traful,Argentina,South America,true,2025-11-07T16:36:07.503+01:00,2025-11-07T16:36:07.503+01:00
+148016,"Amagasaki, Japan",Amagasaki,Japan,Asia,true,2025-09-04T16:21:52.388+02:00,2025-09-04T16:21:52.388+02:00
+148394,"Olofström, Sweden",Olofström,Sweden,Europe,true,2023-11-17T13:54:11.335+01:00,2023-11-17T13:54:11.335+01:00
+148406,"Rijeka Crnojevića, Montenegro",Rijeka Crnojevića,Montenegro,Other,true,2025-11-07T16:35:05.502+01:00,2025-11-07T16:35:05.502+01:00
+148423,"Matjiesfontein, South Africa",Matjiesfontein,South Africa,Africa,true,2025-08-29T09:37:49.707+02:00,2025-08-29T09:37:49.707+02:00
+148610,"Pheriche, Nepal",Pheriche,Nepal,Other,true,2025-07-25T12:34:54.555+02:00,2025-07-25T12:34:54.555+02:00
+148701,"Abhaneri, India",Abhaneri,India,Asia,true,2026-04-02T06:32:17.839+02:00,2026-04-02T06:32:17.839+02:00
+148878,"Dobhan, Nepal",Dobhan,Nepal,Other,true,2020-09-16T10:27:56.817+02:00,2020-09-16T10:27:56.817+02:00
+149071,"Karatu, Tanzania",Karatu,Tanzania,Africa,true,2026-04-02T06:31:57.592+02:00,2026-04-02T06:31:57.592+02:00
+149462,"Poolewe, Britain",Poolewe,Britain,Other,true,2026-04-02T06:32:26.645+02:00,2026-04-02T06:32:26.645+02:00
+149688,"Okutama, Japan",Okutama,Japan,Asia,true,2025-12-01T09:20:53.956+01:00,2025-12-01T09:20:53.956+01:00
+149808,"Å i Lofoten, Norway",Å i Lofoten,Norway,Europe,true,2025-06-25T16:32:54.825+02:00,2025-06-25T16:32:54.825+02:00
+150238,"Beverwijk, Netherlands",Beverwijk,Netherlands,Europe,true,2020-09-16T10:28:08.304+02:00,2020-09-16T10:28:08.304+02:00
+150468,"Kefalos, Greece",Kefalos,Greece,Europe,true,2025-07-25T12:35:00.470+02:00,2025-07-25T12:35:00.470+02:00
+150508,"Beckov, Slovakia",Beckov,Slovakia,Other,true,2024-04-08T10:22:55.399+02:00,2024-04-08T10:22:55.399+02:00
+150510,"Svätý Anton, Slovakia",Svätý Anton,Slovakia,Other,true,2024-04-08T10:22:55.456+02:00,2024-04-08T10:22:55.456+02:00
+150522,"Prievidza, Slovakia",Prievidza,Slovakia,Other,true,2025-09-04T16:10:03.536+02:00,2025-09-04T16:10:03.536+02:00
+150559,"Žďár nad Sázavou, Czech Republic",Žďár nad Sázavou,Czech Republic,Europe,true,2020-09-16T10:28:11.207+02:00,2020-09-16T10:28:11.207+02:00
+150561,"Kroměříž, Czech Republic",Kroměříž,Czech Republic,Europe,true,2025-09-04T16:13:12.134+02:00,2025-09-04T16:13:12.134+02:00
+150607,"Maebashi, Japan",Maebashi,Japan,Asia,true,2021-11-25T15:13:07.794+01:00,2021-11-25T15:13:07.794+01:00
+150616,"Pocklington, United Kingdom",Pocklington,United Kingdom,Europe,true,2024-01-15T09:17:48.264+01:00,2024-01-15T09:17:48.264+01:00
+150676,"Rosà, Italy",Rosà,Italy,Europe,true,2024-07-29T10:22:19.708+02:00,2024-07-29T10:22:19.708+02:00
+150687,"Risor, Norway",Risor,Norway,Europe,true,2025-09-04T16:18:54.668+02:00,2025-09-04T16:18:54.668+02:00
+150702,"Kolbuszowa, Poland",Kolbuszowa,Poland,Europe,true,2026-04-06T10:27:31.415+02:00,2026-04-06T10:27:31.415+02:00
+150816,"Ussel, France",Ussel,France,Europe,true,2021-03-01T11:12:58.652+01:00,2021-03-01T11:12:58.652+01:00
+150854,"Tanacross, United States",Tanacross,United States,North America,true,2025-11-14T13:51:44.736+01:00,2025-11-14T13:51:44.736+01:00
+150858,"Velké Meziříčí, Czechia",Velké Meziříčí,Czechia,Other,true,2021-11-25T15:13:34.188+01:00,2021-11-25T15:13:34.188+01:00
+150951,"Nenzing, Austria",Nenzing,Austria,Europe,true,2021-03-01T11:11:09.047+01:00,2021-03-01T11:11:09.047+01:00
+151013,"Bratsk, Russia",Bratsk,Russia,Other,true,2025-08-29T09:37:49.404+02:00,2025-08-29T09:37:49.404+02:00
+151052,"Saint-Rémi, Canada",Saint-Rémi,Canada,North America,true,2025-09-01T10:23:46.989+02:00,2025-09-01T10:23:46.989+02:00
+151054,"Komatsu, Japan",Komatsu,Japan,Asia,true,2021-03-01T11:10:11.258+01:00,2021-03-01T11:10:11.258+01:00
+151059,"Humacao, Puerto Rico",Humacao,Puerto Rico,Other,true,2025-12-10T08:27:44.073+01:00,2025-12-10T08:27:44.073+01:00
+151094,"Sayama, Japan",Sayama,Japan,Asia,true,2021-02-18T12:26:32.367+01:00,2021-02-18T12:26:32.367+01:00
+151146,"Chesterville, Canada",Chesterville,Canada,North America,true,2024-06-24T10:14:26.209+02:00,2024-06-24T10:14:26.209+02:00
+151147,"Oranienburg, Germany",Oranienburg,Germany,Europe,true,2024-09-16T18:51:00.672+02:00,2024-09-16T18:51:00.672+02:00
+151158,"Lutterworth, United Kingdom",Lutterworth,United Kingdom,Europe,true,2021-02-18T12:11:25.786+01:00,2021-02-18T12:11:25.786+01:00
+151165,"Avesta, Sweden",Avesta,Sweden,Europe,true,2023-10-03T13:59:49.742+02:00,2023-10-03T13:59:49.742+02:00
+151228,"Hallsberg, Sweden",Hallsberg,Sweden,Europe,true,2022-02-09T06:42:11.220+01:00,2022-02-09T06:42:11.220+01:00
+151235,"Waterville, Canada",Waterville,Canada,North America,true,2021-03-01T11:13:11.692+01:00,2021-03-01T11:13:11.692+01:00
+151274,"Weißenbrunn, Germany",Weißenbrunn,Germany,Europe,true,2021-03-01T11:13:12.828+01:00,2021-03-01T11:13:12.828+01:00
+151281,"Saint-Agrève, France",Saint-Agrève,France,Europe,true,2021-03-01T11:12:05.652+01:00,2021-03-01T11:12:05.652+01:00
+151304,"Marling, Italy",Marling,Italy,Europe,true,2023-11-06T16:04:01.711+01:00,2023-11-06T16:04:01.711+01:00
+151322,"Kobylin, Poland",Kobylin,Poland,Europe,true,2021-02-18T12:26:51.392+01:00,2021-02-18T12:26:51.392+01:00
+151333,"Sunagawa, Japan",Sunagawa,Japan,Asia,true,2021-02-08T22:43:09.698+01:00,2021-02-08T22:43:09.698+01:00
+151347,"Stellarton, Canada",Stellarton,Canada,North America,true,2023-10-03T14:02:55.706+02:00,2023-10-03T14:02:55.706+02:00
+151489,"Naguabo, Puerto Rico",Naguabo,Puerto Rico,Other,true,2025-12-10T09:30:34.544+01:00,2025-12-10T09:30:34.544+01:00
+151546,"Nobleton, Canada",Nobleton,Canada,North America,true,2021-03-01T11:11:14.010+01:00,2021-03-01T11:11:14.010+01:00
+151574,"Préverenges, Switzerland",Préverenges,Switzerland,Europe,true,2021-03-01T11:11:45.260+01:00,2021-03-01T11:11:45.260+01:00
+151622,Montferland,Montferland,Unknown,Other,true,2024-11-08T10:07:53.622+01:00,2024-11-08T10:07:53.622+01:00
+151623,"Burglengenfeld, Germany",Burglengenfeld,Germany,Europe,true,2025-11-14T13:50:57.611+01:00,2025-11-14T13:50:57.611+01:00
+151629,"Stockbridge, United Kingdom",Stockbridge,United Kingdom,Europe,true,2024-07-17T14:05:28.620+02:00,2024-07-17T14:05:28.620+02:00
+151644,"Brzesko, Poland",Brzesko,Poland,Europe,true,2021-11-25T15:15:03.826+01:00,2021-11-25T15:15:03.826+01:00
+151654,"Cromer, United Kingdom",Cromer,United Kingdom,Europe,true,2023-12-18T09:13:04.046+01:00,2023-12-18T09:13:04.046+01:00
+151659,"Banjarmasin, Indonesia",Banjarmasin,Indonesia,Asia,true,2021-03-01T10:34:17.335+01:00,2021-03-01T10:34:17.335+01:00
+151690,"Dobruska, Czechia",Dobruska,Czechia,Other,true,2024-03-04T09:08:37.080+01:00,2024-03-04T09:08:37.080+01:00
+151692,"Lilienfeld, Austria",Lilienfeld,Austria,Europe,true,2021-02-18T11:52:36.645+01:00,2021-02-18T11:52:36.645+01:00
+151766,"Wadgassen, Germany",Wadgassen,Germany,Europe,true,2025-11-14T13:50:57.752+01:00,2025-11-14T13:50:57.752+01:00
+151803,"Koscian, Poland",Koscian,Poland,Europe,true,2025-11-14T13:50:57.997+01:00,2025-11-14T13:50:57.997+01:00
+151810,"Victoria, Chile",Victoria,Chile,South America,true,2025-11-14T13:51:47.230+01:00,2025-11-14T13:51:47.230+01:00
+151814,"Fukagawa, Japan",Fukagawa,Japan,Asia,true,2021-02-08T22:42:14.797+01:00,2021-02-08T22:42:14.797+01:00
+151821,"Chiavari, Italy",Chiavari,Italy,Europe,true,2021-02-18T12:11:10.434+01:00,2021-02-18T12:11:10.434+01:00
+151832,"Néris-les-Bains, France",Néris-les-Bains,France,Europe,true,2021-03-01T11:11:09.213+01:00,2021-03-01T11:11:09.213+01:00
+151847,"Zhangjiakou, China",Zhangjiakou,China,Asia,true,2025-09-04T16:14:54.760+02:00,2025-09-04T16:14:54.760+02:00
+151888,"Awara, Japan",Awara,Japan,Asia,true,2022-08-26T14:37:01.137+02:00,2022-08-26T14:37:01.137+02:00
+151894,"Nürtingen, Germany",Nürtingen,Germany,Europe,true,2021-03-01T11:11:17.201+01:00,2021-03-01T11:11:17.201+01:00
+151947,"Le Kremlin-Bicêtre, France",Le Kremlin-Bicêtre,France,Europe,true,2023-10-03T13:59:56.571+02:00,2023-10-03T13:59:56.571+02:00
+151953,"Sissach, Switzerland",Sissach,Switzerland,Europe,true,2025-09-04T16:28:04.129+02:00,2025-09-04T16:28:04.129+02:00
+151975,"Welshpool, Canada",Welshpool,Canada,North America,true,2021-02-18T12:26:53.423+01:00,2021-02-18T12:26:53.423+01:00
+152014,"Port Hawkesbury, Canada",Port Hawkesbury,Canada,North America,true,2023-10-03T14:03:01.219+02:00,2023-10-03T14:03:01.219+02:00
+152021,"Anyang, China",Anyang,China,Asia,true,2023-11-22T23:05:46.192+01:00,2023-11-22T23:05:46.192+01:00
+152040,"Leyland, United Kingdom",Leyland,United Kingdom,Europe,true,2024-01-15T09:20:43.901+01:00,2024-01-15T09:20:43.901+01:00
+152045,"Henley-in-Arden, United Kingdom",Henley-in-Arden,United Kingdom,Europe,true,2024-01-15T09:20:39.570+01:00,2024-01-15T09:20:39.570+01:00
+152059,"Les Geneveys-sur-Coffrane, Switzerland",Les Geneveys-sur-Coffrane,Switzerland,Europe,true,2024-02-19T21:49:41.358+01:00,2024-02-19T21:49:41.358+01:00
+152087,"Acton Vale, Canada",Acton Vale,Canada,North America,true,2025-09-01T10:24:23.677+02:00,2025-09-01T10:24:23.677+02:00
+152099,"Törökbálint, Hungary",Törökbálint,Hungary,Europe,true,2024-06-10T10:24:25.663+02:00,2024-06-10T10:24:25.663+02:00
+152115,"Rochford, United Kingdom",Rochford,United Kingdom,Europe,true,2024-01-15T09:18:55.274+01:00,2024-01-15T09:18:55.274+01:00
+152134,"Oyama, Japan",Oyama,Japan,Asia,true,2021-02-18T12:26:40.396+01:00,2021-02-18T12:26:40.396+01:00
+152154,"Fleetwood, United Kingdom",Fleetwood,United Kingdom,Europe,true,2024-03-13T15:28:40.452+01:00,2024-03-13T15:28:40.452+01:00
+152184,"Frankenmarkt, Austria",Frankenmarkt,Austria,Europe,true,2021-03-01T10:43:08.498+01:00,2021-03-01T10:43:08.498+01:00
+152206,"Alfter, Germany",Alfter,Germany,Europe,true,2024-06-06T11:19:01.291+02:00,2024-06-06T11:19:01.291+02:00
+152216,"Åndalsnes, Norway",Åndalsnes,Norway,Europe,true,2023-10-03T14:04:01.024+02:00,2023-10-03T14:04:01.024+02:00
+152246,"Hachenburg, Germany",Hachenburg,Germany,Europe,true,2021-03-01T10:52:44.551+01:00,2021-03-01T10:52:44.551+01:00
+152274,"Temuco, Chile",Temuco,Chile,South America,true,2025-11-14T13:51:48.541+01:00,2025-11-14T13:51:48.541+01:00
+152284,"Grobbendonk, Belgium",Grobbendonk,Belgium,Europe,true,2024-10-07T10:16:18.761+02:00,2024-10-07T10:16:18.761+02:00
+152336,"Panningen, Netherlands",Panningen,Netherlands,Europe,true,2024-07-08T10:17:20.434+02:00,2024-07-08T10:17:20.434+02:00
+152350,"Palmerston North, New Zealand",Palmerston North,New Zealand,Oceania,true,2021-11-25T15:16:06.548+01:00,2021-11-25T15:16:06.548+01:00
+152420,"Turbigo, Italy",Turbigo,Italy,Europe,true,2021-03-01T11:12:55.059+01:00,2021-03-01T11:12:55.059+01:00
+152425,"Yasugi, Japan",Yasugi,Japan,Asia,true,2021-11-25T15:16:12.600+01:00,2021-11-25T15:16:12.600+01:00
+152438,"Skellefteå, Sweden",Skellefteå,Sweden,Europe,true,2022-02-09T06:08:02.328+01:00,2022-02-09T06:08:02.328+01:00
+152439,"Hem, France",Hem,France,Europe,true,2025-09-08T10:22:06.260+02:00,2025-09-08T10:22:06.260+02:00
+152446,"Brasted, United Kingdom",Brasted,United Kingdom,Europe,true,2021-03-01T10:34:31.797+01:00,2021-03-01T10:34:31.797+01:00
+152483,"Anniston, United States",Anniston,United States,North America,true,2023-11-20T09:48:12.232+01:00,2023-11-20T09:48:12.232+01:00
+152543,"Sillé-le-Guillaume, France",Sillé-le-Guillaume,France,Europe,true,2021-03-01T11:12:27.439+01:00,2021-03-01T11:12:27.439+01:00
+152557,"Dieren, Netherlands",Dieren,Netherlands,Europe,true,2023-10-03T13:59:57.534+02:00,2023-10-03T13:59:57.534+02:00
+152567,"Alta Floresta, Brazil",Alta Floresta,Brazil,South America,true,2021-03-01T10:30:01.192+01:00,2021-03-01T10:30:01.192+01:00
+152610,"Pijnacker, Netherlands",Pijnacker,Netherlands,Europe,true,2021-03-01T11:11:36.373+01:00,2021-03-01T11:11:36.373+01:00
+152613,"Adligenswil, Switzerland",Adligenswil,Switzerland,Europe,true,2024-09-23T10:27:22.678+02:00,2024-09-23T10:27:22.678+02:00
+152698,"Bad Zurzach, Switzerland",Bad Zurzach,Switzerland,Europe,true,2021-11-25T15:16:40.132+01:00,2021-11-25T15:16:40.132+01:00
+152720,"Rawtenstall, United Kingdom",Rawtenstall,United Kingdom,Europe,true,2024-01-15T09:20:41.846+01:00,2024-01-15T09:20:41.846+01:00
+152740,"Champs-sur-Marne, France",Champs-sur-Marne,France,Europe,true,2024-08-20T10:22:44.059+02:00,2024-08-20T10:22:44.059+02:00
+152791,"Naaldwijk, Netherlands",Naaldwijk,Netherlands,Europe,true,2021-03-01T11:11:06.103+01:00,2021-03-01T11:11:06.103+01:00
+152816,"Schwarzach im Pongau, Austria",Schwarzach im Pongau,Austria,Europe,true,2024-09-30T10:31:16.103+02:00,2024-09-30T10:31:16.103+02:00
+152834,"Middlesbrough, United Kingdom",Middlesbrough,United Kingdom,Europe,true,2024-01-15T09:20:42.443+01:00,2024-01-15T09:20:42.443+01:00
+152836,"Westlock, Canada",Westlock,Canada,North America,true,2023-10-03T13:59:58.439+02:00,2023-10-03T13:59:58.439+02:00
+152841,"Kefar Sava, Israel",Kefar Sava,Israel,Middle East,true,2021-11-25T15:16:55.332+01:00,2021-11-25T15:16:55.332+01:00
+152911,"Möriken-Wildegg, Switzerland",Möriken-Wildegg,Switzerland,Europe,true,2021-11-25T15:17:02.057+01:00,2021-11-25T15:17:02.057+01:00
+152950,"Bongaree, Australia",Bongaree,Australia,Oceania,true,2026-04-02T06:32:11.946+02:00,2026-04-02T06:32:11.946+02:00
+152955,"Hoogstraten, Belgium",Hoogstraten,Belgium,Europe,true,2024-10-07T10:18:41.078+02:00,2024-10-07T10:18:41.078+02:00
+152993,"Marcoussis, France",Marcoussis,France,Europe,true,2023-10-03T13:59:58.996+02:00,2023-10-03T13:59:58.996+02:00
+153060,"Meraker, Norway",Meraker,Norway,Europe,true,2022-08-26T14:34:55.345+02:00,2022-08-26T14:34:55.345+02:00
+153069,"Neumünster, Germany",Neumünster,Germany,Europe,true,2025-11-14T13:50:59.098+01:00,2025-11-14T13:50:59.098+01:00
+153094,"Bierutow, Poland",Bierutow,Poland,Europe,true,2021-03-01T10:34:24.464+01:00,2021-03-01T10:34:24.464+01:00
+153142,"Boullay-les-Troux, France",Boullay-les-Troux,France,Europe,true,2023-10-03T13:59:59.178+02:00,2023-10-03T13:59:59.178+02:00
+153177,"Ry, Denmark",Ry,Denmark,Europe,true,2021-11-25T15:17:26.126+01:00,2021-11-25T15:17:26.126+01:00
+153202,"Putbus, Germany",Putbus,Germany,Europe,true,2023-10-19T09:17:23.484+02:00,2023-10-19T09:17:23.484+02:00
+153244,"Odder, Denmark",Odder,Denmark,Europe,true,2021-11-25T15:17:34.242+01:00,2021-11-25T15:17:34.242+01:00
+153293,"Viersen, Germany",Viersen,Germany,Europe,true,2021-03-01T11:13:03.974+01:00,2021-03-01T11:13:03.974+01:00
+153316,"Catalina, Canada",Catalina,Canada,North America,true,2021-11-25T15:17:40.593+01:00,2021-11-25T15:17:40.593+01:00
+153384,"Annaba, Algeria",Annaba,Algeria,Other,true,2022-08-26T14:31:24.329+02:00,2022-08-26T14:31:24.329+02:00
+153393,"Esterhazy, Canada",Esterhazy,Canada,North America,true,2021-02-18T12:11:23.440+01:00,2021-02-18T12:11:23.440+01:00
+153472,"Sandy Lake, Canada",Sandy Lake,Canada,North America,true,2023-11-30T14:53:37.884+01:00,2023-11-30T14:53:37.884+01:00
+153482,"Hoogeveen, Netherlands",Hoogeveen,Netherlands,Europe,true,2021-03-01T11:09:45.291+01:00,2021-03-01T11:09:45.291+01:00
+153541,"Henley-on-Thames, United Kingdom",Henley-on-Thames,United Kingdom,Europe,true,2024-06-19T15:01:43.258+02:00,2024-06-19T15:01:43.258+02:00
+153549,"Oudenaarde, Belgium",Oudenaarde,Belgium,Europe,true,2024-08-22T14:32:01.190+02:00,2024-08-22T14:32:01.190+02:00
+153556,"Grünhain-Beierfeld, Germany",Grünhain-Beierfeld,Germany,Europe,true,2024-06-10T10:28:48.175+02:00,2024-06-10T10:28:48.175+02:00
+153563,"Liaoyang, China",Liaoyang,China,Asia,true,2021-03-01T11:10:28.760+01:00,2021-03-01T11:10:28.760+01:00
+153572,"Ronse, Belgium",Ronse,Belgium,Europe,true,2021-03-01T11:11:59.533+01:00,2021-03-01T11:11:59.533+01:00
+153601,"Salaverry, Peru",Salaverry,Peru,South America,true,2026-04-02T06:32:15.140+02:00,2026-04-02T06:32:15.140+02:00
+153618,"Hoevelaken, Netherlands",Hoevelaken,Netherlands,Europe,true,2023-10-03T14:00:00.229+02:00,2023-10-03T14:00:00.229+02:00
+153634,"Haren, Germany",Haren,Germany,Europe,true,2024-07-01T10:19:52.850+02:00,2024-07-01T10:19:52.850+02:00
+153647,"Wejherowo, Poland",Wejherowo,Poland,Europe,true,2024-09-30T10:31:45.242+02:00,2024-09-30T10:31:45.242+02:00
+153669,"Grâce-Hollogne, Belgium",Grâce-Hollogne,Belgium,Europe,true,2021-03-01T10:52:36.160+01:00,2021-03-01T10:52:36.160+01:00
+153690,"Blagoevgrad, Bulgaria",Blagoevgrad,Bulgaria,Other,true,2025-05-14T14:50:04.760+02:00,2025-05-14T14:50:04.760+02:00
+153700,"Brasschaat, Belgium",Brasschaat,Belgium,Europe,true,2026-04-02T06:31:57.926+02:00,2026-04-02T06:31:57.926+02:00
+153720,"Feldbach, Austria",Feldbach,Austria,Europe,true,2021-03-01T10:43:03.063+01:00,2021-03-01T10:43:03.063+01:00
+153744,"Erwitte, Germany",Erwitte,Germany,Europe,true,2025-11-14T13:50:59.870+01:00,2025-11-14T13:50:59.870+01:00
+153757,"Lwówek Śląski, Poland",Lwówek Śląski,Poland,Europe,true,2021-03-01T11:10:35.900+01:00,2021-03-01T11:10:35.900+01:00
+153814,"Carvin, France",Carvin,France,Europe,true,2023-11-20T09:20:13.615+01:00,2023-11-20T09:20:13.615+01:00
+153816,"Sohag, Egypt",Sohag,Egypt,Africa,true,2024-11-25T17:35:18.993+01:00,2024-11-25T17:35:18.993+01:00
+153856,"Unterentfelden, Switzerland",Unterentfelden,Switzerland,Europe,true,2021-11-25T15:18:36.593+01:00,2021-11-25T15:18:36.593+01:00
+153983,"Wattwil, Switzerland",Wattwil,Switzerland,Europe,true,2021-03-01T11:13:11.805+01:00,2021-03-01T11:13:11.805+01:00
+153985,"Bucaramanga, Colombia",Bucaramanga,Colombia,South America,true,2025-11-14T13:51:52.219+01:00,2025-11-14T13:51:52.219+01:00
+154010,"Jesenik, Czechia",Jesenik,Czechia,Other,true,2024-03-04T09:17:15.352+01:00,2024-03-04T09:17:15.352+01:00
+154025,"Rocky Mountain House, Canada",Rocky Mountain House,Canada,North America,true,2023-10-19T09:23:54.675+02:00,2023-10-19T09:23:54.675+02:00
+154099,"Makati, Philippines",Makati,Philippines,Asia,true,2026-01-08T15:30:13.985+01:00,2026-01-08T15:30:13.985+01:00
+154118,"Ahrensburg, Germany",Ahrensburg,Germany,Europe,true,2024-06-10T10:29:13.390+02:00,2024-06-10T10:29:13.390+02:00
+154168,"Pfronten, Germany",Pfronten,Germany,Europe,true,2024-09-23T10:28:37.772+02:00,2024-09-23T10:28:37.772+02:00
+154186,"Schwadernau, Switzerland",Schwadernau,Switzerland,Europe,true,2021-02-18T12:11:17.562+01:00,2021-02-18T12:11:17.562+01:00
+154249,"Mito, Japan",Mito,Japan,Asia,true,2025-11-23T13:22:53.664+01:00,2025-11-23T13:22:53.664+01:00
+154311,"Kalundborg, Denmark",Kalundborg,Denmark,Europe,true,2023-10-03T14:00:04.459+02:00,2023-10-03T14:00:04.459+02:00
+154336,"Gråsten, Denmark",Gråsten,Denmark,Europe,true,2021-02-18T12:26:47.159+01:00,2021-02-18T12:26:47.159+01:00
+154340,"Trezzano Rosa, Italy",Trezzano Rosa,Italy,Europe,true,2021-03-01T11:12:53.276+01:00,2021-03-01T11:12:53.276+01:00
+154361,"Vaprio d'Adda, Italy",Vaprio d'Adda,Italy,Europe,true,2021-03-01T11:13:00.721+01:00,2021-03-01T11:13:00.721+01:00
+154364,"Tournai, Belgium",Tournai,Belgium,Europe,true,2025-09-08T10:16:34.973+02:00,2025-09-08T10:16:34.973+02:00
+154407,"Hammel, Denmark",Hammel,Denmark,Europe,true,2021-11-25T15:19:29.057+01:00,2021-11-25T15:19:29.057+01:00
+154408,"Hainichen, Germany",Hainichen,Germany,Europe,true,2025-11-14T13:51:01.068+01:00,2025-11-14T13:51:01.068+01:00
+154498,"Oppenweiler, Germany",Oppenweiler,Germany,Europe,true,2024-09-23T10:28:47.401+02:00,2024-09-23T10:28:47.401+02:00
+154512,"Horovice, Czechia",Horovice,Czechia,Other,true,2021-03-01T11:09:46.507+01:00,2021-03-01T11:09:46.507+01:00
+154525,"Rubí, Spain",Rubí,Spain,Europe,true,2024-11-30T13:18:38.648+01:00,2024-11-30T13:18:38.648+01:00
+154550,"Arese, Italy",Arese,Italy,Europe,true,2021-03-01T10:30:35.891+01:00,2021-03-01T10:30:35.891+01:00
+154624,"New Hamburg, Canada",New Hamburg,Canada,North America,true,2024-07-08T10:32:05.111+02:00,2024-07-08T10:32:05.111+02:00
+154628,"Cieszyn, Poland",Cieszyn,Poland,Europe,true,2021-03-01T10:34:55.227+01:00,2021-03-01T10:34:55.227+01:00
+154629,"Cirebon, Indonesia",Cirebon,Indonesia,Asia,true,2024-09-30T14:06:43.306+02:00,2024-09-30T14:06:43.306+02:00
+154642,"Santa Croce sull'Arno, Italy",Santa Croce sull'Arno,Italy,Europe,true,2025-07-01T11:44:57.939+02:00,2025-07-01T11:44:57.939+02:00
+154717,"Clinton, Canada",Clinton,Canada,North America,true,2026-04-06T10:18:39.902+02:00,2026-04-06T10:18:39.902+02:00
+154737,"Bengbu, China",Bengbu,China,Asia,true,2021-03-01T10:34:21.588+01:00,2021-03-01T10:34:21.588+01:00
+154770,"Enniskillen, United Kingdom",Enniskillen,United Kingdom,Europe,true,2025-11-07T16:36:28.741+01:00,2025-11-07T16:36:28.741+01:00
+154790,"Balaives et Butz, France",Balaives et Butz,France,Europe,true,2023-11-23T17:26:09.729+01:00,2023-11-23T17:26:09.729+01:00
+154849,"Lampman, Canada",Lampman,Canada,North America,true,2024-09-30T10:32:26.343+02:00,2024-09-30T10:32:26.343+02:00
+154862,"Marina di Carrara, Italy",Marina di Carrara,Italy,Europe,true,2025-03-24T09:21:45.192+01:00,2025-03-24T09:21:45.192+01:00
+154868,"Ciney, Belgium",Ciney,Belgium,Europe,true,2023-10-19T09:22:40.677+02:00,2023-10-19T09:22:40.677+02:00
+154954,"Vitry-sur-Seine, France",Vitry-sur-Seine,France,Europe,true,2023-10-03T14:02:48.112+02:00,2023-10-03T14:02:48.112+02:00
+154960,"Baker Lake, Canada",Baker Lake,Canada,North America,true,2025-11-14T13:51:54.718+01:00,2025-11-14T13:51:54.718+01:00
+154991,"Duffel, Belgium",Duffel,Belgium,Europe,true,2026-04-02T06:31:57.861+02:00,2026-04-02T06:31:57.861+02:00
+155025,"Säffle, Sweden",Säffle,Sweden,Europe,true,2025-08-29T09:28:40.561+02:00,2025-08-29T09:28:40.561+02:00
+155035,"Kluczbork, Poland",Kluczbork,Poland,Europe,true,2021-03-01T11:10:09.720+01:00,2021-03-01T11:10:09.720+01:00
+155037,"Mackay, Australia",Mackay,Australia,Oceania,true,2024-09-16T23:46:18.766+02:00,2024-09-16T23:46:18.766+02:00
+155098,"Ishikari, Japan",Ishikari,Japan,Asia,true,2021-02-08T22:34:29.006+01:00,2021-02-08T22:34:29.006+01:00
+155130,"Nikiski, United States",Nikiski,United States,North America,true,2023-11-06T09:25:44.098+01:00,2023-11-06T09:25:44.098+01:00
+155168,"Breno, Italy",Breno,Italy,Europe,true,2023-11-13T09:37:40.035+01:00,2023-11-13T09:37:40.035+01:00
+155245,"Porta Westfalica, Germany",Porta Westfalica,Germany,Europe,true,2021-03-01T11:11:42.813+01:00,2021-03-01T11:11:42.813+01:00
+155302,"Vittuone, Italy",Vittuone,Italy,Europe,true,2021-03-01T11:13:06.621+01:00,2021-03-01T11:13:06.621+01:00
+155324,"Los Mochis, Mexico",Los Mochis,Mexico,North America,true,2025-11-14T13:51:02.547+01:00,2025-11-14T13:51:02.547+01:00
+155406,"Kabul, Afghanistan",Kabul,Afghanistan,Other,true,2022-08-26T14:36:12.601+02:00,2022-08-26T14:36:12.601+02:00
+155418,"Chuzhou, China",Chuzhou,China,Asia,true,2021-03-01T10:34:54.976+01:00,2021-03-01T10:34:54.976+01:00
+155457,"Coleford, United Kingdom",Coleford,United Kingdom,Europe,true,2021-03-01T10:34:57.298+01:00,2021-03-01T10:34:57.298+01:00
+155490,"Groß-Gerau, Germany",Groß-Gerau,Germany,Europe,true,2024-06-06T10:53:54.169+02:00,2024-06-06T10:53:54.169+02:00
+155501,"Landeck, Austria",Landeck,Austria,Europe,true,2021-03-01T11:10:21.999+01:00,2021-03-01T11:10:21.999+01:00
+155524,"Steeg, Austria",Steeg,Austria,Europe,true,2024-09-30T10:32:54.612+02:00,2024-09-30T10:32:54.612+02:00
+155552,"Geleen, Netherlands",Geleen,Netherlands,Europe,true,2024-06-03T10:28:29.182+02:00,2024-06-03T10:28:29.182+02:00
+155555,"Echizen, Japan",Echizen,Japan,Asia,true,2022-08-26T14:34:18.416+02:00,2022-08-26T14:34:18.416+02:00
+155598,"Barretos, Brazil",Barretos,Brazil,South America,true,2021-03-01T10:34:18.282+01:00,2021-03-01T10:34:18.282+01:00
+155601,"Bicester, United Kingdom",Bicester,United Kingdom,Europe,true,2021-03-01T10:32:09.686+01:00,2021-03-01T10:32:09.686+01:00
+155633,"Poggiridenti, Italy",Poggiridenti,Italy,Europe,true,2025-11-24T09:14:53.817+01:00,2025-11-24T09:14:53.817+01:00
+155641,"Bettlach, Switzerland",Bettlach,Switzerland,Europe,true,2024-09-23T10:24:04.915+02:00,2024-09-23T10:24:04.915+02:00
+155675,"Kirkintilloch, United Kingdom",Kirkintilloch,United Kingdom,Europe,true,2024-03-06T15:20:12.391+01:00,2024-03-06T15:20:12.391+01:00
+155680,"Salekhard, Russia",Salekhard,Russia,Other,true,2025-08-29T09:30:53.498+02:00,2025-08-29T09:30:53.498+02:00
+155684,"Taganrog, Russia",Taganrog,Russia,Other,true,2025-10-06T10:24:13.805+02:00,2025-10-06T10:24:13.805+02:00
+155687,"Tajimi, Japan",Tajimi,Japan,Asia,true,2025-12-01T09:22:58.178+01:00,2025-12-01T09:22:58.178+01:00
+155693,"Wandlitz, Germany",Wandlitz,Germany,Europe,true,2024-06-10T10:30:28.382+02:00,2024-06-10T10:30:28.382+02:00
+155710,"Nordia, Israel",Nordia,Israel,Middle East,true,2021-11-25T15:21:25.914+01:00,2021-11-25T15:21:25.914+01:00
+155712,"Kongsberg, Norway",Kongsberg,Norway,Europe,true,2022-01-04T00:41:56.754+01:00,2022-01-04T00:41:56.754+01:00
+155744,"Landsee, Austria",Landsee,Austria,Europe,true,2021-03-01T11:10:22.242+01:00,2021-03-01T11:10:22.242+01:00
+155745,"Iligan City, Philippines",Iligan City,Philippines,Asia,true,2025-09-04T16:26:54.940+02:00,2025-09-04T16:26:54.940+02:00
+155763,"Genthin, Germany",Genthin,Germany,Europe,true,2021-02-18T11:52:41.016+01:00,2021-02-18T11:52:41.016+01:00
+155879,"Palazzolo sull'Oglio, Italy",Palazzolo sull'Oglio,Italy,Europe,true,2023-11-13T09:36:32.830+01:00,2023-11-13T09:36:32.830+01:00
+155883,"Karcag, Hungary",Karcag,Hungary,Europe,true,2024-04-15T10:31:53.061+02:00,2024-04-15T10:31:53.061+02:00
+155911,"Zgłobice, Poland",Zgłobice,Poland,Europe,true,2024-09-30T10:20:24.906+02:00,2024-09-30T10:20:24.906+02:00
+155934,"Hallstadt, Germany",Hallstadt,Germany,Europe,true,2021-03-01T10:52:46.329+01:00,2021-03-01T10:52:46.329+01:00
+155950,"Scherpenzeel, Netherlands",Scherpenzeel,Netherlands,Europe,true,2023-10-03T14:02:56.337+02:00,2023-10-03T14:02:56.337+02:00
+155973,"Yakutsk, Russia",Yakutsk,Russia,Other,true,2026-04-02T06:32:11.087+02:00,2026-04-02T06:32:11.087+02:00
+155996,"Edwalton, United Kingdom",Edwalton,United Kingdom,Europe,true,2021-02-18T12:26:31.444+01:00,2021-02-18T12:26:31.444+01:00
+156002,"Aalten, Netherlands",Aalten,Netherlands,Europe,true,2024-11-08T09:55:57.684+01:00,2024-11-08T09:55:57.684+01:00
+156023,"Mogilno, Poland",Mogilno,Poland,Europe,true,2021-03-01T11:10:53.648+01:00,2021-03-01T11:10:53.648+01:00
+156072,"Chiuro, Italy",Chiuro,Italy,Europe,true,2025-11-24T09:08:34.678+01:00,2025-11-24T09:08:34.678+01:00
+156107,"Lipetsk, Russia",Lipetsk,Russia,Other,true,2021-11-25T15:21:57.787+01:00,2021-11-25T15:21:57.787+01:00
+156137,"Warwick, Australia",Warwick,Australia,Oceania,true,2025-10-06T10:20:18.733+02:00,2025-10-06T10:20:18.733+02:00
+156150,"Ponta Porã, Brazil",Ponta Porã,Brazil,South America,true,2022-08-26T14:30:23.248+02:00,2022-08-26T14:30:23.248+02:00
+156167,"Neuilly-sur-Marne, France",Neuilly-sur-Marne,France,Europe,true,2023-10-03T14:02:57.382+02:00,2023-10-03T14:02:57.382+02:00
+156170,"Kirovsk, Russia",Kirovsk,Russia,Other,true,2025-11-14T13:51:57.125+01:00,2025-11-14T13:51:57.125+01:00
+156224,"Kaposvár, Hungary",Kaposvár,Hungary,Europe,true,2025-08-29T09:39:09.663+02:00,2025-08-29T09:39:09.663+02:00
+156254,"Kikonai, Japan",Kikonai,Japan,Asia,true,2021-03-01T11:10:06.592+01:00,2021-03-01T11:10:06.592+01:00
+156264,"Wädenswil, Switzerland",Wädenswil,Switzerland,Europe,true,2021-11-25T15:22:11.598+01:00,2021-11-25T15:22:11.598+01:00
+156354,"Goderich, Canada",Goderich,Canada,North America,true,2021-03-01T10:52:33.851+01:00,2021-03-01T10:52:33.851+01:00
+156366,"Bertem, Belgium",Bertem,Belgium,Europe,true,2021-03-01T10:34:22.930+01:00,2021-03-01T10:34:22.930+01:00
+156369,"Sion, Switzerland",Sion,Switzerland,Europe,true,2026-01-23T21:31:01.659+01:00,2026-01-23T21:31:01.659+01:00
+156442,"Steenbergen, Netherlands",Steenbergen,Netherlands,Europe,true,2021-03-01T11:12:36.157+01:00,2021-03-01T11:12:36.157+01:00
+156450,"Badia Al Pino, Italy",Badia Al Pino,Italy,Europe,true,2025-07-01T11:45:10.489+02:00,2025-07-01T11:45:10.489+02:00
+156452,"Straelen, Germany",Straelen,Germany,Europe,true,2021-03-01T11:12:38.104+01:00,2021-03-01T11:12:38.104+01:00
+156518,"Arviat, Canada",Arviat,Canada,North America,true,2026-04-24T10:27:11.660+02:00,2026-04-24T10:27:11.660+02:00
+156547,"Müllheim, Germany",Müllheim,Germany,Europe,true,2024-09-02T10:25:17.590+02:00,2024-09-02T10:25:17.590+02:00
+156555,"Wörgl, Austria",Wörgl,Austria,Europe,true,2024-09-30T10:33:34.682+02:00,2024-09-30T10:33:34.682+02:00
+156611,"Ciserano, Italy",Ciserano,Italy,Europe,true,2021-03-01T10:34:55.631+01:00,2021-03-01T10:34:55.631+01:00
+156627,"Damanhour, Egypt",Damanhour,Egypt,Africa,true,2024-11-25T17:36:45.300+01:00,2024-11-25T17:36:45.300+01:00
+156694,"Bottisham, United Kingdom",Bottisham,United Kingdom,Europe,true,2021-02-18T12:26:55.294+01:00,2021-02-18T12:26:55.294+01:00
+156725,"Maasdijk, Netherlands",Maasdijk,Netherlands,Europe,true,2021-03-01T11:10:36.362+01:00,2021-03-01T11:10:36.362+01:00
+156761,"Ivano-Frankivsk, Ukraine",Ivano-Frankivsk,Ukraine,Other,true,2025-08-29T09:37:49.459+02:00,2025-08-29T09:37:49.459+02:00
+156768,"Jinju-si, South Korea",Jinju-si,South Korea,Asia,true,2025-09-04T16:41:12.979+02:00,2025-09-04T16:41:12.979+02:00
+156774,"Tornanádaska, Hungary",Tornanádaska,Hungary,Europe,true,2021-11-25T15:23:07.761+01:00,2021-11-25T15:23:07.761+01:00
+156793,"São Domingos de Rana, Portugal",São Domingos de Rana,Portugal,Europe,true,2026-01-12T15:08:12.529+01:00,2026-01-12T15:08:12.529+01:00
+156794,"Yueyang, China",Yueyang,China,Asia,true,2021-11-25T15:23:10.909+01:00,2021-11-25T15:23:10.909+01:00
+156872,"Arzamas, Russia",Arzamas,Russia,Other,true,2021-11-25T15:23:19.350+01:00,2021-11-25T15:23:19.350+01:00
+156873,"Shibushi, Japan",Shibushi,Japan,Asia,true,2025-12-01T09:08:51.404+01:00,2025-12-01T09:08:51.404+01:00
+156884,"Moravske Budejovice, Czechia",Moravske Budejovice,Czechia,Other,true,2025-10-06T10:22:59.710+02:00,2025-10-06T10:22:59.710+02:00
+156914,"Spruce Grove, Canada",Spruce Grove,Canada,North America,true,2023-10-03T14:02:59.192+02:00,2023-10-03T14:02:59.192+02:00
+156965,"Matsusaka, Japan",Matsusaka,Japan,Asia,true,2021-02-18T12:11:16.223+01:00,2021-02-18T12:11:16.223+01:00
+156973,"Meckenheim, Germany",Meckenheim,Germany,Europe,true,2024-06-03T10:29:30.098+02:00,2024-06-03T10:29:30.098+02:00
+156992,"Iksan, South Korea",Iksan,South Korea,Asia,true,2024-04-08T10:08:41.236+02:00,2024-04-08T10:08:41.236+02:00
+157017,"Lüdinghausen, Germany",Lüdinghausen,Germany,Europe,true,2021-03-01T11:10:34.614+01:00,2021-03-01T11:10:34.614+01:00
+157034,"Varnsdorf, Czechia",Varnsdorf,Czechia,Other,true,2024-03-04T09:11:21.802+01:00,2024-03-04T09:11:21.802+01:00
+157064,"Potters Bar, United Kingdom",Potters Bar,United Kingdom,Europe,true,2021-02-18T12:26:57.022+01:00,2021-02-18T12:26:57.022+01:00
+157066,"Nabburg, Germany",Nabburg,Germany,Europe,true,2021-03-01T11:11:06.226+01:00,2021-03-01T11:11:06.226+01:00
+157079,"Wagrowiec, Poland",Wagrowiec,Poland,Europe,true,2021-02-18T12:26:51.751+01:00,2021-02-18T12:26:51.751+01:00
+157103,"Calderara di Reno, Italy",Calderara di Reno,Italy,Europe,true,2021-03-01T10:34:38.664+01:00,2021-03-01T10:34:38.664+01:00
+157118,"Dodewaard, Netherlands",Dodewaard,Netherlands,Europe,true,2023-10-03T14:02:57.036+02:00,2023-10-03T14:02:57.036+02:00
+157197,"Romans-sur-Isère, France",Romans-sur-Isère,France,Europe,true,2021-03-01T11:11:59.246+01:00,2021-03-01T11:11:59.246+01:00
+157210,"Boechout, Belgium",Boechout,Belgium,Europe,true,2023-10-19T09:23:15.518+02:00,2023-10-19T09:23:15.518+02:00
+157370,"Zanè, Italy",Zanè,Italy,Europe,true,2024-07-29T10:27:02.245+02:00,2024-07-29T10:27:02.245+02:00
+157373,"Bialobrzegi, Poland",Bialobrzegi,Poland,Europe,true,2021-11-25T15:24:11.245+01:00,2021-11-25T15:24:11.245+01:00
+157377,"Choisy-le-Roi, France",Choisy-le-Roi,France,Europe,true,2023-10-03T14:03:00.801+02:00,2023-10-03T14:03:00.801+02:00
+157449,"Selkirk, Canada",Selkirk,Canada,North America,true,2025-11-14T13:51:59.354+01:00,2025-11-14T13:51:59.354+01:00
+157482,"Ruscombe, United Kingdom",Ruscombe,United Kingdom,Europe,true,2025-12-15T09:19:44.655+01:00,2025-12-15T09:19:44.655+01:00
+157542,"Uddel, Netherlands",Uddel,Netherlands,Europe,true,2023-10-03T14:03:01.256+02:00,2023-10-03T14:03:01.256+02:00
+157545,"Stafford, United Kingdom",Stafford,United Kingdom,Europe,true,2024-01-15T16:26:56.393+01:00,2024-01-15T16:26:56.393+01:00
+157558,"Deerlijk, Belgium",Deerlijk,Belgium,Europe,true,2021-03-01T10:42:39.564+01:00,2021-03-01T10:42:39.564+01:00
+157643,"Bruck am Ziller, Austria",Bruck am Ziller,Austria,Europe,true,2021-03-01T10:34:34.188+01:00,2021-03-01T10:34:34.188+01:00
+157659,"Thorold, Canada",Thorold,Canada,North America,true,2021-03-01T11:12:47.959+01:00,2021-03-01T11:12:47.959+01:00
+157711,"Oleggio, Italy",Oleggio,Italy,Europe,true,2021-03-01T11:11:21.098+01:00,2021-03-01T11:11:21.098+01:00
+157712,"Chapleau, Canada",Chapleau,Canada,North America,true,2025-11-14T13:52:00.185+01:00,2025-11-14T13:52:00.185+01:00
+157731,"Urayasu, Japan",Urayasu,Japan,Asia,true,2021-02-18T12:26:29.552+01:00,2021-02-18T12:26:29.552+01:00
+157768,"Inverbervie, United Kingdom",Inverbervie,United Kingdom,Europe,true,2023-10-19T09:25:53.182+02:00,2023-10-19T09:25:53.182+02:00
+157979,"San Carlos, Mendoza, Argentina",San Carlos,"Mendoza, Argentina",South America,true,2026-04-02T06:31:53.241+02:00,2026-04-02T06:31:53.241+02:00
+158223,"Puerto Viejo de Talamanca, Costa Rica",Puerto Viejo de Talamanca,Costa Rica,Other,true,2025-06-25T16:33:05.413+02:00,2025-06-25T16:33:05.413+02:00
+158332,"Makawao, United States",Makawao,United States,North America,true,2020-10-07T13:46:33.571+02:00,2020-10-07T13:46:33.571+02:00
+158382,"Lions Bay, BC, Canada",Lions Bay,"BC, Canada",North America,true,2026-04-06T10:21:09.740+02:00,2026-04-06T10:21:09.740+02:00
+158415,"Itu, Brazil",Itu,Brazil,South America,true,2024-09-04T16:13:21.777+02:00,2024-09-04T16:13:21.777+02:00
+158938,"Roquebrune-Cap-Martin, France",Roquebrune-Cap-Martin,France,Europe,true,2023-11-17T13:07:14.197+01:00,2023-11-17T13:07:14.197+01:00
+159079,"Tamariu, Spain",Tamariu,Spain,Europe,true,2025-11-07T16:35:21.279+01:00,2025-11-07T16:35:21.279+01:00
+159256,"Nānākuli, United States",Nānākuli,United States,North America,true,2021-02-13T10:19:42.242+01:00,2021-02-13T10:19:42.242+01:00
+159517,"Tuy Hòa, Vietnam, Socialist Republic of",Tuy Hòa,"Vietnam, Socialist Republic of",Other,true,2021-02-16T16:26:51.666+01:00,2021-02-16T16:26:51.666+01:00
+159662,"Blankenberge, Belgium",Blankenberge,Belgium,Europe,true,2021-02-23T22:15:51.781+01:00,2021-02-23T22:15:51.781+01:00
+160245,"Los Barrios, Spain",Los Barrios,Spain,Europe,true,2023-10-19T09:24:13.652+02:00,2023-10-19T09:24:13.652+02:00
+160253,"Moron de la Frontera, Spain",Moron de la Frontera,Spain,Europe,true,2021-03-30T15:52:30.559+02:00,2021-03-30T15:52:30.559+02:00
+160279,"Puerto Nuevo, Mexico",Puerto Nuevo,Mexico,North America,true,2026-04-02T06:32:20.968+02:00,2026-04-02T06:32:20.968+02:00
+160333,"Agios Myron, Greece",Agios Myron,Greece,Europe,true,2021-03-30T16:03:53.792+02:00,2021-03-30T16:03:53.792+02:00
+160345,"Kroussónas, Greece",Kroussónas,Greece,Europe,true,2026-04-02T06:32:32.665+02:00,2026-04-02T06:32:32.665+02:00
+160390,"Santa Margalida, Spain",Santa Margalida,Spain,Europe,true,2021-03-30T16:03:59.051+02:00,2021-03-30T16:03:59.051+02:00
+160514,"Gennadi, Greece",Gennadi,Greece,Europe,true,2025-11-07T16:35:30.949+01:00,2025-11-07T16:35:30.949+01:00
+160547,"Oliena, Italy",Oliena,Italy,Europe,true,2021-10-03T22:05:38.508+02:00,2021-10-03T22:05:38.508+02:00
+160706,"Maryculter, Britain",Maryculter,Britain,Other,true,2025-08-29T09:29:33.519+02:00,2025-08-29T09:29:33.519+02:00
+162479,"Port d'Addaia, Spain",Port d'Addaia,Spain,Europe,true,2021-04-04T09:42:44.182+02:00,2021-04-04T09:42:44.182+02:00
+162610,"Sorbas, Spain",Sorbas,Spain,Europe,true,2023-11-20T09:52:29.741+01:00,2023-11-20T09:52:29.741+01:00
+162696,"Yarmouth, Massachusetts, United States",Yarmouth,"Massachusetts, United States",North America,true,2023-11-17T13:05:13.860+01:00,2023-11-17T13:05:13.860+01:00
+162955,"Wanchese, United States",Wanchese,United States,North America,true,2021-04-28T18:53:19.659+02:00,2021-04-28T18:53:19.659+02:00
+162970,"Kill Devil Hills, United States",Kill Devil Hills,United States,North America,true,2023-11-20T09:25:51.149+01:00,2023-11-20T09:25:51.149+01:00
+163154,"Wurrumiyanga, Australia",Wurrumiyanga,Australia,Oceania,true,2023-10-03T14:03:06.236+02:00,2023-10-03T14:03:06.236+02:00
+163301,"Nerano, Italy",Nerano,Italy,Europe,true,2026-02-03T09:49:32.641+01:00,2026-02-03T09:49:32.641+01:00
+164846,"Tweed Heads, Australia",Tweed Heads,Australia,Oceania,true,2026-02-01T19:37:42.383+01:00,2026-02-01T19:37:42.383+01:00
+164955,"Liapades, Greece",Liapades,Greece,Europe,true,2025-11-07T16:35:30.550+01:00,2025-11-07T16:35:30.550+01:00
+165196,Concordia Sagittaria,Concordia Sagittaria,Unknown,Other,true,2022-02-23T05:50:27.454+01:00,2022-02-23T05:50:27.454+01:00
+165521,"Page Springs, United States",Page Springs,United States,North America,true,2023-10-19T09:20:19.756+02:00,2023-10-19T09:20:19.756+02:00
+165738,"Praia Grande, Portugal",Praia Grande,Portugal,Europe,true,2026-04-02T06:32:13.638+02:00,2026-04-02T06:32:13.638+02:00
+166052,"Riverhead, New York, United States",Riverhead,"New York, United States",North America,true,2023-12-18T09:11:11.024+01:00,2023-12-18T09:11:11.024+01:00
+166444,"Alcossebre, Spain",Alcossebre,Spain,Europe,true,2023-10-03T14:02:52.848+02:00,2023-10-03T14:02:52.848+02:00
+166480,"Tekom, Mexico",Tekom,Mexico,North America,true,2022-08-26T14:07:11.101+02:00,2022-08-26T14:07:11.101+02:00
+166792,"Llano Grande, Mexico",Llano Grande,Mexico,North America,true,2023-10-19T09:25:34.057+02:00,2023-10-19T09:25:34.057+02:00
+166795,"Eagle Bay, Australia",Eagle Bay,Australia,Oceania,true,2022-08-26T14:07:15.663+02:00,2022-08-26T14:07:15.663+02:00
+168217,"Keutschach am See, Austria",Keutschach am See,Austria,Europe,true,2024-09-30T10:34:54.207+02:00,2024-09-30T10:34:54.207+02:00
+168542,"Chichaoua, Morocco",Chichaoua,Morocco,Africa,true,2022-01-24T11:55:52.012+01:00,2022-01-24T11:55:52.012+01:00
+168677,"Ribeira Grande, Cape Verde",Ribeira Grande,Cape Verde,Other,true,2022-02-02T14:08:45.828+01:00,2022-02-02T14:08:45.828+01:00
+169322,"Carlingford, Ireland",Carlingford,Ireland,Europe,true,2026-04-02T06:32:11.181+02:00,2026-04-02T06:32:11.181+02:00
+169598,"Stroumpi, Cyprus",Stroumpi,Cyprus,Other,true,2022-03-07T01:55:23.214+01:00,2022-03-07T01:55:23.214+01:00
+169639,"Alfacar, Spain",Alfacar,Spain,Europe,true,2022-03-09T16:03:01.109+01:00,2022-03-09T16:03:01.109+01:00
+170203,"Kula, United States",Kula,United States,North America,true,2022-11-14T15:35:18.784+01:00,2022-11-14T15:35:18.784+01:00
+170204,"Kaupo, United States",Kaupo,United States,North America,true,2026-04-02T06:32:27.236+02:00,2026-04-02T06:32:27.236+02:00
+173341,"Pertisau, Austria",Pertisau,Austria,Europe,true,2023-12-01T16:05:01.625+01:00,2023-12-01T16:05:01.625+01:00
+173632,"Kenansville, United States",Kenansville,United States,North America,true,2025-07-25T12:34:50.139+02:00,2025-07-25T12:34:50.139+02:00
+174821,"Le Morne, Mauritius, Mauritius, Republic of",Le Morne,"Mauritius, Mauritius, Republic of",Other,true,2025-06-25T16:32:53.128+02:00,2025-06-25T16:32:53.128+02:00
+174945,"Chợ Rã, Vietnam, Vietnam, Socialist Republic of",Chợ Rã,"Vietnam, Vietnam, Socialist Republic of",Other,true,2025-04-21T18:19:19.526+02:00,2025-04-21T18:19:19.526+02:00
+175026,"Blinman, Australia",Blinman,Australia,Oceania,true,2026-04-02T06:32:36.352+02:00,2026-04-02T06:32:36.352+02:00
+175080,"Knaresborough, United Kingdom",Knaresborough,United Kingdom,Europe,true,2024-01-15T09:15:42.035+01:00,2024-01-15T09:15:42.035+01:00
+175391,"Etty Bay, Australia",Etty Bay,Australia,Oceania,true,2023-10-03T14:03:07.568+02:00,2023-10-03T14:03:07.568+02:00
+175689,"Elgoibar, Spain",Elgoibar,Spain,Europe,true,2025-09-01T10:26:55.038+02:00,2025-09-01T10:26:55.038+02:00
+176057,"Nymfasia, Greece",Nymfasia,Greece,Europe,true,2022-06-10T14:30:28.487+02:00,2022-06-10T14:30:28.487+02:00
+176421,"Burnett Heads, Australia",Burnett Heads,Australia,Oceania,true,2024-05-27T10:27:01.069+02:00,2024-05-27T10:27:01.069+02:00
+176953,"Bad Camberg, Germany",Bad Camberg,Germany,Europe,true,2025-09-04T16:28:03.990+02:00,2025-09-04T16:28:03.990+02:00
+177001,"Bad Fallingbostel, Germany",Bad Fallingbostel,Germany,Europe,true,2024-09-23T10:09:55.855+02:00,2024-09-23T10:09:55.855+02:00
+177137,"Dietenheim, Germany, Germany",Dietenheim,"Germany, Germany",Europe,true,2024-09-23T10:22:36.489+02:00,2024-09-23T10:22:36.489+02:00
+177199,"Garding, Germany",Garding,Germany,Europe,true,2024-09-23T10:25:40.303+02:00,2024-09-23T10:25:40.303+02:00
+177210,"Geiselhöring, Germany",Geiselhöring,Germany,Europe,true,2024-06-03T10:30:39.285+02:00,2024-06-03T10:30:39.285+02:00
+177291,"Monheim, Germany",Monheim,Germany,Europe,true,2024-06-03T10:30:40.766+02:00,2024-06-03T10:30:40.766+02:00
+177330,"Goldberg, Germany, Germany",Goldberg,"Germany, Germany",Europe,true,2024-09-23T10:34:18.530+02:00,2024-09-23T10:34:18.530+02:00
+177347,"Waldbröl, Germany",Waldbröl,Germany,Europe,true,2025-09-04T16:28:14.951+02:00,2025-09-04T16:28:14.951+02:00
+177381,"Schönau, Germany",Schönau,Germany,Europe,true,2025-09-04T16:23:12.450+02:00,2025-09-04T16:23:12.450+02:00
+177500,"Shoshone, United States",Shoshone,United States,North America,true,2023-11-20T09:53:33.805+01:00,2023-11-20T09:53:33.805+01:00
+178207,"Ribeira Brava, Cape Verde",Ribeira Brava,Cape Verde,Other,true,2022-07-24T20:46:31.800+02:00,2022-07-24T20:46:31.800+02:00
+179622,"Segura de la Sierra, Andalusia, Spain",Segura de la Sierra,"Andalusia, Spain",Europe,true,2025-09-04T16:04:43.437+02:00,2025-09-04T16:04:43.437+02:00
+179632,"Manta Rota, Faro District, Portugal",Manta Rota,"Faro District, Portugal",Europe,true,2022-08-22T05:37:35.299+02:00,2022-08-22T05:37:35.299+02:00
+179715,"Corrubbio, Veneto, Italy",Corrubbio,"Veneto, Italy",Europe,true,2022-08-23T13:24:23.315+02:00,2022-08-23T13:24:23.315+02:00
+179772,"Ventotene, Lazio, Italy, Italy",Ventotene,"Lazio, Italy, Italy",Europe,true,2023-10-03T13:59:51.130+02:00,2023-10-03T13:59:51.130+02:00
+180084,"Malpica, Galicia, Spain",Malpica,"Galicia, Spain",Europe,true,2023-11-28T17:51:22.532+01:00,2023-11-28T17:51:22.532+01:00
+180164,"Valle de San Lorenzo, Canarias, Spain",Valle de San Lorenzo,"Canarias, Spain",Europe,true,2022-08-31T23:42:33.337+02:00,2022-08-31T23:42:33.337+02:00
+180384,"Contigliano, Lazio, Italy",Contigliano,"Lazio, Italy",Europe,true,2023-10-03T14:02:51.720+02:00,2023-10-03T14:02:51.720+02:00
+180407,"Phuthaditjhaba, South Africa",Phuthaditjhaba,South Africa,Africa,true,2024-09-30T10:35:27.544+02:00,2024-09-30T10:35:27.544+02:00
+180671,"Tzoumerka, Greece",Tzoumerka,Greece,Europe,true,2022-09-13T10:54:05.290+02:00,2022-09-13T10:54:05.290+02:00
+180798,"Penha Garcia, Castelo Branco, Portugal",Penha Garcia,"Castelo Branco, Portugal",Europe,true,2025-10-06T10:27:42.468+02:00,2025-10-06T10:27:42.468+02:00
+180867,"Sant Jaume d'Enveja, Catalonia, Spain",Sant Jaume d'Enveja,"Catalonia, Spain",Europe,true,2024-08-12T13:34:30.776+02:00,2024-08-12T13:34:30.776+02:00
+180992,"Upper Marlboro, Prince George's County",Upper Marlboro,Prince George's County,Other,true,2023-10-03T14:03:12.647+02:00,2023-10-03T14:03:12.647+02:00
+181271,"Božava, Zadarska županija, Croatia",Božava,"Zadarska županija, Croatia",Europe,true,2025-11-07T16:36:05.269+01:00,2025-11-07T16:36:05.269+01:00
+181307,"Hollywood, Florida, United States",Hollywood,"Florida, United States",North America,true,2023-11-20T09:52:52.572+01:00,2023-11-20T09:52:52.572+01:00
+181430,"Mannings, Saint George Gingerland Parish, Saint Kitts and Nevis",Mannings,"Saint George Gingerland Parish, Saint Kitts and Nevis",Other,true,2024-05-20T10:13:19.428+02:00,2024-05-20T10:13:19.428+02:00
+181468,"Baltar, Porto, Portugal",Baltar,"Porto, Portugal",Europe,true,2022-10-10T19:27:07.526+02:00,2022-10-10T19:27:07.526+02:00
+181551,"Yumani, La Paz Department, Bolivia",Yumani,"La Paz Department, Bolivia",Other,true,2025-11-07T16:36:07.709+01:00,2025-11-07T16:36:07.709+01:00
+181819,"Soure, Brazil",Soure,Brazil,South America,true,2025-11-22T22:55:39.746+01:00,2025-11-22T22:55:39.746+01:00
+181903,"Glottertal, Baden-Württemberg, Germania",Glottertal,"Baden-Württemberg, Germania",Other,true,2024-09-02T10:21:59.761+02:00,2024-09-02T10:21:59.761+02:00
+182179,"Velburg, Baviera, Germania",Velburg,"Baviera, Germania",Other,true,2022-10-20T15:11:22.940+02:00,2022-10-20T15:11:22.940+02:00
+182295,"Piesendorf, Salzburg, Austria",Piesendorf,"Salzburg, Austria",Europe,true,2022-10-26T18:04:24.520+02:00,2022-10-26T18:04:24.520+02:00
+182809,"Kalkara, Malta",Kalkara,Malta,Other,true,2025-05-20T23:40:34.620+02:00,2025-05-20T23:40:34.620+02:00
+183059,"Juodkrantė, Klaipėda County, Lithuania, Lithuania",Juodkrantė,"Klaipėda County, Lithuania, Lithuania",Other,true,2024-10-07T10:27:19.980+02:00,2024-10-07T10:27:19.980+02:00
+183070,"De Rust, Western Cape, South Africa",De Rust,"Western Cape, South Africa",Africa,true,2024-09-16T10:17:38.721+02:00,2024-09-16T10:17:38.721+02:00
+183079,"Șoimoș, Arad County, Romania",Șoimoș,"Arad County, Romania",Europe,true,2023-10-03T14:03:10.989+02:00,2023-10-03T14:03:10.989+02:00
+183329,"Tarxien, Malta",Tarxien,Malta,Other,true,2025-05-20T23:40:46.615+02:00,2025-05-20T23:40:46.615+02:00
+183587,"seviaka, La Guajira, Colombia",seviaka,"La Guajira, Colombia",South America,true,2022-11-18T11:36:00.699+01:00,2022-11-18T11:36:00.699+01:00
+184360,"Sun Lakes, Arizona",Sun Lakes,Arizona,Other,true,2024-04-22T10:21:19.506+02:00,2024-04-22T10:21:19.506+02:00
+184629,"Villers-sous-Châtillon, Grand Est, France",Villers-sous-Châtillon,"Grand Est, France",Europe,true,2023-01-02T22:26:59.486+01:00,2023-01-02T22:26:59.486+01:00
+184881,"Prejmer, Brașov district, Romania",Prejmer,"Brașov district, Romania",Europe,true,2024-01-08T10:21:30.921+01:00,2024-01-08T10:21:30.921+01:00
+184914,"Crișan, Tulcea County, Romania",Crișan,"Tulcea County, Romania",Europe,true,2024-01-07T09:58:24.345+01:00,2024-01-07T09:58:24.345+01:00
+185027,"Lernanist, Kotayk Province, Armenia",Lernanist,"Kotayk Province, Armenia",Other,true,2022-12-23T14:57:03.154+01:00,2022-12-23T14:57:03.154+01:00
+185182,"Fiorenzuola di Focara, Marche, Italy",Fiorenzuola di Focara,"Marche, Italy",Europe,true,2023-10-03T13:31:37.459+02:00,2023-10-03T13:31:37.459+02:00
+185822,Golf del Sur,Golf del Sur,Unknown,Other,true,2023-12-05T12:00:46.146+01:00,2023-12-05T12:00:46.146+01:00
+185860,"Monleale, Piedmont",Monleale,Piedmont,Other,true,2023-01-11T14:38:00.433+01:00,2023-01-11T14:38:00.433+01:00
+185903,"Therma, Greece",Therma,Greece,Europe,true,2023-11-26T23:17:53.592+01:00,2023-11-26T23:17:53.592+01:00
+186247,"Kampung Toyapakeh, Nusa Penida",Kampung Toyapakeh,Nusa Penida,Other,true,2026-04-02T06:32:23.428+02:00,2026-04-02T06:32:23.428+02:00
+186419,"Eleousa, Greece",Eleousa,Greece,Europe,true,2023-11-25T12:15:23.611+01:00,2023-11-25T12:15:23.611+01:00
+186594,"Ermones, Corfu",Ermones,Corfu,Other,true,2025-11-07T16:36:18.736+01:00,2025-11-07T16:36:18.736+01:00
+187323,"Maktar, Tunisia",Maktar,Tunisia,Other,true,2023-11-14T11:44:34.817+01:00,2023-11-14T11:44:34.817+01:00
+187324,"Fluelen, Switzerland",Fluelen,Switzerland,Europe,true,2023-08-07T17:38:18.842+02:00,2023-08-07T17:38:18.842+02:00
+187401,Viveiro,Viveiro,Unknown,Other,true,2023-02-02T10:16:34.291+01:00,2023-02-02T10:16:34.291+01:00
+187406,Cortecorbo,Cortecorbo,Unknown,Other,true,2026-04-02T06:32:30.769+02:00,2026-04-02T06:32:30.769+02:00
+187792,"Si Racha, Thailand",Si Racha,Thailand,Asia,true,2025-11-14T13:51:12.173+01:00,2025-11-14T13:51:12.173+01:00
+188196,"Daimiel, Spain",Daimiel,Spain,Europe,true,2023-02-22T14:04:28.549+01:00,2023-02-22T14:04:28.549+01:00
+188224,"Luque, Spain",Luque,Spain,Europe,true,2025-09-01T10:30:10.696+02:00,2025-09-01T10:30:10.696+02:00
+188324,"Collado Mediano, Spain",Collado Mediano,Spain,Europe,true,2023-02-23T09:59:37.175+01:00,2023-02-23T09:59:37.175+01:00
+188338,"Noia, Spain",Noia,Spain,Europe,true,2023-02-23T10:07:43.831+01:00,2023-02-23T10:07:43.831+01:00
+188558,"Port Germein, Australia",Port Germein,Australia,Oceania,true,2024-09-23T10:24:06.405+02:00,2024-09-23T10:24:06.405+02:00
+188730,"Tampaksiring, Bali",Tampaksiring,Bali,Other,true,2025-11-07T16:35:08.258+01:00,2025-11-07T16:35:08.258+01:00
+188942,"Rottingdean, England",Rottingdean,England,Other,true,2023-12-18T09:22:08.290+01:00,2023-12-18T09:22:08.290+01:00
+188983,"Torul, Turkey",Torul,Turkey,Europe,true,2023-11-23T14:42:11.969+01:00,2023-11-23T14:42:11.969+01:00
+189180,"Orbey, France",Orbey,France,Europe,true,2025-09-08T10:29:42.119+02:00,2025-09-08T10:29:42.119+02:00
+189243,"Tholos, Santorini",Tholos,Santorini,Other,true,2025-11-07T16:36:15.760+01:00,2025-11-07T16:36:15.760+01:00
+189366,"Arabba, Italy",Arabba,Italy,Europe,true,2023-10-19T09:18:38.024+02:00,2023-10-19T09:18:38.024+02:00
+189381,"Øverbygd, Norway",Øverbygd,Norway,Europe,true,2025-11-07T16:36:46.296+01:00,2025-11-07T16:36:46.296+01:00
+189551,"Pounta, Cyclades",Pounta,Cyclades,Other,true,2025-07-25T12:35:07.567+02:00,2025-07-25T12:35:07.567+02:00
+189567,"Attard, Malta",Attard,Malta,Other,true,2023-09-07T15:42:41.528+02:00,2023-09-07T15:42:41.528+02:00
+189915,"Mola di Bari, Italy",Mola di Bari,Italy,Europe,true,2023-10-02T15:44:30.101+02:00,2023-10-02T15:44:30.101+02:00
+189961,"Ses Illetes, Mallorca",Ses Illetes,Mallorca,Other,true,2025-11-07T16:35:57.342+01:00,2025-11-07T16:35:57.342+01:00
+189988,"Fazenda das Lajes, Portugal",Fazenda das Lajes,Portugal,Europe,true,2023-04-19T04:40:49.288+02:00,2023-04-19T04:40:49.288+02:00
+190115,"Aiello del Friuli, Italy",Aiello del Friuli,Italy,Europe,true,2023-04-26T13:22:20.553+02:00,2023-04-26T13:22:20.553+02:00
+190176,"Broadwater, New South Wales",Broadwater,New South Wales,Other,true,2023-05-02T18:13:40.368+02:00,2023-05-02T18:13:40.368+02:00
+190265,"Ingenbohl, Switzerland",Ingenbohl,Switzerland,Europe,true,2024-06-03T10:09:01.632+02:00,2024-06-03T10:09:01.632+02:00
+190424,"Ligaria, Crete",Ligaria,Crete,Other,true,2024-01-12T17:23:32.367+01:00,2024-01-12T17:23:32.367+01:00
+190523,"Nelas, Portugal",Nelas,Portugal,Europe,true,2025-10-06T10:31:28.455+02:00,2025-10-06T10:31:28.455+02:00
+190622,"Krondorf, South Australia, Australia",Krondorf,"South Australia, Australia",Oceania,true,2023-10-19T09:18:31.769+02:00,2023-10-19T09:18:31.769+02:00
+190851,"Kepez, Turkey",Kepez,Turkey,Europe,true,2025-09-01T10:37:10.521+02:00,2025-09-01T10:37:10.521+02:00
+190853,"Šmrika, Croatia",Šmrika,Croatia,Europe,true,2025-11-07T16:36:25.522+01:00,2025-11-07T16:36:25.522+01:00
+191087,"Argana, Morocco",Argana,Morocco,Africa,true,2025-11-14T13:52:04.709+01:00,2025-11-14T13:52:04.709+01:00
+191101,Bobatsi,Bobatsi,Unknown,Other,true,2025-12-01T09:09:06.271+01:00,2025-12-01T09:09:06.271+01:00
+191147,"Mambrui, Kenya",Mambrui,Kenya,Africa,true,2025-11-07T16:37:04.880+01:00,2025-11-07T16:37:04.880+01:00
+191311,Bungi,Bungi,Unknown,Other,true,2026-04-06T10:15:05.317+02:00,2026-04-06T10:15:05.317+02:00
+191368,Gongju-si,Gongju-si,Unknown,Other,true,2025-09-04T16:40:44.516+02:00,2025-09-04T16:40:44.516+02:00
+191486,Burcei,Burcei,Unknown,Other,true,2023-07-27T09:36:30.680+02:00,2023-07-27T09:36:30.680+02:00
+191849,L'Escarene,L'Escarene,Unknown,Other,true,2023-11-17T12:57:13.559+01:00,2023-11-17T12:57:13.559+01:00
+191922,"Cúcuta, Colombia",Cúcuta,Colombia,South America,true,2024-04-08T10:21:59.952+02:00,2024-04-08T10:21:59.952+02:00
+192167,Longreach,Longreach,Unknown,Other,true,2025-11-14T13:52:04.939+01:00,2025-11-14T13:52:04.939+01:00
+192190,Hell-Bourg,Hell-Bourg,Unknown,Other,true,2025-11-07T16:36:56.311+01:00,2025-11-07T16:36:56.311+01:00
+192240,Soke,Soke,Unknown,Other,true,2023-09-04T14:25:11.460+02:00,2023-09-04T14:25:11.460+02:00
+192418,Croix,Croix,Unknown,Other,true,2023-10-03T14:02:57.356+02:00,2023-10-03T14:02:57.356+02:00
+192439,Praya,Praya,Unknown,Other,true,2025-11-14T13:52:05.112+01:00,2025-11-14T13:52:05.112+01:00
+192699,Pénjamo,Pénjamo,Unknown,Other,true,2023-11-20T09:12:07.231+01:00,2023-11-20T09:12:07.231+01:00
+192702,Tehuixtla,Tehuixtla,Unknown,Other,true,2024-09-30T10:13:18.055+02:00,2024-09-30T10:13:18.055+02:00
+192768,Winnellie,Winnellie,Unknown,Other,true,2023-10-05T09:54:49.286+02:00,2023-10-05T09:54:49.286+02:00
+193105,Rio Hato,Rio Hato,Unknown,Other,true,2026-04-02T06:32:13.207+02:00,2026-04-02T06:32:13.207+02:00
+193234,Steinbachtal,Steinbachtal,Unknown,Other,true,2023-10-20T10:12:26.596+02:00,2023-10-20T10:12:26.596+02:00
+193414,Summertown,Summertown,Unknown,Other,true,2023-10-30T08:42:19.016+01:00,2023-10-30T08:42:19.016+01:00
+193561,Tanglad,Tanglad,Unknown,Other,true,2023-11-06T10:43:21.813+01:00,2023-11-06T10:43:21.813+01:00
+193705,Vendinha,Vendinha,Unknown,Other,true,2023-11-14T12:24:39.371+01:00,2023-11-14T12:24:39.371+01:00
+193889,Villa Pliniana,Villa Pliniana,Unknown,Other,true,2025-11-07T16:35:06.435+01:00,2025-11-07T16:35:06.435+01:00
+193949,Livingston Montana,Livingston Montana,Unknown,Other,true,2023-11-28T17:29:18.902+01:00,2023-11-28T17:29:18.902+01:00
+193986,Madrigal de las Altas Torres,Madrigal de las Altas Torres,Unknown,Other,true,2023-11-30T11:46:42.170+01:00,2023-11-30T11:46:42.170+01:00
+194572,Hostalric,Hostalric,Unknown,Other,true,2023-12-19T12:51:45.538+01:00,2023-12-19T12:51:45.538+01:00
+195957,Kolasin,Kolasin,Unknown,Other,true,2024-01-03T15:56:54.787+01:00,2024-01-03T15:56:54.787+01:00
+196066,San Vito di Cadore,San Vito di Cadore,Unknown,Other,true,2024-01-03T16:50:13.867+01:00,2024-01-03T16:50:13.867+01:00
+197713,Chokoloskee Island,Chokoloskee Island,Unknown,Other,true,2025-11-07T16:36:12.780+01:00,2025-11-07T16:36:12.780+01:00
+198586,"Lakewood, Colorado",Lakewood,Colorado,Other,true,2025-04-17T18:44:29.079+02:00,2025-04-17T18:44:29.079+02:00
+198810,Kisoro,Kisoro,Unknown,Other,true,2024-09-30T10:22:35.561+02:00,2024-09-30T10:22:35.561+02:00
+198947,Lahti,Lahti,Unknown,Other,true,2024-03-04T09:17:08.379+01:00,2024-03-04T09:17:08.379+01:00
+199579,Rendon Fort Worth,Rendon Fort Worth,Unknown,Other,true,2026-02-02T08:26:01.802+01:00,2026-02-02T08:26:01.802+01:00
+199745,Skagabyggd,Skagabyggd,Unknown,Other,true,2024-05-20T10:16:43.519+02:00,2024-05-20T10:16:43.519+02:00
+199897,Tres Potrillos,Tres Potrillos,Unknown,Other,true,2025-11-07T16:35:58.610+01:00,2025-11-07T16:35:58.610+01:00
+200045,Fabrégas,Fabrégas,Unknown,Other,true,2024-08-19T13:29:57.603+02:00,2024-08-19T13:29:57.603+02:00
+200051,Hanwella,Hanwella,Unknown,Other,true,2024-02-21T18:42:23.953+01:00,2024-02-21T18:42:23.953+01:00
+200061,"George, South Africa",George,South Africa,Africa,true,2025-03-30T00:19:23.322+01:00,2025-03-30T00:19:23.322+01:00
+200303,Rully,Rully,Unknown,Other,true,2024-02-29T16:23:31.387+01:00,2024-02-29T16:23:31.387+01:00
+200439,Orikum,Orikum,Unknown,Other,true,2025-08-29T15:53:41.045+02:00,2025-08-29T15:53:41.045+02:00
+200482,Cheverny,Cheverny,Unknown,Other,true,2024-08-19T10:11:32.851+02:00,2024-08-19T10:11:32.851+02:00
+200524,Minamiawaji,Minamiawaji,Unknown,Other,true,2025-07-28T10:22:42.228+02:00,2025-07-28T10:22:42.228+02:00
+200580,Pluma Hidalgo,Pluma Hidalgo,Unknown,Other,true,2024-03-12T09:58:00.866+01:00,2024-03-12T09:58:00.866+01:00
+200734,Le Grazie,Le Grazie,Unknown,Other,true,2024-03-21T12:19:57.945+01:00,2024-03-21T12:19:57.945+01:00
+201034,Promajna,Promajna,Unknown,Other,true,2026-04-02T06:32:40.049+02:00,2026-04-02T06:32:40.049+02:00
+201426,Martil,Martil,Unknown,Other,true,2025-11-14T13:52:07.678+01:00,2025-11-14T13:52:07.678+01:00
+202133,"Yamoussoukro, Cote d'Ivoire",Yamoussoukro,Cote d'Ivoire,Other,true,2025-11-24T09:18:30.684+01:00,2025-11-24T09:18:30.684+01:00
+202606,Troncones,Troncones,Unknown,Other,true,2026-04-02T06:32:29.587+02:00,2026-04-02T06:32:29.587+02:00
+203371,Puerto Colombia Venezuela,Puerto Colombia Venezuela,Unknown,Other,true,2024-04-26T16:03:11.814+02:00,2024-04-26T16:03:11.814+02:00
+203428,Gignod,Gignod,Unknown,Other,true,2024-07-08T10:22:30.061+02:00,2024-07-08T10:22:30.061+02:00
+203698,Scharfenstein,Scharfenstein,Unknown,Other,true,2024-06-10T10:33:41.117+02:00,2024-06-10T10:33:41.117+02:00
+205066,Pachino,Pachino,Unknown,Other,true,2024-05-16T11:38:35.910+02:00,2024-05-16T11:38:35.910+02:00
+205443,Limeniskos,Limeniskos,Unknown,Other,true,2026-04-02T06:32:34.229+02:00,2026-04-02T06:32:34.229+02:00
+205782,Utsjoki,Utsjoki,Unknown,Other,true,2024-09-09T10:37:23.673+02:00,2024-09-09T10:37:23.673+02:00
+206059,Himmelreich,Himmelreich,Unknown,Other,true,2024-09-02T10:36:02.846+02:00,2024-09-02T10:36:02.846+02:00
+206118,Alor Gajah,Alor Gajah,Unknown,Other,true,2024-06-03T10:57:01.327+02:00,2024-06-03T10:57:01.327+02:00
+206132,Macka,Macka,Unknown,Other,true,2024-06-03T11:58:19.107+02:00,2024-06-03T11:58:19.107+02:00
+206213,Wesendorf,Wesendorf,Unknown,Other,true,2024-06-03T17:18:09.519+02:00,2024-06-03T17:18:09.519+02:00
+206446,Schaumburg,Schaumburg,Unknown,Other,true,2024-06-10T15:04:18.451+02:00,2024-06-10T15:04:18.451+02:00
+206525,Ebbs,Ebbs,Unknown,Other,true,2024-09-30T10:22:55.623+02:00,2024-09-30T10:22:55.623+02:00
+206600,Berryville,Berryville,Unknown,Other,true,2024-06-11T15:15:49.537+02:00,2024-06-11T15:15:49.537+02:00
+206613,Bertrange,Bertrange,Unknown,Other,true,2024-06-11T16:01:16.233+02:00,2024-06-11T16:01:16.233+02:00
+206699,Brecksville,Brecksville,Unknown,Other,true,2024-06-11T18:43:04.909+02:00,2024-06-11T18:43:04.909+02:00
+206726,Thị Tran Nam Ban,Thị Tran Nam Ban,Unknown,Other,true,2024-06-12T16:38:56.573+02:00,2024-06-12T16:38:56.573+02:00
+206739,Knik-Fairview,Knik-Fairview,Unknown,Other,true,2024-06-13T09:25:30.521+02:00,2024-06-13T09:25:30.521+02:00
+206783,Solleron,Solleron,Unknown,Other,true,2024-06-13T10:03:03.144+02:00,2024-06-13T10:03:03.144+02:00
+206921,Whitemarsh Township,Whitemarsh Township,Unknown,Other,true,2024-06-14T17:04:33.580+02:00,2024-06-14T17:04:33.580+02:00
+206951,Koutsouras,Koutsouras,Unknown,Other,true,2025-10-06T10:20:20.574+02:00,2025-10-06T10:20:20.574+02:00
+206967,Zawoja,Zawoja,Unknown,Other,true,2024-06-16T17:04:23.891+02:00,2024-06-16T17:04:23.891+02:00
+206997,Keda Municipality,Keda Municipality,Unknown,Other,true,2024-06-17T14:19:43.178+02:00,2024-06-17T14:19:43.178+02:00
+206999,Inverness California,Inverness California,Unknown,Other,true,2024-06-17T14:29:30.353+02:00,2024-06-17T14:29:30.353+02:00
+207035,Siren,Siren,Unknown,Other,true,2024-06-17T15:17:16.448+02:00,2024-06-17T15:17:16.448+02:00
+207160,Airolo,Airolo,Unknown,Other,true,2025-07-28T10:31:37.843+02:00,2025-07-28T10:31:37.843+02:00
+207168,Gurjaani,Gurjaani,Unknown,Other,true,2024-06-18T10:32:54.758+02:00,2024-06-18T10:32:54.758+02:00
+207185,Goldstream,Goldstream,Unknown,Other,true,2024-06-18T15:17:01.935+02:00,2024-06-18T15:17:01.935+02:00
+207233,Sutton Forest,Sutton Forest,Unknown,Other,true,2024-09-23T10:16:14.712+02:00,2024-09-23T10:16:14.712+02:00
+207279,Burlov,Burlov,Unknown,Other,true,2024-06-19T10:27:24.949+02:00,2024-06-19T10:27:24.949+02:00
+207338,Deming,Deming,Unknown,Other,true,2024-06-19T11:06:56.514+02:00,2024-06-19T11:06:56.514+02:00
+207381,Calkini,Calkini,Unknown,Other,true,2024-06-19T15:32:33.776+02:00,2024-06-19T15:32:33.776+02:00
+207407,Omao,Omao,Unknown,Other,true,2024-06-19T15:54:35.419+02:00,2024-06-19T15:54:35.419+02:00
+207430,Ataahua,Ataahua,Unknown,Other,true,2025-01-20T09:26:59.635+01:00,2025-01-20T09:26:59.635+01:00
+207448,Aísa,Aísa,Unknown,Other,true,2024-06-19T16:52:01.016+02:00,2024-06-19T16:52:01.016+02:00
+207494,Taylors,Taylors,Unknown,Other,true,2024-06-20T11:21:51.040+02:00,2024-06-20T11:21:51.040+02:00
+207517,Ranson,Ranson,Unknown,Other,true,2024-06-20T11:46:17.198+02:00,2024-06-20T11:46:17.198+02:00
+207719,Vivario,Vivario,Unknown,Other,true,2024-06-24T17:35:40.260+02:00,2024-06-24T17:35:40.260+02:00
+207797,Fanlo,Fanlo,Unknown,Other,true,2024-06-26T19:01:55.026+02:00,2024-06-26T19:01:55.026+02:00
+207909,Buren,Buren,Unknown,Other,true,2024-06-27T16:50:12.018+02:00,2024-06-27T16:50:12.018+02:00
+207922,Coazzolo,Coazzolo,Unknown,Other,true,2024-06-27T17:12:29.447+02:00,2024-06-27T17:12:29.447+02:00
+207945,"Hull, Massachusetts",Hull,Massachusetts,Other,true,2024-06-28T10:47:09.201+02:00,2024-06-28T10:47:09.201+02:00
+208013,Shorewood,Shorewood,Unknown,Other,true,2024-06-28T11:37:26.536+02:00,2024-06-28T11:37:26.536+02:00
+208030,Kautokeino,Kautokeino,Unknown,Other,true,2025-09-01T10:30:28.852+02:00,2025-09-01T10:30:28.852+02:00
+208049,Bonnechere Valley,Bonnechere Valley,Unknown,Other,true,2024-06-28T18:18:49.201+02:00,2024-06-28T18:18:49.201+02:00
+208072,Durban-Corbieres,Durban-Corbieres,Unknown,Other,true,2025-12-08T09:22:51.727+01:00,2025-12-08T09:22:51.727+01:00
+208165,Kissee Mills,Kissee Mills,Unknown,Other,true,2024-07-01T17:26:03.814+02:00,2024-07-01T17:26:03.814+02:00
+208196,Kargil,Kargil,Unknown,Other,true,2024-07-01T17:35:40.390+02:00,2024-07-01T17:35:40.390+02:00
+208237,Joanes,Joanes,Unknown,Other,true,2024-07-01T17:53:29.889+02:00,2024-07-01T17:53:29.889+02:00
+208247,Swat,Swat,Unknown,Other,true,2024-07-01T17:57:08.614+02:00,2024-07-01T17:57:08.614+02:00
+208271,Warsaw Indiana,Warsaw Indiana,Unknown,Other,true,2024-07-01T18:06:42.199+02:00,2024-07-01T18:06:42.199+02:00
+208312,Partille,Partille,Unknown,Other,true,2024-07-02T14:13:53.834+02:00,2024-07-02T14:13:53.834+02:00
+208351,Olbersdorf,Olbersdorf,Unknown,Other,true,2024-07-02T16:18:30.537+02:00,2024-07-02T16:18:30.537+02:00
+208425,Peaceful Bay,Peaceful Bay,Unknown,Other,true,2024-07-02T17:55:20.871+02:00,2024-07-02T17:55:20.871+02:00
+208521,Chillicothe,Chillicothe,Unknown,Other,true,2024-07-03T11:24:22.966+02:00,2024-07-03T11:24:22.966+02:00
+208537,Quevedo,Quevedo,Unknown,Other,true,2025-11-14T13:52:10.014+01:00,2025-11-14T13:52:10.014+01:00
+208569,Ingleside,Ingleside,Unknown,Other,true,2025-09-01T10:28:35.258+02:00,2025-09-01T10:28:35.258+02:00
+208669,Willmar,Willmar,Unknown,Other,true,2024-07-04T11:36:41.294+02:00,2024-07-04T11:36:41.294+02:00
+208709,Temoaya,Temoaya,Unknown,Other,true,2024-07-04T16:10:10.816+02:00,2024-07-04T16:10:10.816+02:00
+208752,Hincesti City,Hincesti City,Unknown,Other,true,2024-07-08T08:18:56.597+02:00,2024-07-08T08:18:56.597+02:00
+208763,Sigacik,Sigacik,Unknown,Other,true,2024-07-08T08:31:41.151+02:00,2024-07-08T08:31:41.151+02:00
+208851,Umasbamba,Umasbamba,Unknown,Other,true,2024-09-09T10:10:19.563+02:00,2024-09-09T10:10:19.563+02:00
+208893,Schinias,Schinias,Unknown,Other,true,2024-07-09T12:45:16.648+02:00,2024-07-09T12:45:16.648+02:00
+208918,Giannitsa,Giannitsa,Unknown,Other,true,2024-07-09T12:55:27.769+02:00,2024-07-09T12:55:27.769+02:00
+208924,Arbeca,Arbeca,Unknown,Other,true,2025-06-30T10:27:19.493+02:00,2025-06-30T10:27:19.493+02:00
+208949,Castletown Isle of Man,Castletown Isle of Man,Unknown,Other,true,2024-07-09T13:10:31.891+02:00,2024-07-09T13:10:31.891+02:00
+209003,Suleja,Suleja,Unknown,Other,true,2026-02-02T09:16:32.852+01:00,2026-02-02T09:16:32.852+01:00
+209111,Aniane,Aniane,Unknown,Other,true,2024-07-12T09:55:46.102+02:00,2024-07-12T09:55:46.102+02:00
+209130,Lexington Massachusetts,Lexington Massachusetts,Unknown,Other,true,2024-07-12T13:21:35.738+02:00,2024-07-12T13:21:35.738+02:00
+209207,"Stuart, Florida",Stuart,Florida,Other,true,2025-04-16T00:23:45.943+02:00,2025-04-16T00:23:45.943+02:00
+209898,Lake Delton,Lake Delton,Unknown,Other,true,2024-07-25T15:24:32.594+02:00,2024-07-25T15:24:32.594+02:00
+209919,"Lincoln, Massachusetts",Lincoln,Massachusetts,Other,true,2024-07-25T16:55:35.252+02:00,2024-07-25T16:55:35.252+02:00
+210278,"Warwick, Pennsylvania",Warwick,Pennsylvania,Other,true,2024-08-01T15:02:44.220+02:00,2024-08-01T15:02:44.220+02:00
+210317,Cumieira,Cumieira,Unknown,Other,true,2024-08-02T11:06:54.972+02:00,2024-08-02T11:06:54.972+02:00
+210440,"Siesta Key, Florida",Siesta Key,Florida,Other,true,2024-08-05T09:15:38.446+02:00,2024-08-05T09:15:38.446+02:00
+210523,Kakunodatemachi,Kakunodatemachi,Unknown,Other,true,2024-08-05T13:15:45.493+02:00,2024-08-05T13:15:45.493+02:00
+210742,La Tour-d'Aigues,La Tour-d'Aigues,Unknown,Other,true,2024-08-06T13:47:34.014+02:00,2024-08-06T13:47:34.014+02:00
+210775,Ampasipohy,Ampasipohy,Unknown,Other,true,2025-11-07T16:35:49.628+01:00,2025-11-07T16:35:49.628+01:00
+210873,Koumelas,Koumelas,Unknown,Other,true,2025-10-06T10:22:39.476+02:00,2025-10-06T10:22:39.476+02:00
+210958,Cleulis,Cleulis,Unknown,Other,true,2024-08-07T13:20:56.569+02:00,2024-08-07T13:20:56.569+02:00
+211030,S'Estanyol de Migjorn,S'Estanyol de Migjorn,Unknown,Other,true,2025-06-16T10:13:34.036+02:00,2025-06-16T10:13:34.036+02:00
+211278,Autoire,Autoire,Unknown,Other,true,2024-08-09T09:09:19.762+02:00,2024-08-09T09:09:19.762+02:00
+212068,"Clarendon, South Australia",Clarendon,South Australia,Other,true,2024-08-17T14:31:33.310+02:00,2024-08-17T14:31:33.310+02:00
+212476,Cahir,Cahir,Unknown,Other,true,2024-08-22T09:57:13.766+02:00,2024-08-22T09:57:13.766+02:00
+212575,Asnieres-sur-Oise,Asnieres-sur-Oise,Unknown,Other,true,2024-08-22T14:34:37.914+02:00,2024-08-22T14:34:37.914+02:00
+212667,Olu Deniz,Olu Deniz,Unknown,Other,true,2026-03-16T09:08:58.440+01:00,2026-03-16T09:08:58.440+01:00
+212838,Beitou District,Beitou District,Unknown,Other,true,2026-04-02T06:32:21.545+02:00,2026-04-02T06:32:21.545+02:00
+212985,Churute,Churute,Unknown,Other,true,2024-09-03T10:46:18.929+02:00,2024-09-03T10:46:18.929+02:00
+213028,Brataj,Brataj,Unknown,Other,true,2026-04-02T06:32:25.780+02:00,2026-04-02T06:32:25.780+02:00
+213185,El Pinar,El Pinar,Unknown,Other,true,2024-08-29T09:52:16.347+02:00,2024-08-29T09:52:16.347+02:00
+213190,Villanueva de las Torres,Villanueva de las Torres,Unknown,Other,true,2024-08-29T09:54:45.946+02:00,2024-08-29T09:54:45.946+02:00
+213235,Blandy,Blandy,Unknown,Other,true,2024-08-29T11:11:31.151+02:00,2024-08-29T11:11:31.151+02:00
+213290,Onkaparinga,Onkaparinga,Unknown,Other,true,2024-08-29T14:58:20.967+02:00,2024-08-29T14:58:20.967+02:00
+213582,Ystradfellte,Ystradfellte,Unknown,Other,true,2024-08-31T17:26:03.815+02:00,2024-08-31T17:26:03.815+02:00
+213624,Trawsfynydd,Trawsfynydd,Unknown,Other,true,2025-10-06T10:27:48.170+02:00,2025-10-06T10:27:48.170+02:00
+213638,Bishopthorpe,Bishopthorpe,Unknown,Other,true,2024-09-01T21:02:45.747+02:00,2024-09-01T21:02:45.747+02:00
+213671,Salice Salentino,Salice Salentino,Unknown,Other,true,2024-09-02T09:29:50.087+02:00,2024-09-02T09:29:50.087+02:00
+213673,Ramsey and Parkeston,Ramsey and Parkeston,Unknown,Other,true,2024-09-02T09:30:57.303+02:00,2024-09-02T09:30:57.303+02:00
+213677,Salmour,Salmour,Unknown,Other,true,2024-09-02T09:36:42.565+02:00,2024-09-02T09:36:42.565+02:00
+213690,Gressan,Gressan,Unknown,Other,true,2024-09-02T09:56:58.523+02:00,2024-09-02T09:56:58.523+02:00
+213871,Santiago Colombia,Santiago Colombia,Unknown,Other,true,2026-04-02T06:32:13.954+02:00,2026-04-02T06:32:13.954+02:00
+213980,Albinea,Albinea,Unknown,Other,true,2025-01-13T09:10:08.139+01:00,2025-01-13T09:10:08.139+01:00
+214290,Saint-Ambroix,Saint-Ambroix,Unknown,Other,true,2024-09-05T19:41:07.738+02:00,2024-09-05T19:41:07.738+02:00
+214350,Monein,Monein,Unknown,Other,true,2025-09-08T10:31:03.061+02:00,2025-09-08T10:31:03.061+02:00
+214369,San Juan de Miraflores,San Juan de Miraflores,Unknown,Other,true,2024-09-06T11:51:36.329+02:00,2024-09-06T11:51:36.329+02:00
+214774,Grabs,Grabs,Unknown,Other,true,2024-09-09T23:02:41.387+02:00,2024-09-09T23:02:41.387+02:00
+214820,Conjunt de Castell d'Aro,Conjunt de Castell d'Aro,Unknown,Other,true,2024-09-10T16:54:24.304+02:00,2024-09-10T16:54:24.304+02:00
+214851,"Vallehermoso, Tenerife",Vallehermoso,Tenerife,Other,true,2025-06-30T10:39:01.639+02:00,2025-06-30T10:39:01.639+02:00
+214934,Osterhaninge,Osterhaninge,Unknown,Other,true,2024-09-10T18:15:00.131+02:00,2024-09-10T18:15:00.131+02:00
+215255,Plerin,Plerin,Unknown,Other,true,2024-09-12T12:42:44.190+02:00,2024-09-12T12:42:44.190+02:00
+215559,Unterammergau,Unterammergau,Unknown,Other,true,2024-09-14T20:35:22.226+02:00,2024-09-14T20:35:22.226+02:00
+215666,Dundee Beach,Dundee Beach,Unknown,Other,true,2024-09-16T23:28:15.582+02:00,2024-09-16T23:28:15.582+02:00
+215762,Criquetot-L'Esneval,Criquetot-L'Esneval,Unknown,Other,true,2024-09-17T14:39:35.405+02:00,2024-09-17T14:39:35.405+02:00
+215935,Mata de Sao Joao,Mata de Sao Joao,Unknown,Other,true,2024-09-18T13:32:17.897+02:00,2024-09-18T13:32:17.897+02:00
+215940,Sainte-Foy-Les-Lyon,Sainte-Foy-Les-Lyon,Unknown,Other,true,2026-02-02T10:12:31.429+01:00,2026-02-02T10:12:31.429+01:00
+216129,Li Curt,Li Curt,Unknown,Other,true,2025-11-14T13:52:12.439+01:00,2025-11-14T13:52:12.439+01:00
+216132,Ricken,Ricken,Unknown,Other,true,2024-09-19T12:12:31.315+02:00,2024-09-19T12:12:31.315+02:00
+216231,Samarra,Samarra,Unknown,Other,true,2026-04-02T06:32:41.705+02:00,2026-04-02T06:32:41.705+02:00
+216534,Santo Quintino,Santo Quintino,Unknown,Other,true,2024-09-23T16:43:35.677+02:00,2024-09-23T16:43:35.677+02:00
+216536,Valenca do Douro,Valenca do Douro,Unknown,Other,true,2024-09-23T16:45:02.406+02:00,2024-09-23T16:45:02.406+02:00
+216554,Lomba da Maia,Lomba da Maia,Unknown,Other,true,2025-06-16T10:15:52.180+02:00,2025-06-16T10:15:52.180+02:00
+216664,Fassberg,Fassberg,Unknown,Other,true,2024-09-24T12:06:34.733+02:00,2024-09-24T12:06:34.733+02:00
+216681,Russbach am Pass Gschutt,Russbach am Pass Gschutt,Unknown,Other,true,2025-11-14T13:52:12.934+01:00,2025-11-14T13:52:12.934+01:00
+216963,Balsfjord,Balsfjord,Unknown,Other,true,2025-09-01T10:12:54.760+02:00,2025-09-01T10:12:54.760+02:00
+217663,Lech am Arlberg,Lech am Arlberg,Unknown,Other,true,2024-10-01T09:04:53.845+02:00,2024-10-01T09:04:53.845+02:00
+217665,"La Trinidad, Queretaro",La Trinidad,Queretaro,Other,true,2024-10-01T09:40:53.877+02:00,2024-10-01T09:40:53.877+02:00
+218335,Vic-Fezensac,Vic-Fezensac,Unknown,Other,true,2024-10-07T21:49:24.440+02:00,2024-10-07T21:49:24.440+02:00
+218342,Vega de Río Palmas,Vega de Río Palmas,Unknown,Other,true,2025-06-16T10:11:27.881+02:00,2025-06-16T10:11:27.881+02:00
+218413,Trabia,Trabia,Unknown,Other,true,2024-10-09T03:33:13.565+02:00,2024-10-09T03:33:13.565+02:00
+218422,Lake Sebu,Lake Sebu,Unknown,Other,true,2024-10-09T03:47:50.339+02:00,2024-10-09T03:47:50.339+02:00
+218423,Marina Smir,Marina Smir,Unknown,Other,true,2024-10-09T03:52:34.150+02:00,2024-10-09T03:52:34.150+02:00
+218447,"Padina, Romania",Padina,Romania,Europe,true,2024-10-10T12:48:09.091+02:00,2024-10-10T12:48:09.091+02:00
+218452,Petty Harbour-Maddox Cove,Petty Harbour-Maddox Cove,Unknown,Other,true,2026-04-02T06:32:28.953+02:00,2026-04-02T06:32:28.953+02:00
+218474,Glan,Glan,Unknown,Other,true,2024-10-09T09:01:27.490+02:00,2024-10-09T09:01:27.490+02:00
+218510,Ashford in the Water,Ashford in the Water,Unknown,Other,true,2024-10-09T09:13:37.852+02:00,2024-10-09T09:13:37.852+02:00
+218535,"Crystal Creek, Queensland",Crystal Creek,Queensland,Other,true,2025-10-06T10:21:48.405+02:00,2025-10-06T10:21:48.405+02:00
+218553,Millahue,Millahue,Unknown,Other,true,2024-10-09T12:13:41.913+02:00,2024-10-09T12:13:41.913+02:00
+218583,Andasibe,Andasibe,Unknown,Other,true,2026-04-02T06:32:18.706+02:00,2026-04-02T06:32:18.706+02:00
+218588,Itoshima,Itoshima,Unknown,Other,true,2024-10-09T12:29:10.712+02:00,2024-10-09T12:29:10.712+02:00
+218647,Assinie-Mafia,Assinie-Mafia,Unknown,Other,true,2024-12-04T00:30:47.692+01:00,2024-12-04T00:30:47.692+01:00
+218662,Crevillent,Crevillent,Unknown,Other,true,2024-10-09T12:58:43.917+02:00,2024-10-09T12:58:43.917+02:00
+218689,Agost,Agost,Unknown,Other,true,2024-10-09T15:08:30.789+02:00,2024-10-09T15:08:30.789+02:00
+218717,Istocno Sarajevo,Istocno Sarajevo,Unknown,Other,true,2026-04-27T10:12:59.364+02:00,2026-04-27T10:12:59.364+02:00
+218774,Fenghuang County,Fenghuang County,Unknown,Other,true,2024-10-10T16:59:25.301+02:00,2024-10-10T16:59:25.301+02:00
+218797,Campomoro,Campomoro,Unknown,Other,true,2025-11-07T16:35:26.339+01:00,2025-11-07T16:35:26.339+01:00
+218961,Green Mountain Falls,Green Mountain Falls,Unknown,Other,true,2024-10-14T17:04:45.091+02:00,2024-10-14T17:04:45.091+02:00
+219017,Neck,Neck,Unknown,Other,true,2025-04-21T19:53:19.534+02:00,2025-04-21T19:53:19.534+02:00
+219018,Porta Coeli,Porta Coeli,Unknown,Other,true,2024-10-14T18:52:13.152+02:00,2024-10-14T18:52:13.152+02:00
+219199,"Malata, Peru",Malata,Peru,South America,true,2024-10-16T14:08:40.473+02:00,2024-10-16T14:08:40.473+02:00
+219437,Taolagnaro,Taolagnaro,Unknown,Other,true,2026-04-02T06:31:58.199+02:00,2026-04-02T06:31:58.199+02:00
+219492,"Sayan, Peru",Sayan,Peru,South America,true,2024-10-23T11:05:16.106+02:00,2024-10-23T11:05:16.106+02:00
+219504,Ccolcca,Ccolcca,Unknown,Other,true,2024-10-23T14:16:13.515+02:00,2024-10-23T14:16:13.515+02:00
+220522,Fornello,Fornello,Unknown,Other,true,2024-11-11T13:13:35.294+01:00,2024-11-11T13:13:35.294+01:00
+221101,Nam Ty,Nam Ty,Unknown,Other,true,2025-06-30T10:49:35.415+02:00,2025-06-30T10:49:35.415+02:00
+221462,Flums,Flums,Unknown,Other,true,2024-11-25T12:31:28.477+01:00,2024-11-25T12:31:28.477+01:00
+222223,"Himi, Toyama",Himi,Toyama,Other,true,2024-11-29T11:06:42.333+01:00,2024-11-29T11:06:42.333+01:00
+222643,Polinyà de Xúquer,Polinyà de Xúquer,Unknown,Other,true,2024-12-11T15:51:43.438+01:00,2024-12-11T15:51:43.438+01:00
+222957,Puna'auia,Puna'auia,Unknown,Other,true,2026-04-02T06:32:38.491+02:00,2026-04-02T06:32:38.491+02:00
+222995,Old Head,Old Head,Unknown,Other,true,2026-04-02T06:32:36.713+02:00,2026-04-02T06:32:36.713+02:00
+223612,Lombez,Lombez,Unknown,Other,true,2025-01-02T00:45:55.335+01:00,2025-01-02T00:45:55.335+01:00
+223842,"St. Andrews, New Brunswick",St. Andrews,New Brunswick,Other,true,2026-02-02T15:12:31.961+01:00,2026-02-02T15:12:31.961+01:00
+223861,Brugnato,Brugnato,Unknown,Other,true,2025-01-03T09:30:14.243+01:00,2025-01-03T09:30:14.243+01:00
+224233,Gustafsberg,Gustafsberg,Unknown,Other,true,2025-01-06T16:56:40.092+01:00,2025-01-06T16:56:40.092+01:00
+224453,Saint-Trojan-Les-Bains,Saint-Trojan-Les-Bains,Unknown,Other,true,2025-01-07T17:30:51.286+01:00,2025-01-07T17:30:51.286+01:00
+225797,Combapata,Combapata,Unknown,Other,true,2025-01-16T12:41:29.791+01:00,2025-01-16T12:41:29.791+01:00
+225838,Villetta Barrea,Villetta Barrea,Unknown,Other,true,2025-01-16T17:05:57.744+01:00,2025-01-16T17:05:57.744+01:00
+226169,Gordon's Bay,Gordon's Bay,Unknown,Other,true,2025-01-20T12:59:53.722+01:00,2025-01-20T12:59:53.722+01:00
+226250,Ritterhude,Ritterhude,Unknown,Other,true,2025-01-20T17:54:41.813+01:00,2025-01-20T17:54:41.813+01:00
+226464,Laggio di Cadore,Laggio di Cadore,Unknown,Other,true,2025-01-21T15:51:57.937+01:00,2025-01-21T15:51:57.937+01:00
+226749,Pa Vi,Pa Vi,Unknown,Other,true,2025-04-14T14:19:45.609+02:00,2025-04-14T14:19:45.609+02:00
+227179,"Gaiman, Argentina",Gaiman,Argentina,South America,true,2025-11-22T22:50:24.050+01:00,2025-11-22T22:50:24.050+01:00
+227361,Thrapsano,Thrapsano,Unknown,Other,true,2025-01-24T16:03:07.963+01:00,2025-01-24T16:03:07.963+01:00
+227438,Machuca,Machuca,Unknown,Other,true,2025-01-24T17:42:38.582+01:00,2025-01-24T17:42:38.582+01:00
+227482,Montpezat,Montpezat,Unknown,Other,true,2025-01-27T10:25:53.336+01:00,2025-01-27T10:25:53.336+01:00
+227487,El Zonte,El Zonte,Unknown,Other,true,2025-11-07T16:35:40.727+01:00,2025-11-07T16:35:40.727+01:00
+227789,Sannat,Sannat,Unknown,Other,true,2025-06-16T10:31:19.966+02:00,2025-06-16T10:31:19.966+02:00
+228005,Terrigal,Terrigal,Unknown,Other,true,2025-06-30T10:37:49.800+02:00,2025-06-30T10:37:49.800+02:00
+228043,Wirrina Cove,Wirrina Cove,Unknown,Other,true,2025-01-29T10:03:48.682+01:00,2025-01-29T10:03:48.682+01:00
+228435,Chorvoq,Chorvoq,Unknown,Other,true,2025-02-03T17:37:59.189+01:00,2025-02-03T17:37:59.189+01:00
+228542,Savigny-les-Beaune,Savigny-les-Beaune,Unknown,Other,true,2025-02-04T11:22:33.070+01:00,2025-02-04T11:22:33.070+01:00
+228675,Casal Novo,Casal Novo,Unknown,Other,true,2025-02-04T13:14:39.832+01:00,2025-02-04T13:14:39.832+01:00
+228686,Navacerrada,Navacerrada,Unknown,Other,true,2025-02-04T13:19:00.301+01:00,2025-02-04T13:19:00.301+01:00
+228837,Qeparo Fushe,Qeparo Fushe,Unknown,Other,true,2025-02-05T14:10:17.772+01:00,2025-02-05T14:10:17.772+01:00
+228849,Al Aweer,Al Aweer,Unknown,Other,true,2026-04-02T06:32:21.079+02:00,2026-04-02T06:32:21.079+02:00
+229183,"Venecia, Colombia",Venecia,Colombia,South America,true,2025-02-08T14:07:44.115+01:00,2025-02-08T14:07:44.115+01:00
+229311,Ban Pha Hee Or Ban Pha Hi,Ban Pha Hee Or Ban Pha Hi,Unknown,Other,true,2025-02-10T11:52:12.471+01:00,2025-02-10T11:52:12.471+01:00
+229462,Vikran,Vikran,Unknown,Other,true,2025-02-11T09:19:41.345+01:00,2025-02-11T09:19:41.345+01:00
+229594,Puerto Bandera,Puerto Bandera,Unknown,Other,true,2026-04-02T06:32:13.042+02:00,2026-04-02T06:32:13.042+02:00
+229895,Epuyen,Epuyen,Unknown,Other,true,2025-02-12T16:04:31.521+01:00,2025-02-12T16:04:31.521+01:00
+230039,Malinat,Malinat,Unknown,Other,true,2026-01-26T19:03:50.405+01:00,2026-01-26T19:03:50.405+01:00
+230108,Kasina Wielka,Kasina Wielka,Unknown,Other,true,2025-02-13T19:00:15.329+01:00,2025-02-13T19:00:15.329+01:00
+230133,Abu Ghosh,Abu Ghosh,Unknown,Other,true,2025-12-01T09:10:27.480+01:00,2025-12-01T09:10:27.480+01:00
+230404,Pulacayo,Pulacayo,Unknown,Other,true,2026-04-02T06:32:35.638+02:00,2026-04-02T06:32:35.638+02:00
+230697,Kuchevishte,Kuchevishte,Unknown,Other,true,2026-01-26T19:39:50.882+01:00,2026-01-26T19:39:50.882+01:00
+230766,Assin Manso,Assin Manso,Unknown,Other,true,2025-02-17T18:21:07.983+01:00,2025-02-17T18:21:07.983+01:00
+230779,Muang Thong,Muang Thong,Unknown,Other,true,2025-02-17T18:46:34.832+01:00,2025-02-17T18:46:34.832+01:00
+231602,Aparan,Aparan,Unknown,Other,true,2025-02-21T12:07:43.131+01:00,2025-02-21T12:07:43.131+01:00
+231685,Lindoso,Lindoso,Unknown,Other,true,2025-02-21T17:16:28.024+01:00,2025-02-21T17:16:28.024+01:00
+231688,Paukaa,Paukaa,Unknown,Other,true,2025-02-21T17:19:47.378+01:00,2025-02-21T17:19:47.378+01:00
+231744,Kamena Vourla,Kamena Vourla,Unknown,Other,true,2026-01-26T20:18:04.464+01:00,2026-01-26T20:18:04.464+01:00
+231857,Long Tan Ba Ria-Vung Tau,Long Tan Ba Ria-Vung Tau,Unknown,Other,true,2025-02-24T16:44:32.679+01:00,2025-02-24T16:44:32.679+01:00
+231968,Pelling,Pelling,Unknown,Other,true,2026-04-02T06:32:42.795+02:00,2026-04-02T06:32:42.795+02:00
+232181,Dzitnup,Dzitnup,Unknown,Other,true,2025-11-07T16:36:35.799+01:00,2025-11-07T16:36:35.799+01:00
+232717,Domaso,Domaso,Unknown,Other,true,2025-03-03T18:58:12.287+01:00,2025-03-03T18:58:12.287+01:00
+232773,Melaab,Melaab,Unknown,Other,true,2026-04-02T06:32:34.969+02:00,2026-04-02T06:32:34.969+02:00
+232785,Òdena,Òdena,Unknown,Other,true,2025-06-30T10:28:36.557+02:00,2025-06-30T10:28:36.557+02:00
+233237,Port Renfrew,Port Renfrew,Unknown,Other,true,2025-11-07T16:35:31.359+01:00,2025-11-07T16:35:31.359+01:00
+233256,Mokosica,Mokosica,Unknown,Other,true,2025-03-08T13:50:27.409+01:00,2025-03-08T13:50:27.409+01:00
+233503,Chiqueiro,Chiqueiro,Unknown,Other,true,2025-03-10T18:39:59.600+01:00,2025-03-10T18:39:59.600+01:00
+233760,Sant'Angelo Muxaro,Sant'Angelo Muxaro,Unknown,Other,true,2025-03-13T12:02:53.898+01:00,2025-03-13T12:02:53.898+01:00
+233879,Olocuilta,Olocuilta,Unknown,Other,true,2025-03-14T15:51:44.989+01:00,2025-03-14T15:51:44.989+01:00
+233902,Canas Dulces,Canas Dulces,Unknown,Other,true,2025-03-14T16:45:20.287+01:00,2025-03-14T16:45:20.287+01:00
+234212,Abades,Abades,Unknown,Other,true,2025-11-07T16:36:26.539+01:00,2025-11-07T16:36:26.539+01:00
+234587,Huangluo,Huangluo,Unknown,Other,true,2025-03-18T11:41:57.480+01:00,2025-03-18T11:41:57.480+01:00
+234624,Callanish,Callanish,Unknown,Other,true,2025-12-15T09:29:53.311+01:00,2025-12-15T09:29:53.311+01:00
+234656,Valea Draganului,Valea Draganului,Unknown,Other,true,2025-03-18T14:47:48.856+01:00,2025-03-18T14:47:48.856+01:00
+234891,"Kampen, Germany",Kampen,Germany,Europe,true,2025-03-19T10:38:31.403+01:00,2025-03-19T10:38:31.403+01:00
+235172,San Esteban de Gormaz,San Esteban de Gormaz,Unknown,Other,true,2025-03-20T11:58:54.929+01:00,2025-03-20T11:58:54.929+01:00
+235440,Brajici,Brajici,Unknown,Other,true,2025-03-20T17:36:47.264+01:00,2025-03-20T17:36:47.264+01:00
+235604,Yangiabad,Yangiabad,Unknown,Other,true,2025-03-21T10:54:56.873+01:00,2025-03-21T10:54:56.873+01:00
+236171,Emeishan City,Emeishan City,Unknown,Other,true,2025-03-24T19:02:09.184+01:00,2025-03-24T19:02:09.184+01:00
+236590,Portals Vells,Portals Vells,Unknown,Other,true,2025-11-07T16:36:25.309+01:00,2025-11-07T16:36:25.309+01:00
+236925,Vlasenica,Vlasenica,Unknown,Other,true,2026-01-27T10:10:49.732+01:00,2026-01-27T10:10:49.732+01:00
+237855,Riebeek-Kasteel,Riebeek-Kasteel,Unknown,Other,true,2026-04-02T06:32:39.150+02:00,2026-04-02T06:32:39.150+02:00
+238131,Roodepoort,Roodepoort,Unknown,Other,true,2025-03-31T15:06:28.809+02:00,2025-03-31T15:06:28.809+02:00
+238184,Krvavica,Krvavica,Unknown,Other,true,2025-04-01T10:30:48.305+02:00,2025-04-01T10:30:48.305+02:00
+238503,Caherconree,Caherconree,Unknown,Other,true,2025-04-02T10:49:45.452+02:00,2025-04-02T10:49:45.452+02:00
+238533,Hacienda Queveri,Hacienda Queveri,Unknown,Other,true,2025-11-17T09:21:45.454+01:00,2025-11-17T09:21:45.454+01:00
+238534,Qantab,Qantab,Unknown,Other,true,2026-01-27T12:08:54.161+01:00,2026-01-27T12:08:54.161+01:00
+238893,Pouillon,Pouillon,Unknown,Other,true,2025-04-03T16:56:21.878+02:00,2025-04-03T16:56:21.878+02:00
+239244,Alinja,Alinja,Unknown,Other,true,2025-09-02T11:28:30.418+02:00,2025-09-02T11:28:30.418+02:00
+239338,Kovacica,Kovacica,Unknown,Other,true,2025-04-06T11:20:58.070+02:00,2025-04-06T11:20:58.070+02:00
+239631,Monte Petrosu,Monte Petrosu,Unknown,Other,true,2025-11-07T16:35:23.203+01:00,2025-11-07T16:35:23.203+01:00
+239698,Kamshet,Kamshet,Unknown,Other,true,2025-04-07T17:33:59.385+02:00,2025-04-07T17:33:59.385+02:00
+240536,Lavrion,Lavrion,Unknown,Other,true,2025-04-10T12:35:56.246+02:00,2025-04-10T12:35:56.246+02:00
+240879,Palaia Fokaia,Palaia Fokaia,Unknown,Other,true,2026-01-27T16:44:43.351+01:00,2026-01-27T16:44:43.351+01:00
+240886,Jindabyne,Jindabyne,Unknown,Other,true,2025-06-30T10:40:27.442+02:00,2025-06-30T10:40:27.442+02:00
+241145,"Smyrna, GA",Smyrna,GA,Other,true,2025-04-18T18:49:55.714+02:00,2025-04-18T18:49:55.714+02:00
+241391,Tankavaara,Tankavaara,Unknown,Other,true,2026-04-02T06:32:27.262+02:00,2026-04-02T06:32:27.262+02:00
+241437,Valle de Santa Inés,Valle de Santa Inés,Unknown,Other,true,2026-04-02T06:32:36.161+02:00,2026-04-02T06:32:36.161+02:00
+241749,Tjeldsund,Tjeldsund,Unknown,Other,true,2025-09-01T10:16:20.582+02:00,2025-09-01T10:16:20.582+02:00
+241796,Kealakekua,Kealakekua,Unknown,Other,true,2025-04-25T17:03:23.068+02:00,2025-04-25T17:03:23.068+02:00
+242510,Regulice,Regulice,Unknown,Other,true,2025-05-10T22:04:45.982+02:00,2025-05-10T22:04:45.982+02:00
+242722,Marabut,Marabut,Unknown,Other,true,2025-05-14T18:22:40.038+02:00,2025-05-14T18:22:40.038+02:00
+242756,Salavas,Salavas,Unknown,Other,true,2025-05-15T15:56:44.174+02:00,2025-05-15T15:56:44.174+02:00
+242782,San Gusme,San Gusme,Unknown,Other,true,2026-04-02T06:32:33.133+02:00,2026-04-02T06:32:33.133+02:00
+242790,Uostadvaris,Uostadvaris,Unknown,Other,true,2025-05-15T19:55:42.467+02:00,2025-05-15T19:55:42.467+02:00
+242999,Birgel,Birgel,Unknown,Other,true,2025-05-22T21:12:02.771+02:00,2025-05-22T21:12:02.771+02:00
+243085,Podgrađe,Podgrađe,Unknown,Other,true,2025-05-23T22:16:31.545+02:00,2025-05-23T22:16:31.545+02:00
+243113,Buraydah,Buraydah,Unknown,Other,true,2025-05-24T14:23:02.723+02:00,2025-05-24T14:23:02.723+02:00
+243350,Ruhengeri,Ruhengeri,Unknown,Other,true,2025-05-29T10:07:22.120+02:00,2025-05-29T10:07:22.120+02:00
+244208,Kastellorizo Town,Kastellorizo Town,Unknown,Other,true,2025-06-19T10:48:29.733+02:00,2025-06-19T10:48:29.733+02:00
+244670,Bingil Bay,Bingil Bay,Unknown,Other,true,2025-09-01T10:29:09.977+02:00,2025-09-01T10:29:09.977+02:00
+244898,Paralia Fodele,Paralia Fodele,Unknown,Other,true,2026-04-02T06:32:27.323+02:00,2026-04-02T06:32:27.323+02:00
+244987,Janki Chatti,Janki Chatti,Unknown,Other,true,2025-07-10T16:29:12.431+02:00,2025-07-10T16:29:12.431+02:00
+245086,Stanghe,Stanghe,Unknown,Other,true,2025-07-14T16:45:14.587+02:00,2025-07-14T16:45:14.587+02:00
+245139,Son Carrio,Son Carrio,Unknown,Other,true,2025-07-15T15:21:32.556+02:00,2025-07-15T15:21:32.556+02:00
+245285,Hinnøya,Hinnøya,Unknown,Other,true,2026-04-02T06:32:19.880+02:00,2026-04-02T06:32:19.880+02:00
+246006,"San Francisco, Jujuy",San Francisco,Jujuy,Other,true,2025-08-04T11:45:10.559+02:00,2025-08-04T11:45:10.559+02:00
+246139,Comalapa,Comalapa,Unknown,Other,true,2025-08-07T16:43:34.748+02:00,2025-08-07T16:43:34.748+02:00
+246202,Tuheljske Toplice,Tuheljske Toplice,Unknown,Other,true,2026-04-02T06:32:24.751+02:00,2026-04-02T06:32:24.751+02:00
+246417,Casillas de Morales,Casillas de Morales,Unknown,Other,true,2025-08-13T15:00:28.778+02:00,2025-08-13T15:00:28.778+02:00
+246614,Suðureyri,Suðureyri,Unknown,Other,true,2025-08-15T14:42:40.223+02:00,2025-08-15T14:42:40.223+02:00
+246703,"Badacsonytomaj, Magyarország",Badacsonytomaj,Magyarország,Other,true,2025-08-18T16:16:21.580+02:00,2025-08-18T16:16:21.580+02:00
+246828,"Beaufort, Australia",Beaufort,Australia,Oceania,true,2025-08-19T21:23:43.312+02:00,2025-08-19T21:23:43.312+02:00
+246938,Donaldsonville,Donaldsonville,Unknown,Other,true,2025-08-22T18:35:16.649+02:00,2025-08-22T18:35:16.649+02:00
+246942,Gevgelija,Gevgelija,Unknown,Other,true,2026-04-02T06:32:33.245+02:00,2026-04-02T06:32:33.245+02:00
+246991,Meldola,Meldola,Unknown,Other,true,2025-08-25T13:02:10.138+02:00,2025-08-25T13:02:10.138+02:00
+247020,"Poggioreale, Sicily",Poggioreale,Sicily,Other,true,2025-08-25T15:57:26.128+02:00,2025-08-25T15:57:26.128+02:00
+247845,Sipanska Luka,Sipanska Luka,Unknown,Other,true,2026-04-02T06:32:26.847+02:00,2026-04-02T06:32:26.847+02:00
+247869,Upper Pisang,Upper Pisang,Unknown,Other,true,2025-09-04T18:56:37.815+02:00,2025-09-04T18:56:37.815+02:00
+248214,"Caraz, Perú",Caraz,Perú,Other,true,2025-09-12T17:47:13.859+02:00,2025-09-12T17:47:13.859+02:00
+248367,Liencres,Liencres,Unknown,Other,true,2025-09-16T11:28:33.871+02:00,2025-09-16T11:28:33.871+02:00
+248736,Boucau,Boucau,Unknown,Other,true,2025-09-23T11:43:11.752+02:00,2025-09-23T11:43:11.752+02:00
+249173,Ras Kigomasha,Ras Kigomasha,Unknown,Other,true,2025-10-01T10:25:07.499+02:00,2025-10-01T10:25:07.499+02:00
+249240,Hida,Hida,Unknown,Other,true,2025-12-01T09:12:54.291+01:00,2025-12-01T09:12:54.291+01:00
+249547,Cerdeirinhas,Cerdeirinhas,Unknown,Other,true,2025-10-02T13:16:17.224+02:00,2025-10-02T13:16:17.224+02:00
+249626,Huixianzhen,Huixianzhen,Unknown,Other,true,2025-10-02T17:17:06.226+02:00,2025-10-02T17:17:06.226+02:00
+249885,Kanine,Kanine,Unknown,Other,true,2025-10-03T16:29:43.258+02:00,2025-10-03T16:29:43.258+02:00
+250219,Kurcaj,Kurcaj,Unknown,Other,true,2025-10-07T13:04:08.628+02:00,2025-10-07T13:04:08.628+02:00
+250551,Dalghiu,Dalghiu,Unknown,Other,true,2025-10-08T18:34:47.495+02:00,2025-10-08T18:34:47.495+02:00
+250607,Shatili,Shatili,Unknown,Other,true,2026-04-02T06:32:30.618+02:00,2026-04-02T06:32:30.618+02:00
+250985,Mulgaon,Mulgaon,Unknown,Other,true,2025-10-14T12:32:51.318+02:00,2025-10-14T12:32:51.318+02:00
+251723,Babje,Babje,Unknown,Other,true,2026-01-28T16:22:20.143+01:00,2026-01-28T16:22:20.143+01:00
+251782,Hacienda San José,Hacienda San José,Unknown,Other,true,2026-01-27T16:38:36.898+01:00,2026-01-27T16:38:36.898+01:00
+251882,Blidet,Blidet,Unknown,Other,true,2025-10-20T12:08:33.030+02:00,2025-10-20T12:08:33.030+02:00
+252033,Rupakot,Rupakot,Unknown,Other,true,2025-10-20T16:43:17.358+02:00,2025-10-20T16:43:17.358+02:00
+252126,Wlotzkasbaken,Wlotzkasbaken,Unknown,Other,true,2025-10-20T18:43:11.452+02:00,2025-10-20T18:43:11.452+02:00
+252503,Hengchun,Hengchun,Unknown,Other,true,2025-10-22T18:20:58.996+02:00,2025-10-22T18:20:58.996+02:00
+253474,Ped,Ped,Unknown,Other,true,2025-10-29T16:37:31.829+01:00,2025-10-29T16:37:31.829+01:00
+253734,Puchberg am Schneeberg,Puchberg am Schneeberg,Unknown,Other,true,2025-10-30T16:53:31.902+01:00,2025-10-30T16:53:31.902+01:00
+254489,Vaikom,Vaikom,Unknown,Other,true,2025-11-08T16:55:37.924+01:00,2025-11-08T16:55:37.924+01:00
+255072,Silvano d'Orba,Silvano d'Orba,Unknown,Other,true,2025-11-17T18:57:31.203+01:00,2025-11-17T18:57:31.203+01:00
+255111,"Chatsworth, South Africa",Chatsworth,South Africa,Africa,true,2025-11-18T14:04:47.705+01:00,2025-11-18T14:04:47.705+01:00
+255328,In Guezzam,In Guezzam,Unknown,Other,true,2025-11-20T15:25:01.775+01:00,2025-11-20T15:25:01.775+01:00
+255413,"Darlington, England",Darlington,England,Other,true,2025-11-21T10:46:04.897+01:00,2025-11-21T10:46:04.897+01:00
+255627,Platja de l'Arenal,Platja de l'Arenal,Unknown,Other,true,2025-11-23T14:50:54.639+01:00,2025-11-23T14:50:54.639+01:00
+256325,Afrato,Afrato,Unknown,Other,true,2025-11-27T14:52:18.317+01:00,2025-11-27T14:52:18.317+01:00
+256332,Nerezisca,Nerezisca,Unknown,Other,true,2025-11-27T15:21:31.028+01:00,2025-11-27T15:21:31.028+01:00
+256465,"Maro, Spain",Maro,Spain,Europe,true,2025-11-27T20:13:02.763+01:00,2025-11-27T20:13:02.763+01:00
+256545,El Sheikh Zayed City,El Sheikh Zayed City,Unknown,Other,true,2025-11-28T11:37:51.468+01:00,2025-11-28T11:37:51.468+01:00
+256618,Agii Apostoli,Agii Apostoli,Unknown,Other,true,2025-11-28T13:34:11.397+01:00,2025-11-28T13:34:11.397+01:00
+256640,Kotohira,Kotohira,Unknown,Other,true,2025-11-28T15:33:19.909+01:00,2025-11-28T15:33:19.909+01:00
+256649,"Le Bouchon, Mauritius",Le Bouchon,Mauritius,Other,true,2025-11-28T15:55:38.724+01:00,2025-11-28T15:55:38.724+01:00
+256657,"Maho, Sint Maarten",Maho,Sint Maarten,Other,true,2025-11-28T16:13:29.104+01:00,2025-11-28T16:13:29.104+01:00
+256688,"Pyrzowice, Poland",Pyrzowice,Poland,Europe,true,2025-11-28T16:53:55.112+01:00,2025-11-28T16:53:55.112+01:00
+256727,Lagadin,Lagadin,Unknown,Other,true,2025-11-28T17:42:58.643+01:00,2025-11-28T17:42:58.643+01:00
+256729,Berrimah,Berrimah,Unknown,Other,true,2025-11-28T17:44:43.117+01:00,2025-11-28T17:44:43.117+01:00
+256792,"Ferma, Greece",Ferma,Greece,Europe,true,2025-11-28T18:57:20.472+01:00,2025-11-28T18:57:20.472+01:00
+256806,Coressia,Coressia,Unknown,Other,true,2025-11-28T19:14:04.069+01:00,2025-11-28T19:14:04.069+01:00
+256827,"Ojos de Garza, Las Palmas",Ojos de Garza,Las Palmas,Other,true,2025-11-28T19:25:34.265+01:00,2025-11-28T19:25:34.265+01:00
+256879,"Villair, Aosta",Villair,Aosta,Other,true,2025-11-28T20:24:54.831+01:00,2025-11-28T20:24:54.831+01:00
+256972,Citrus Heights,Citrus Heights,Unknown,Other,true,2025-11-30T17:39:03.898+01:00,2025-11-30T17:39:03.898+01:00
+257005,"Pateros, Metro Manila",Pateros,Metro Manila,Other,true,2026-01-08T15:26:28.135+01:00,2026-01-08T15:26:28.135+01:00
+257014,"Piane Vecchie, Sicily",Piane Vecchie,Sicily,Other,true,2025-12-01T02:02:37.232+01:00,2025-12-01T02:02:37.232+01:00
+257027,Rancho Viejo,Rancho Viejo,Unknown,Other,true,2025-12-01T11:02:56.614+01:00,2025-12-01T11:02:56.614+01:00
+257083,Talek,Talek,Unknown,Other,true,2025-12-01T12:30:21.562+01:00,2025-12-01T12:30:21.562+01:00
+257247,Borgo San Lorenzo,Borgo San Lorenzo,Unknown,Other,true,2025-12-01T20:58:03.154+01:00,2025-12-01T20:58:03.154+01:00
+257249,Mandrem,Mandrem,Unknown,Other,true,2025-12-01T21:00:10.014+01:00,2025-12-01T21:00:10.014+01:00
+257271,"Mbaléni, Comoros",Mbaléni,Comoros,Other,true,2025-12-01T21:35:25.727+01:00,2025-12-01T21:35:25.727+01:00
+257277,Huby,Huby,Unknown,Other,true,2025-12-01T21:45:34.911+01:00,2025-12-01T21:45:34.911+01:00
+257323,Merricks North,Merricks North,Unknown,Other,true,2025-12-02T07:14:04.104+01:00,2025-12-02T07:14:04.104+01:00
+257347,"Mopa, India",Mopa,India,Asia,true,2025-12-02T08:32:49.438+01:00,2025-12-02T08:32:49.438+01:00
+257442,Provatas,Provatas,Unknown,Other,true,2025-12-02T13:01:04.937+01:00,2025-12-02T13:01:04.937+01:00
+257456,"Black Hawk, South Dakota",Black Hawk,South Dakota,Other,true,2025-12-02T13:11:42.597+01:00,2025-12-02T13:11:42.597+01:00
+257602,Terzigno,Terzigno,Unknown,Other,true,2025-12-02T20:01:15.085+01:00,2025-12-02T20:01:15.085+01:00
+257626,Tiena,Tiena,Unknown,Other,true,2025-12-02T20:47:50.248+01:00,2025-12-02T20:47:50.248+01:00
+257651,"Las Mercedes, Spain",Las Mercedes,Spain,Europe,true,2025-12-03T07:29:12.342+01:00,2025-12-03T07:29:12.342+01:00
+257665,Agriana,Agriana,Unknown,Other,true,2025-12-03T07:52:31.190+01:00,2025-12-03T07:52:31.190+01:00
+257667,Kalametiya,Kalametiya,Unknown,Other,true,2026-04-02T06:32:13.430+02:00,2026-04-02T06:32:13.430+02:00
+257689,Ampelos,Ampelos,Unknown,Other,true,2025-12-03T08:25:41.689+01:00,2025-12-03T08:25:41.689+01:00
+257691,Portella di Mare,Portella di Mare,Unknown,Other,true,2025-12-03T08:26:48.394+01:00,2025-12-03T08:26:48.394+01:00
+257723,Perryopolis,Perryopolis,Unknown,Other,true,2025-12-03T08:56:04.059+01:00,2025-12-03T08:56:04.059+01:00
+257726,Torre Santa Sabina,Torre Santa Sabina,Unknown,Other,true,2025-12-03T08:58:31.321+01:00,2025-12-03T08:58:31.321+01:00
+257787,"Long Hanborough, Witney",Long Hanborough,Witney,Other,true,2025-12-03T11:07:22.686+01:00,2025-12-03T11:07:22.686+01:00
+257817,"Lynnfield, Massachusetts",Lynnfield,Massachusetts,Other,true,2025-12-03T11:44:41.775+01:00,2025-12-03T11:44:41.775+01:00
+257826,Terrey Hills,Terrey Hills,Unknown,Other,true,2025-12-03T11:52:53.862+01:00,2025-12-03T11:52:53.862+01:00
+257936,Kikiboga,Kikiboga,Unknown,Other,true,2025-12-03T17:21:48.126+01:00,2025-12-03T17:21:48.126+01:00
+257977,Cuzcurrita de Río Tirón,Cuzcurrita de Río Tirón,Unknown,Other,true,2025-12-03T18:14:44.570+01:00,2025-12-03T18:14:44.570+01:00
+258016,Buzanada,Buzanada,Unknown,Other,true,2025-12-03T19:28:39.031+01:00,2025-12-03T19:28:39.031+01:00
+258027,Kfar Shmaryahu,Kfar Shmaryahu,Unknown,Other,true,2025-12-03T19:48:06.226+01:00,2025-12-03T19:48:06.226+01:00
+258065,"Nikiana, Greece",Nikiana,Greece,Europe,true,2025-12-04T07:31:50.086+01:00,2025-12-04T07:31:50.086+01:00
+258118,Cabezón de Liébana,Cabezón de Liébana,Unknown,Other,true,2025-12-04T10:18:16.158+01:00,2025-12-04T10:18:16.158+01:00
+258184,Skinners Shoot,Skinners Shoot,Unknown,Other,true,2025-12-04T11:13:41.763+01:00,2025-12-04T11:13:41.763+01:00
+258221,"Puerto del Morro, Ecuador",Puerto del Morro,Ecuador,Other,true,2025-12-04T12:22:38.658+01:00,2025-12-04T12:22:38.658+01:00
+258232,Mendig,Mendig,Unknown,Other,true,2026-04-24T10:23:37.535+02:00,2026-04-24T10:23:37.535+02:00
+258236,"Thimbiri Wewa, Sri Lanka",Thimbiri Wewa,Sri Lanka,Other,true,2025-12-04T12:29:17.163+01:00,2025-12-04T12:29:17.163+01:00
+258252,"Litchfield Park, Northern Territory",Litchfield Park,Northern Territory,Other,true,2025-12-04T12:42:37.452+01:00,2025-12-04T12:42:37.452+01:00
+258326,Mudanya,Mudanya,Unknown,Other,true,2025-12-04T13:17:30.645+01:00,2025-12-04T13:17:30.645+01:00
+258328,Ensenada Blanca,Ensenada Blanca,Unknown,Other,true,2025-12-04T13:18:01.770+01:00,2025-12-04T13:18:01.770+01:00
+258339,Kurgansalaman,Kurgansalaman,Unknown,Other,true,2025-12-04T13:24:50.651+01:00,2025-12-04T13:24:50.651+01:00
+258350,Xeraco,Xeraco,Unknown,Other,true,2025-12-04T13:28:52.371+01:00,2025-12-04T13:28:52.371+01:00
+258444,Montalbano,Montalbano,Unknown,Other,true,2025-12-04T20:22:28.656+01:00,2025-12-04T20:22:28.656+01:00
+258470,Kishan Ghat,Kishan Ghat,Unknown,Other,true,2025-12-04T20:52:27.720+01:00,2025-12-04T20:52:27.720+01:00
+258548,Novi Vinodolski,Novi Vinodolski,Unknown,Other,true,2025-12-05T06:59:23.918+01:00,2025-12-05T06:59:23.918+01:00
+258552,Kumano,Kumano,Unknown,Other,true,2025-12-05T07:03:31.788+01:00,2025-12-05T07:03:31.788+01:00
+258556,"Olney, Maryland",Olney,Maryland,Other,true,2025-12-05T07:06:18.935+01:00,2025-12-05T07:06:18.935+01:00
+258581,"Shuakhevi, Georgia",Shuakhevi,Georgia,Other,true,2025-12-05T08:14:28.838+01:00,2025-12-05T08:14:28.838+01:00
+258636,Sant Tomàs des Migjorn Gran,Sant Tomàs des Migjorn Gran,Unknown,Other,true,2025-12-05T10:53:23.450+01:00,2025-12-05T10:53:23.450+01:00
+258670,Bellecombe-en-Bauges,Bellecombe-en-Bauges,Unknown,Other,true,2025-12-05T11:43:41.004+01:00,2025-12-05T11:43:41.004+01:00
+258681,"Miramar Beach, Florida",Miramar Beach,Florida,Other,true,2025-12-05T11:51:17.994+01:00,2025-12-05T11:51:17.994+01:00
+258780,"Alcàsser, Spain",Alcàsser,Spain,Europe,true,2025-12-05T15:53:44.023+01:00,2025-12-05T15:53:44.023+01:00
+258791,Rixensart,Rixensart,Unknown,Other,true,2025-12-05T16:04:01.449+01:00,2025-12-05T16:04:01.449+01:00
+258904,"At-Taybeh, Jordan",At-Taybeh,Jordan,Middle East,true,2025-12-06T10:52:22.214+01:00,2025-12-06T10:52:22.214+01:00
+258937,Montauban-de-Bretagne,Montauban-de-Bretagne,Unknown,Other,true,2025-12-06T11:29:57.427+01:00,2025-12-06T11:29:57.427+01:00
+258939,Taccu,Taccu,Unknown,Other,true,2025-12-06T11:33:46.134+01:00,2025-12-06T11:33:46.134+01:00
+258998,Pesina Spezie,Pesina Spezie,Unknown,Other,true,2025-12-06T16:19:55.914+01:00,2025-12-06T16:19:55.914+01:00
+259014,Dorado Royale,Dorado Royale,Unknown,Other,true,2025-12-06T16:38:22.060+01:00,2025-12-06T16:38:22.060+01:00
+259053,"Penasco, New Mexico",Penasco,New Mexico,Other,true,2025-12-07T09:18:25.707+01:00,2025-12-07T09:18:25.707+01:00
+259112,"Rundhaug, Norway",Rundhaug,Norway,Europe,true,2025-12-07T11:17:42.939+01:00,2025-12-07T11:17:42.939+01:00
+259175,"North Kingstown, Rhode Island",North Kingstown,Rhode Island,Other,true,2025-12-07T18:24:22.457+01:00,2025-12-07T18:24:22.457+01:00
+259295,Beylikduzu,Beylikduzu,Unknown,Other,true,2025-12-08T00:09:30.938+01:00,2025-12-08T00:09:30.938+01:00
+259316,"Buwelikada, Sri Lanka",Buwelikada,Sri Lanka,Other,true,2025-12-08T00:16:47.797+01:00,2025-12-08T00:16:47.797+01:00
+259329,"Bella Vista, New South Wales",Bella Vista,New South Wales,Other,true,2025-12-08T00:32:16.347+01:00,2025-12-08T00:32:16.347+01:00
+259439,Vecses,Vecses,Unknown,Other,true,2025-12-08T08:48:40.565+01:00,2025-12-08T08:48:40.565+01:00
+259521,Tundla,Tundla,Unknown,Other,true,2025-12-08T12:22:12.350+01:00,2025-12-08T12:22:12.350+01:00
+259561,"La Verne, California",La Verne,California,Other,true,2025-12-08T13:20:38.770+01:00,2025-12-08T13:20:38.770+01:00
+259573,"Vadu Izei, Romania",Vadu Izei,Romania,Europe,true,2025-12-08T13:29:13.947+01:00,2025-12-08T13:29:13.947+01:00
+259631,Leonforte,Leonforte,Unknown,Other,true,2025-12-08T16:18:10.975+01:00,2025-12-08T16:18:10.975+01:00
+259655,"Soulac-sur-Mer, France",Soulac-sur-Mer,France,Europe,true,2025-12-08T17:09:49.140+01:00,2025-12-08T17:09:49.140+01:00
+259698,"Cypress, California",Cypress,California,Other,true,2025-12-08T18:22:27.790+01:00,2025-12-08T18:22:27.790+01:00
+259754,Injune,Injune,Unknown,Other,true,2025-12-08T19:46:25.478+01:00,2025-12-08T19:46:25.478+01:00
+259770,"Ingliston, Scotland",Ingliston,Scotland,Other,true,2025-12-09T08:57:57.054+01:00,2025-12-09T08:57:57.054+01:00
+259797,Mazzeo,Mazzeo,Unknown,Other,true,2025-12-09T09:34:47.604+01:00,2025-12-09T09:34:47.604+01:00
+259822,"Majvik, Finland",Majvik,Finland,Europe,true,2025-12-09T10:02:53.659+01:00,2025-12-09T10:02:53.659+01:00
+259852,Lakkopetra,Lakkopetra,Unknown,Other,true,2025-12-09T10:41:31.521+01:00,2025-12-09T10:41:31.521+01:00
+259878,Pinezici,Pinezici,Unknown,Other,true,2025-12-09T10:57:12.092+01:00,2025-12-09T10:57:12.092+01:00
+259884,"Bình Minh, Quang Nam",Bình Minh,Quang Nam,Other,true,2025-12-09T11:00:23.721+01:00,2025-12-09T11:00:23.721+01:00
+259898,"Backa Palanka, Serbia",Backa Palanka,Serbia,Other,true,2025-12-09T11:16:00.399+01:00,2025-12-09T11:16:00.399+01:00
+259910,"Cicevac, Serbia",Cicevac,Serbia,Other,true,2025-12-09T11:22:18.095+01:00,2025-12-09T11:22:18.095+01:00
+260144,"Sokobanja, Serbia",Sokobanja,Serbia,Other,true,2025-12-10T13:19:46.911+01:00,2025-12-10T13:19:46.911+01:00
+260168,Zitoradja,Zitoradja,Unknown,Other,true,2025-12-10T13:26:17.122+01:00,2025-12-10T13:26:17.122+01:00
+260194,Songjiang University Town,Songjiang University Town,Unknown,Other,true,2025-12-10T15:05:53.165+01:00,2025-12-10T15:05:53.165+01:00
+260441,Patù,Patù,Unknown,Other,true,2025-12-11T15:07:37.149+01:00,2025-12-11T15:07:37.149+01:00
+260469,Lakshapana,Lakshapana,Unknown,Other,true,2025-12-11T17:03:27.676+01:00,2025-12-11T17:03:27.676+01:00
+260482,Inskip,Inskip,Unknown,Other,true,2025-12-11T17:10:17.994+01:00,2025-12-11T17:10:17.994+01:00
+260517,Sajang,Sajang,Unknown,Other,true,2025-12-11T17:31:43.870+01:00,2025-12-11T17:31:43.870+01:00
+261335,Spindleruv Mlyn,Spindleruv Mlyn,Unknown,Other,true,2026-04-02T06:32:13.155+02:00,2026-04-02T06:32:13.155+02:00
+261375,Doze Ribeiras,Doze Ribeiras,Unknown,Other,true,2025-12-17T17:01:52.008+01:00,2025-12-17T17:01:52.008+01:00
+261814,Fort Jeudy,Fort Jeudy,Unknown,Other,true,2025-12-22T14:02:47.291+01:00,2025-12-22T14:02:47.291+01:00
+262965,Stanwell Park,Stanwell Park,Unknown,Other,true,2025-12-27T22:20:19.461+01:00,2025-12-27T22:20:19.461+01:00
+263086,Boltana,Boltana,Unknown,Other,true,2025-12-29T15:53:20.972+01:00,2025-12-29T15:53:20.972+01:00
+264394,Fratta Terme,Fratta Terme,Unknown,Other,true,2026-01-05T16:36:23.359+01:00,2026-01-05T16:36:23.359+01:00
+264405,"Wheatland, Pennsylvania",Wheatland,Pennsylvania,Other,true,2026-01-05T16:47:25.754+01:00,2026-01-05T16:47:25.754+01:00
+265002,Talknafjordur,Talknafjordur,Unknown,Other,true,2026-01-09T09:27:46.096+01:00,2026-01-09T09:27:46.096+01:00
+265011,San Vito Chietino,San Vito Chietino,Unknown,Other,true,2026-01-09T09:43:14.755+01:00,2026-01-09T09:43:14.755+01:00
+265267,Banja Koviljaca,Banja Koviljaca,Unknown,Other,true,2026-01-15T13:45:20.394+01:00,2026-01-15T13:45:20.394+01:00
+265862,"Danville, Virginia",Danville,Virginia,Other,true,2026-04-14T17:19:05.966+02:00,2026-04-14T17:19:05.966+02:00
+265917,Isca Marina,Isca Marina,Unknown,Other,true,2026-01-20T14:53:56.119+01:00,2026-01-20T14:53:56.119+01:00
+266126,"Clarksdale, Mississippi",Clarksdale,Mississippi,Other,true,2026-01-21T15:51:48.996+01:00,2026-01-21T15:51:48.996+01:00
+266136,Bennett,Bennett,Unknown,Other,true,2026-01-21T15:55:31.071+01:00,2026-01-21T15:55:31.071+01:00
+266139,Shaoshan,Shaoshan,Unknown,Other,true,2026-01-21T15:55:56.983+01:00,2026-01-21T15:55:56.983+01:00
+266158,Ahmadawa,Ahmadawa,Unknown,Other,true,2026-01-21T16:34:48.693+01:00,2026-01-21T16:34:48.693+01:00
+266379,Santo Domingo de Silos,Santo Domingo de Silos,Unknown,Other,true,2026-01-22T10:58:56.225+01:00,2026-01-22T10:58:56.225+01:00
+266428,Muang Khoun,Muang Khoun,Unknown,Other,true,2026-01-22T13:01:06.437+01:00,2026-01-22T13:01:06.437+01:00
+266576,Migliarino,Migliarino,Unknown,Other,true,2026-04-02T06:32:41.775+02:00,2026-04-02T06:32:41.775+02:00
+266884,Batu Caves,Batu Caves,Unknown,Other,true,2026-02-02T08:43:35.815+01:00,2026-02-02T08:43:35.815+01:00
+266894,"St Charles, Missouri",St Charles,Missouri,Other,true,2026-04-24T10:24:19.008+02:00,2026-04-24T10:24:19.008+02:00
+268344,Pundaluoya,Pundaluoya,Unknown,Other,true,2026-02-24T15:01:21.128+01:00,2026-02-24T15:01:21.128+01:00
+268409,Goult,Goult,Unknown,Other,true,2026-02-24T20:37:59.164+01:00,2026-02-24T20:37:59.164+01:00
+268424,Inharrime,Inharrime,Unknown,Other,true,2026-02-25T07:34:45.912+01:00,2026-02-25T07:34:45.912+01:00
+268444,Huraymila,Huraymila,Unknown,Other,true,2026-02-25T08:30:09.039+01:00,2026-02-25T08:30:09.039+01:00
+268453,Logarska Dolina,Logarska Dolina,Unknown,Other,true,2026-02-25T08:53:54.443+01:00,2026-02-25T08:53:54.443+01:00
+268458,Veneguera,Veneguera,Unknown,Other,true,2026-02-25T09:05:54.631+01:00,2026-02-25T09:05:54.631+01:00
+268499,Bhojpur,Bhojpur,Unknown,Other,true,2026-02-25T10:18:58.941+01:00,2026-02-25T10:18:58.941+01:00
+268519,Torsby,Torsby,Unknown,Other,true,2026-02-25T10:56:01.097+01:00,2026-02-25T10:56:01.097+01:00
+268526,Garlate,Garlate,Unknown,Other,true,2026-02-25T11:07:51.865+01:00,2026-02-25T11:07:51.865+01:00
+268590,"Ashford, Alabama",Ashford,Alabama,Other,true,2026-02-25T15:58:52.174+01:00,2026-02-25T15:58:52.174+01:00
+268603,"Quero, Ecuador",Quero,Ecuador,Other,true,2026-02-25T16:25:00.765+01:00,2026-02-25T16:25:00.765+01:00
+268631,Dyulino,Dyulino,Unknown,Other,true,2026-02-25T17:06:34.525+01:00,2026-02-25T17:06:34.525+01:00
+268648,"Kalinino, Kazakhstan",Kalinino,Kazakhstan,Other,true,2026-02-25T17:35:07.988+01:00,2026-02-25T17:35:07.988+01:00
+268654,Castelnuovo di Porto,Castelnuovo di Porto,Unknown,Other,true,2026-02-25T17:43:36.798+01:00,2026-02-25T17:43:36.798+01:00
+268655,Morano Calabro,Morano Calabro,Unknown,Other,true,2026-02-25T17:44:32.710+01:00,2026-02-25T17:44:32.710+01:00
+268660,Sandhikharka,Sandhikharka,Unknown,Other,true,2026-02-25T17:53:36.422+01:00,2026-02-25T17:53:36.422+01:00
+268733,Ulhasnagar,Ulhasnagar,Unknown,Other,true,2026-02-26T07:41:08.844+01:00,2026-02-26T07:41:08.844+01:00
+268746,Tapalhuaca,Tapalhuaca,Unknown,Other,true,2026-02-26T08:11:14.687+01:00,2026-02-26T08:11:14.687+01:00
+268819,"The Dalles, Oregon",The Dalles,Oregon,Other,true,2026-02-26T13:19:18.864+01:00,2026-02-26T13:19:18.864+01:00
+268854,"Linge, Norway",Linge,Norway,Europe,true,2026-02-26T14:34:45.228+01:00,2026-02-26T14:34:45.228+01:00
+268867,Ribeiradio,Ribeiradio,Unknown,Other,true,2026-02-26T15:09:04.055+01:00,2026-02-26T15:09:04.055+01:00
+268885,Sant'Angelo in Colle,Sant'Angelo in Colle,Unknown,Other,true,2026-02-26T15:33:17.349+01:00,2026-02-26T15:33:17.349+01:00
+268937,"Los Santos, Colombia",Los Santos,Colombia,South America,true,2026-02-27T08:09:08.861+01:00,2026-02-27T08:09:08.861+01:00
+269047,Kovachevitsa,Kovachevitsa,Unknown,Other,true,2026-02-27T15:23:10.448+01:00,2026-02-27T15:23:10.448+01:00
+269063,Ohope,Ohope,Unknown,Other,true,2026-02-27T16:02:38.463+01:00,2026-02-27T16:02:38.463+01:00
+269069,San Pietro in Lama,San Pietro in Lama,Unknown,Other,true,2026-02-27T16:14:09.349+01:00,2026-02-27T16:14:09.349+01:00
+269122,Yasuni,Yasuni,Unknown,Other,true,2026-02-27T17:18:39.648+01:00,2026-02-27T17:18:39.648+01:00
+269126,al'akhdud,al'akhdud,Unknown,Other,true,2026-02-28T13:34:40.390+01:00,2026-02-28T13:34:40.390+01:00
+269138,Vezza d'Alba,Vezza d'Alba,Unknown,Other,true,2026-02-28T13:51:11.873+01:00,2026-02-28T13:51:11.873+01:00
+269140,Madulkele,Madulkele,Unknown,Other,true,2026-02-28T13:52:40.959+01:00,2026-02-28T13:52:40.959+01:00
+269164,Sedouikech,Sedouikech,Unknown,Other,true,2026-02-28T14:38:33.905+01:00,2026-02-28T14:38:33.905+01:00
+269216,"Algonquin Park, Canada",Algonquin Park,Canada,North America,true,2026-03-01T17:30:17.152+01:00,2026-03-01T17:30:17.152+01:00
+269218,"Villamagna, Italy",Villamagna,Italy,Europe,true,2026-03-01T17:31:32.670+01:00,2026-03-01T17:31:32.670+01:00
+269221,Tortiano,Tortiano,Unknown,Other,true,2026-03-01T17:42:58.148+01:00,2026-03-01T17:42:58.148+01:00
+269270,Wadi Qannoubine,Wadi Qannoubine,Unknown,Other,true,2026-03-02T07:51:46.966+01:00,2026-03-02T07:51:46.966+01:00
+269299,"Ponte, Italy",Ponte,Italy,Europe,true,2026-03-02T11:33:29.349+01:00,2026-03-02T11:33:29.349+01:00
+269754,"Miramar, Mozambique",Miramar,Mozambique,Other,true,2026-03-12T12:12:26.267+01:00,2026-03-12T12:12:26.267+01:00
+269770,Surigao City,Surigao City,Unknown,Other,true,2026-03-13T08:46:14.420+01:00,2026-03-13T08:46:14.420+01:00
+269794,Oropa,Oropa,Unknown,Other,true,2026-03-16T18:57:08.965+01:00,2026-03-16T18:57:08.965+01:00
+269924,Shisui,Shisui,Unknown,Other,true,2026-03-23T12:09:38.290+01:00,2026-03-23T12:09:38.290+01:00
+269932,Pussay,Pussay,Unknown,Other,true,2026-03-23T14:37:06.143+01:00,2026-03-23T14:37:06.143+01:00
+269989,Vistuk,Vistuk,Unknown,Other,true,2026-03-25T14:17:44.858+01:00,2026-03-25T14:17:44.858+01:00
+270098,Rokka,Rokka,Unknown,Other,true,2026-03-30T20:21:36.732+02:00,2026-03-30T20:21:36.732+02:00
