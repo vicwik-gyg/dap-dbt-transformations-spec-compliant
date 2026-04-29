@@ -1,0 +1,53 @@
+name: Spec Compliance Check
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  spec-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Install dbt packages
+        run: uv run dbt deps
+
+      - name: Parse dbt project
+        run: uv run dbt parse --target ci
+        env:
+          DBT_PROFILES_DIR: .
+
+      - name: Run spec compliance check
+        id: spec-check
+        run: |
+          uv run python -m scripts.spec_check.cli all --format markdown > compliance_output.md
+          echo "exit_code=$?" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Post compliance report as PR comment
+        if: github.event_name == 'pull_request'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          path: compliance_output.md
+
+      - name: Run unit tests
+        run: uv run pytest tests/spec_check/ -v
+
+      - name: Fail if non-compliant
+        if: steps.spec-check.outputs.exit_code == '1'
+        run: |
+          echo "Spec compliance check found deviations. See the compliance report above."
+          exit 1
