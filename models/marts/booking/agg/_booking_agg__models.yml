@@ -103,3 +103,58 @@ models:
         description: Average booking value in cents.
       - name: cancellation_rate
         description: Cancellation rate.
+
+  - name: agg_bookings_supplier_monthly
+    description: >
+      Monthly aggregate of bookings by supplier. Provides supplier-level
+      performance metrics including volume, revenue, and commission for
+      supplier operations and payout analysis.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+      synonyms: [supplier_monthly, supplier_performance]
+      spec_check_suppress:
+        - rule: "tests.unique_on_pk"
+          justification: "Composite grain (checkout_month, supplier_id) — neither column alone is unique"
+    columns:
+      - name: checkout_month
+        description: First day of the checkout month (truncated to month grain).
+        data_type: date
+        tests:
+          - not_null
+      - name: supplier_id
+        description: Foreign key to the supplier.
+        data_type: bigint
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_seed_data__suppliers')
+              field: supplier_id
+              config:
+                severity: warn
+      - name: total_bookings
+        description: Total number of bookings for this supplier in the month.
+        data_type: bigint
+      - name: confirmed_bookings
+        description: Number of non-cancelled bookings.
+        data_type: bigint
+      - name: cancelled_bookings
+        description: Number of cancelled bookings.
+        data_type: bigint
+      - name: total_participants
+        description: Total number of participants across all bookings.
+        data_type: bigint
+      - name: gross_bookings_in_cents
+        description: Total revenue from all bookings in cents (including cancelled).
+        data_type: bigint
+      - name: net_bookings_in_cents
+        description: Revenue from confirmed bookings only, in cents.
+        data_type: bigint
+      - name: total_commission_in_cents
+        description: Sum of GYG commission in cents.
+        data_type: bigint
+      - name: total_supplier_payout_in_cents
+        description: Sum of supplier payouts in cents.
+        data_type: bigint
