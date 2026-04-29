@@ -10,6 +10,7 @@ profiles.yml
 .user.yml
 *.pyc
 __pycache__/
+.pytest_cache/
 .venv/
 uv.lock
 .ca-bundle.pem
