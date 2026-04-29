@@ -106,6 +106,43 @@ semantic_models:
         agg: sum
         expr: net_bookings_in_cents
 
+  - name: sem_reviews
+    description: >
+      Semantic model on fct_reviews for MetricFlow queries.
+    defaults:
+      agg_time_dimension: created_at
+    model: ref('fct_reviews')
+    entities:
+      - name: review
+        type: primary
+        expr: review_id
+      - name: tour
+        type: foreign
+        expr: tour_id
+      - name: supplier
+        type: foreign
+        expr: supplier_id
+    dimensions:
+      - name: created_at
+        type: time
+        type_params:
+          time_granularity: day
+      - name: review_status
+        type: categorical
+      - name: is_active
+        type: categorical
+      - name: tour_name
+        type: categorical
+    measures:
+      - name: reviews_count
+        description: Count of all reviews.
+        agg: count
+        expr: review_id
+      - name: active_reviews_count
+        description: Count of active (visible) reviews.
+        agg: count
+        expr: "case when is_active = true then review_id end"
+
 metrics:
   - name: gross_bookings
     label: Gross Bookings
