@@ -145,3 +145,22 @@ sources:
             description: Reason code for deactivation (null if activation).
           - name: update_timestamp
             description: When the status change occurred.
+
+      - name: seed_customers
+        description: Customer account records (simulates db_mirror_dbz.gyg__customer).
+        columns:
+          - name: customer_id
+            description: Unique identifier for each customer.
+          - name: customer_email
+            description: Primary email for the customer account.
+          - name: customer_country
+            description: ISO country code for the customer.
+          - name: signup_source
+            description: Channel through which the customer signed up.
+          - name: is_verified
+            description: Whether the customer has verified their email.
+          - name: created_at
+            description: When the customer account was created.
+          - name: updated_at
+            description: When the customer record was last updated.
+

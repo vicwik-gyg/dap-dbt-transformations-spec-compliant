@@ -1,0 +1,8 @@
+customer_id,customer_email,customer_country,signup_source,is_verified,created_at,updated_at
+978994400,customer_978994400@redacted.example,DE,organic,true,2015-03-12T10:00:00.000+01:00,2026-01-10T08:30:00.000+01:00
+42,customer_42@redacted.example,FR,paid,true,2014-06-01T09:00:00.000+02:00,2025-12-20T14:00:00.000+01:00
+1551711646,customer_1551711646@redacted.example,US,organic,true,2017-08-15T16:00:00.000+02:00,2026-02-01T11:00:00.000+01:00
+1261962100,customer_1261962100@redacted.example,GB,referral,true,2018-01-20T12:00:00.000+01:00,2026-01-05T09:00:00.000+01:00
+854555600,customer_854555600@redacted.example,ES,organic,false,2019-05-10T08:00:00.000+02:00,2025-11-30T10:00:00.000+01:00
+2091474400,customer_2091474400@redacted.example,IT,paid,true,2020-02-28T14:00:00.000+01:00,2026-03-15T16:00:00.000+01:00
+1677878900,customer_1677878900@redacted.example,NL,organic,true,2021-07-04T11:00:00.000+02:00,2026-04-01T13:00:00.000+02:00
