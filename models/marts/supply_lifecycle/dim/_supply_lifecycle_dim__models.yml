@@ -1,0 +1,202 @@
+version: 2
+
+models:
+  - name: dim_tour_lifecycle_stage_history
+    description: >
+      SCD Type 2 tour lifecycle stage history. One row per stage run per
+      tour/supplier pair. Tracks transitions through Created → Pre-Activated
+      → Activated → Dormant → Churned based on online activity and reviews.
+    config:
+      group: boi
+    meta:
+      owner: boi
+      synonyms: [tour lifecycle, tour funnel, tour stage]
+    columns:
+      - name: tour_id
+        description: Tour identifier.
+        data_type: bigint
+        tests: [not_null]
+      - name: supplier_id
+        description: Supplier who owns this tour.
+        data_type: bigint
+        tests: [not_null]
+      - name: lifecycle_stage
+        description: >
+          Lifecycle stage for this period. One of: 01. Created, 02. Pre-Activated,
+          03. Activated, 04. Dormant, 05. Churned.
+        data_type: string
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - '01. Created'
+                - '02. Pre-Activated'
+                - '03. Activated'
+                - '04. Dormant'
+                - '05. Churned'
+      - name: valid_from
+        description: Start date of this stage run (inclusive).
+        data_type: date
+        tests: [not_null]
+      - name: valid_to
+        description: End date of this stage run (inclusive).
+        data_type: date
+        tests: [not_null]
+      - name: is_current
+        description: Whether this is the most recent stage for the tour.
+        data_type: boolean
+      - name: days_in_stage
+        description: Number of days spent in this stage run.
+        data_type: int
+      - name: is_ever_activated
+        description: Whether the tour has ever reached Activated stage.
+        data_type: boolean
+      - name: activation_date
+        description: Date when the 3rd active review was received (null if not activated).
+        data_type: date
+      - name: previous_stage
+        description: The lifecycle stage before this one (null for first run).
+        data_type: string
+      - name: stage_run_id
+        description: Sequential identifier for stage runs within a tour/supplier.
+        data_type: int
+
+  - name: dim_tour_lifecycle_stage
+    description: >
+      Current lifecycle stage per tour/supplier pair. Filtered view of the
+      history table showing only the most recent stage.
+    config:
+      group: boi
+      materialized: table
+    meta:
+      owner: boi
+      synonyms: [tour lifecycle current, tour stage current]
+    columns:
+      - name: tour_id
+        description: Tour identifier.
+        data_type: bigint
+        tests:
+          - unique
+          - not_null
+      - name: supplier_id
+        description: Supplier who owns this tour.
+        data_type: bigint
+        tests: [not_null]
+      - name: lifecycle_stage
+        description: Current lifecycle stage.
+        data_type: string
+        tests: [not_null]
+      - name: stage_start_date
+        description: When the current stage started.
+        data_type: date
+      - name: days_in_stage
+        description: Days in current stage.
+        data_type: int
+      - name: previous_stage
+        description: Previous lifecycle stage.
+        data_type: string
+      - name: is_ever_activated
+        description: Whether the tour has ever been activated.
+        data_type: boolean
+      - name: activation_date
+        description: Date of activation (3rd review).
+        data_type: date
+
+  - name: dim_supplier_lifecycle_stage_history
+    description: >
+      SCD Type 2 supplier lifecycle stage history. Aggregates tour-level
+      stages to supplier level, with self-deactivation overrides. Includes
+      suppliers with zero tours.
+    config:
+      group: boi
+    meta:
+      owner: boi
+      synonyms: [supplier lifecycle, supplier funnel, partner stage]
+    columns:
+      - name: supplier_id
+        description: Supplier identifier.
+        data_type: bigint
+        tests: [not_null]
+      - name: lifecycle_stage
+        description: >
+          Lifecycle stage for this period. Same stages as tour lifecycle
+          but aggregated (best stage across all supplier's tours wins).
+        data_type: string
+        tests:
+          - not_null
+          - accepted_values:
+              values:
+                - '01. Created'
+                - '02. Pre-Activated'
+                - '03. Activated'
+                - '04. Dormant'
+                - '05. Churned'
+      - name: valid_from
+        description: Start date of this stage run.
+        data_type: date
+        tests: [not_null]
+      - name: valid_to
+        description: End date of this stage run.
+        data_type: date
+        tests: [not_null]
+      - name: is_current
+        description: Whether this is the most recent stage for the supplier.
+        data_type: boolean
+      - name: days_in_stage
+        description: Number of days spent in this stage run.
+        data_type: int
+      - name: is_ever_activated
+        description: Whether any tour has ever been activated (sticky flag).
+        data_type: boolean
+      - name: is_self_deactivated
+        description: Whether this Churned run was caused by self-deactivation.
+        data_type: boolean
+      - name: is_tours_vanished
+        description: Whether this Churned run was caused by all tours disappearing.
+        data_type: boolean
+      - name: previous_stage
+        description: Previous lifecycle stage.
+        data_type: string
+      - name: stage_run_id
+        description: Sequential identifier for stage runs.
+        data_type: int
+
+  - name: dim_supplier_lifecycle_stage
+    description: >
+      Current lifecycle stage per supplier. Filtered view of the history
+      table showing only the most recent stage.
+    config:
+      group: boi
+      materialized: table
+    meta:
+      owner: boi
+      synonyms: [supplier lifecycle current, supplier stage current]
+    columns:
+      - name: supplier_id
+        description: Supplier identifier.
+        data_type: bigint
+        tests:
+          - unique
+          - not_null
+      - name: lifecycle_stage
+        description: Current lifecycle stage.
+        data_type: string
+        tests: [not_null]
+      - name: stage_start_date
+        description: When the current stage started.
+        data_type: date
+      - name: days_in_stage
+        description: Days in current stage.
+        data_type: int
+      - name: previous_stage
+        description: Previous lifecycle stage.
+        data_type: string
+      - name: is_ever_activated
+        description: Whether any tour has ever been activated.
+        data_type: boolean
+      - name: is_self_deactivated
+        description: Whether current state is a self-deactivation.
+        data_type: boolean
+      - name: is_tours_vanished
+        description: Whether current state is due to tours vanishing.
+        data_type: boolean
