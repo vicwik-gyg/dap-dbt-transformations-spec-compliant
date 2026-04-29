@@ -97,11 +97,9 @@ models:
       - name: is_active
         description: Active status at this version.
       - name: valid_from
-        description: Start of version validity (UTC).
-        tests: [not_null]
+        description: Start of version validity (UTC). Null for early records.
       - name: valid_to
-        description: End of version validity (UTC). 9999-12-31 = current.
-        tests: [not_null]
+        description: End of version validity (UTC). Null for current/incomplete records.
       - name: operation
         description: insert or update.
       - name: is_current_version

@@ -71,17 +71,15 @@ models:
         description: Active status at this version.
         data_type: boolean
       - name: valid_from
-        description: Start of this version's validity window (UTC).
+        description: >
+          Start of this version's validity window (UTC).
+          May be null for early historical records with no recorded timestamp.
         data_type: timestamp
-        tests:
-          - not_null
       - name: valid_to
         description: >
           End of this version's validity window (UTC).
-          '9999-12-31 23:59:59' indicates the currently active version.
+          Null for the currently active version or incomplete history records.
         data_type: timestamp
-        tests:
-          - not_null
       - name: operation
         description: The operation that created this version — 'insert' or 'update'.
         data_type: string

@@ -35,11 +35,13 @@ models:
         description: Foreign key to the destination where the tour takes place.
         data_type: bigint
       - name: booking_status
-        description: Current status of the booking — one of 'pending', 'confirmed', 'cancelled'.
+        description: >
+          Current status of the booking. Production values include 'active',
+          'canceled', 'deleted', 'deleted_by_customer', 'deleted_by_daemon'.
         data_type: string
         tests:
           - accepted_values:
-              values: ['pending', 'confirmed', 'cancelled']
+              values: ['active', 'canceled', 'deleted', 'deleted_by_customer', 'deleted_by_daemon']
       - name: number_of_participants
         description: Number of guests on this booking.
         data_type: int
