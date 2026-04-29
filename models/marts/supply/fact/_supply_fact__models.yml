@@ -1,0 +1,67 @@
+version: 2
+
+models:
+  - name: fct_reviews
+    description: >
+      Transaction fact table for tour reviews. One row per review event capturing
+      the review lifecycle status and the tour context at the time of review.
+    config:
+      group: boi
+      materialized: table
+    meta:
+      owner: boi
+      synonyms: [review, rating, feedback]
+    columns:
+      - name: review_id
+        description: Unique identifier for the review.
+        data_type: bigint
+        tests:
+          - unique
+          - not_null
+      - name: tour_id
+        description: Foreign key to the tour that was reviewed.
+        data_type: bigint
+        tests:
+          - relationships:
+              to: ref('stg_seed_data__tours')
+              field: tour_id
+              config:
+                severity: warn
+      - name: review_status
+        description: Current lifecycle status of the review. Valid values — active, inactive.
+        data_type: string
+        tests:
+          - accepted_values:
+              values: ['active', 'inactive']
+      - name: is_active
+        description: Whether the review is currently visible on the platform.
+        data_type: boolean
+      - name: created_at
+        description: Timestamp when the review was submitted (UTC).
+        data_type: timestamp
+      - name: review_date
+        description: Calendar date of the review.
+        data_type: date
+        tests:
+          - not_null
+      - name: tour_name
+        description: Display name of the reviewed tour at time of join.
+        data_type: string
+      - name: supplier_id
+        description: Foreign key to the supplier who runs the reviewed tour.
+        data_type: bigint
+        tests:
+          - relationships:
+              to: ref('stg_seed_data__suppliers')
+              field: supplier_id
+              config:
+                severity: warn
+      - name: destination_id
+        description: Foreign key to the destination where the reviewed tour operates.
+        data_type: bigint
+        tests:
+          - relationships:
+              to: ref('stg_seed_data__destinations')
+              field: destination_id
+              config:
+                severity: warn
