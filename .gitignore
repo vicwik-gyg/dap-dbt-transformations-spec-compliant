@@ -3,7 +3,6 @@ dbt_packages/
 logs/
 .vscode/
 .idea/
-profiles.yml
 .env
 .DS_Store
 .databricks

@@ -1,0 +1,14 @@
+# CI-only profiles file. Local development uses ~/.dbt/profiles.yml instead.
+# See HOW-TO-RUN.md for local setup instructions.
+
+dap_dbt_transformations:
+  target: ci
+  outputs:
+    ci:
+      type: databricks
+      catalog: testing
+      host: dbc-d10db17d-b6c4.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/placeholder
+      schema: dbt_default
+      threads: 4
+      token: "placeholder_for_parse_only"
