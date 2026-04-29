@@ -140,3 +140,95 @@ models:
       - name: seconds_request_to_cancellation
         description: Elapsed seconds between cancellation request and final cancellation.
         data_type: bigint
+
+  - name: int_bookings_with_cancellation
+    description: >
+      Enriches bookings with cancellation timing derived from the booking status
+      change event stream. Provides seconds-to-cancellation and days-before-travel
+      metrics for downstream churn and operations analysis.
+    config:
+      group: boi
+      materialized: view
+    meta:
+      owner: boi
+    columns:
+      - name: booking_id
+        description: Unique identifier for the booking.
+        data_type: bigint
+        tests:
+          - unique
+          - not_null
+      - name: tour_id
+        description: Foreign key to the tour.
+        data_type: bigint
+        tests:
+          - relationships:
+              to: ref('stg_seed_data__tours')
+              field: tour_id
+              config:
+                severity: warn
+      - name: customer_id
+        description: Foreign key to the customer.
+        data_type: bigint
+        tests:
+          - relationships:
+              to: ref('stg_seed_data__customers')
+              field: customer_id
+              config:
+                severity: warn
+      - name: supplier_id
+        description: Foreign key to the supplier.
+        data_type: bigint
+        tests:
+          - relationships:
+              to: ref('stg_seed_data__suppliers')
+              field: supplier_id
+              config:
+                severity: warn
+      - name: destination_id
+        description: Foreign key to the destination.
+        data_type: bigint
+        tests:
+          - relationships:
+              to: ref('stg_seed_data__destinations')
+              field: destination_id
+              config:
+                severity: warn
+      - name: booking_status
+        description: >
+          Current status of the booking. Valid values — active, canceled,
+          deleted, deleted_by_customer, deleted_by_daemon.
+        data_type: string
+        tests:
+          - accepted_values:
+              values: ['active', 'canceled', 'deleted', 'deleted_by_customer', 'deleted_by_daemon']
+      - name: is_cancelled
+        description: Whether this booking was cancelled.
+        data_type: boolean
+      - name: number_of_participants
+        description: Number of guests on the booking.
+        data_type: int
+      - name: total_price_in_cents
+        description: Total booking price in minor currency units.
+        data_type: bigint
+      - name: currency_code
+        description: ISO 4217 currency code.
+        data_type: string
+      - name: checkout_at
+        description: Timestamp of customer checkout (UTC).
+        data_type: timestamp
+      - name: travel_at
+        description: Scheduled travel timestamp (UTC).
+        data_type: timestamp
+      - name: created_at
+        description: Record creation timestamp (UTC).
+        data_type: timestamp
+      - name: first_cancelled_at
+        description: Earliest cancellation event timestamp from status changes (UTC).
+        data_type: timestamp
+      - name: seconds_to_cancellation
+        description: Seconds elapsed between booking creation and first cancellation event.
+        data_type: bigint
+      - name: days_before_travel_cancelled
+        description: Days between cancellation and scheduled travel date. Positive means cancelled before travel.
+        data_type: int
