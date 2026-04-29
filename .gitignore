@@ -3,13 +3,13 @@ dbt_packages/
 logs/
 .vscode/
 .idea/
-profiles.yml
 .env
 .DS_Store
 .databricks
 .user.yml
 *.pyc
 __pycache__/
+.pytest_cache/
 .venv/
 uv.lock
 .ca-bundle.pem

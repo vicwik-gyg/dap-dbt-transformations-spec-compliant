@@ -117,7 +117,8 @@ def check_my_rule(node: dict, manifest: dict) -> RuleResult:
 
 - **PASS** — Model complies with this rule
 - **DEVIATES** — Model violates the spec (includes a `finding` description)
-- **NA** — Rule doesn't apply to this model (e.g., staging rule on a marts model)
+- **NA** — Rule doesn't apply to this model (e.g., staging rule on a marts model, or FK target not in project)
+- **SUPPRESSED** — Rule explicitly opted-out via `meta.spec_check_suppress` with justification
 
 ## Makefile Targets
 
