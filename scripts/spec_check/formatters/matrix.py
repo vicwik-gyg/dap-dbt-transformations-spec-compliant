@@ -38,6 +38,8 @@ def format_matrix(results: list[RuleResult]) -> str:
                 cells.append(f"{'-':<14}")
             elif r.result == Result.PASS:
                 cells.append(f"{'PASS':<14}")
+            elif r.result == Result.SUPPRESSED:
+                cells.append(f"{'SUPPRESSED':<14}")
             else:
                 cells.append(f"{'DEVIATES':<14}")
 

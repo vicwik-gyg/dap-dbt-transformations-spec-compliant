@@ -67,6 +67,10 @@ models:
       - name: tour_category
         description: Category of the booked tour.
         data_type: string
+        meta:
+          spec_check_suppress:
+            - rule: "tests.accepted_values_on_enums"
+              justification: "Open-domain classification from source — unbounded set of values"
       - name: tour_list_price_in_cents
         description: Listed per-person price of the tour in cents.
         data_type: bigint

@@ -19,10 +19,10 @@ def format_human(results: list[RuleResult]) -> str:
     )
     lines.append("-" * 120)
 
-    # Sort: DEVIATES first, then PASS, then NA
-    priority = {Result.DEVIATES: 0, Result.PASS: 1, Result.NA: 2}
+    # Sort: DEVIATES first, then SUPPRESSED, then PASS, then NA
+    priority = {Result.DEVIATES: 0, Result.SUPPRESSED: 1, Result.PASS: 2, Result.NA: 3}
     sorted_results = sorted(
-        results, key=lambda r: (priority.get(r.result, 3), r.model, r.rule)
+        results, key=lambda r: (priority.get(r.result, 4), r.model, r.rule)
     )
 
     for r in sorted_results:
@@ -37,8 +37,9 @@ def format_human(results: list[RuleResult]) -> str:
     pass_count = sum(1 for r in results if r.result == Result.PASS)
     dev_count = sum(1 for r in results if r.result == Result.DEVIATES)
     na_count = sum(1 for r in results if r.result == Result.NA)
+    sup_count = sum(1 for r in results if r.result == Result.SUPPRESSED)
 
     lines.append("")
-    lines.append(f"Summary: {pass_count} PASS / {dev_count} DEVIATES / {na_count} NA")
+    lines.append(f"Summary: {pass_count} PASS / {dev_count} DEVIATES / {na_count} NA / {sup_count} SUPPRESSED")
 
     return "\n".join(lines)

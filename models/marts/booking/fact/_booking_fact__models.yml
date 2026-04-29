@@ -47,6 +47,10 @@ models:
         description: Tour name.
       - name: tour_category
         description: Tour category.
+        meta:
+          spec_check_suppress:
+            - rule: "tests.accepted_values_on_enums"
+              justification: "Open-domain classification from source — unbounded set of values"
       - name: tour_list_price_in_cents
         description: Tour list price in cents.
       - name: tour_duration_minutes

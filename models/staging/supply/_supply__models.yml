@@ -152,6 +152,10 @@ models:
           Category of the tour — e.g. 'walking_tour', 'landmark', 'museum',
           'bike_tour', 'food_tour', 'boat_tour'.
         data_type: string
+        meta:
+          spec_check_suppress:
+            - rule: "tests.accepted_values_on_enums"
+              justification: "Open-domain classification from source — unbounded set of values"
       - name: price_in_cents
         description: Listed price per person in minor currency units (cents).
         data_type: bigint

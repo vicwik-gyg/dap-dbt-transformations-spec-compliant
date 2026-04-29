@@ -11,6 +11,7 @@ class Result(Enum):
     PASS = "PASS"
     DEVIATES = "DEVIATES"
     NA = "NA"
+    SUPPRESSED = "SUPPRESSED"
 
 
 @dataclass
