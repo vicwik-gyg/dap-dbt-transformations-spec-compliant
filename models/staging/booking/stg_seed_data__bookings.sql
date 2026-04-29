@@ -17,6 +17,6 @@ select
     cast(travel_at as timestamp) as travel_at,
     cast(created_at as timestamp) as created_at,
     cast(cancelled_at as timestamp) as cancelled_at,
-    booking_status = 'cancelled' as is_cancelled
+    booking_status in ('canceled', 'deleted', 'deleted_by_customer', 'deleted_by_daemon') as is_cancelled
 
 from {{ source('seed_data', 'seed_bookings') }}
